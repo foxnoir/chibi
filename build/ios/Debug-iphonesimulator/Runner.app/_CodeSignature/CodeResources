@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		yfEuMf1bQmvp12vSeBwfzi9t+WA=
+		izCF097npM8PhTDE8o3ZPLLRJ9Q=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		4U18iXqgBZu6Bh4OOUwNJwoUG38=
+		wyEqiCl7qE8Ob2/Wj71rWmznr2I=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		alWa1QoKsBIBaaa5FfYG/CCoWGk=
+		7gf47IqUz+I1uh8qCkYDLJ57Dz8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		DUZ0+JGtw/V5eDwD27PZLwlipKs=
+		AUWTr4NNJPXMJsoTjryXbQ4VRlQ=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		qWQJg9kw/ySR7pPDYs/eAly0M9s=
+		LjlQ+WM0yUk3MXaaWCNkS8mO7Hk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		DVFJgEuWTmT+FZ4LCKCs5ijlRzQ=
+		ihxza8ywDJz1hw1jFrBjEUL38MI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Poppins-Bold.ttf</key>
 		<data>
@@ -450,11 +450,27 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		GZQ1vt7QCPxHMskl85PibR6pe9s=
+		9iD2dS9oSzG5k0YP86jH1FAprpI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang/en_US.json</key>
+		<data>
+		lOBikVHIEU1Se+HqGzsF0iExrxY=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang/pt_BR.json</key>
+		<data>
+		VPQtqk0QtCXnNxU47eG00+3fNzk=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang2/en_US.json</key>
+		<data>
+		uL3GGly9ubNh9OCbgY33MyNZ5LU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang2/pt_BR.json</key>
+		<data>
+		tMgCSqc68J8g9kGfM2sMmQfIhJI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/simple_circular_progress_bar/fonts/Roboto-Regular.ttf</key>
 		<data>
@@ -616,7 +632,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nl4HeVz6YMLb8NbGONhfYQ8JkK+jkC5yLSKdfoD2YLU=
+			STM5VPPnJyCMzTwZpDDT5hdBT6iodHKWUqRvqMH+oBI=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -665,7 +681,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DddS3H5UckDhcxPrr5WcPTXdWQS68EE5f/C2PzEPhpw=
+			x6Q7LG8ikltKWeZNjQE9l8iHTmCA+UIDmDH4K5TqcA8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -679,21 +695,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JISs+pxEBZjv7m35m9HUBsIODn3OIE1HsZNS7Sy3LXM=
+			AM0j+hmdQjvNiYz2OP/JL8FPtwEJvkcdRlnel5M3q/0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cf2yOjR5TiyTfE/5zd9B3ArkInYiD0sdLRZQqZDPNe0=
+			7KaNiKhdKXGKWQTCfuVZJmTLbgRFHRhzIKZ2qB09Ku0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ILX3/HCUjtXjcFRTUVaPFh2leSQfCbovRWKUowv09xs=
+			QA9MPsPCrWTDuj2XAj6ASE9LFzSmpJrZSr9Eem2Sa48=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -707,7 +723,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jC5HIfoChJfaj5fC5WXFOFnL2pOVou/UDKT72nAFkVk=
+			riryayKC1I+CSfArlQr1aOn3ZOIO/UygaDuR6NO1QCQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Poppins-Bold.ttf</key>
@@ -1372,7 +1388,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Gt2/whayVNzVc0b5GNoPenVRbjKaA+c2SVfREDyd9M=
+			lLKvfyyyeVcuPW+Nwi5CaN+MYu1NGcIwrlf/I/5PZkA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -1380,6 +1396,34 @@
 			<key>hash2</key>
 			<data>
 			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang/en_US.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9A+d2GU0PHMhI3CtJub5yTVJSHdfQePOCGLOd7x+qs0=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang/pt_BR.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RgJ3Tp7+Nm7ILkt2xCZRnVQKLt+NL85xdyC5bFIoSS0=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang2/en_US.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dM0ohVVYuYN2YxI/8bgdjYdDSvzig4qqPjUFkfjC5jA=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/localization/test/assets/lang2/pt_BR.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FLCK9r9noY6lPCeL+STQaAnaFkva7VsCqVoHUncaPCg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/simple_circular_progress_bar/fonts/Roboto-Regular.ttf</key>

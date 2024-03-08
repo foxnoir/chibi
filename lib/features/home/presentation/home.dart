@@ -10,7 +10,6 @@ import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 import 'package:chibi/global_widgets//round_button.dart';
 import 'package:chibi/global_widgets//round_gradient_button.dart';
-import 'package:chibi/view/notification/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/HomeScreen";
@@ -200,8 +199,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     IconButton(
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, NotificationScreen.routeName);
+                          // Navigator.pushNamed(
+                          // context, NotificationScreen.routeName);
                         },
                         icon: Image.asset(
                           "assets/icons/notification_icon.png",

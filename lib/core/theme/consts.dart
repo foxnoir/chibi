@@ -126,30 +126,6 @@ class Consts {
   static double globalIconSizeS = 12;
   static double globalIconSizeXS = 10;
 
-  // Dialogs
-  static double dialogPaddingLarge = 18;
-  static double dialogPaddingSmall = 10;
-  static double dialogBtnPadding = 5;
-  static double dialogBtnHeight = 52;
-  static double dialogInsetPaddingH = 20;
-  static double dialogInsetPaddingV = 60;
-  static double dialogImageHeight = 120;
-  static TextStyle dialogTitleTextStyle = TextStyle(
-      fontSize: FontSize.large,
-      fontWeight: FontWeights.bold,
-      color: Colours.gray);
-  static double fontSizeSmall = FontSize.small;
-  static TextStyle dialogContentTextStyle =
-      TextStyle(fontSize: FontSize.medium, color: Colours.gray);
-  static TextStyle dialogBtnPrimaryColorTextStyle =
-      TextStyle(fontSize: FontSize.medium, color: Colours.secondaryColor2);
-  static TextStyle dialogBtnGreyColorTextStyle =
-      TextStyle(fontSize: FontSize.medium, color: Colours.gray);
-  static BoxDecoration dialogBtnBorder = BoxDecoration(
-      border: Border(
-    top: BorderSide(color: Colours.midgray, width: borderThin),
-  ));
-
   // Spinner
   static Color spinnerColor = Colours.secondaryColor2;
   static double spinnerStrokeW = 3;
@@ -185,8 +161,6 @@ class Consts {
 
   // Conntainer
   static Color containerLight = Colours.white;
-  static Color containerSemiLight = Colours.alphaWhite_150;
-  static Color containerDark = Colours.black_0;
   static double listItemHeight = 164;
   static double listItemImageSize = 120;
   static double similarProductsContainerHeight = 128;

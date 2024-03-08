@@ -2,8 +2,8 @@ import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/your_goal/your_goal_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_widgets//round_gradient_button.dart';
-import '../../global_widgets//round_textfield.dart';
+import '../../../global_widgets/round_gradient_button.dart';
+import '../../../global_widgets/round_textfield.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
   static String routeName = "/CompleteProfileScreen";

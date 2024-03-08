@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/activity/activity_screen.dart';
 import 'package:chibi/view/camera/camera_screen.dart';
-import 'package:chibi/view/profile/user_profile.dart';
+import 'package:chibi/features/profile/presentation/user_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/home/presentation/home.dart';

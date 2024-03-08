@@ -1,10 +1,6 @@
 import 'package:chibi/core/routes.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/dashboard/dashboard_screen.dart';
-import 'package:chibi/view/login/login_screen.dart';
-import 'package:chibi/view/profile/complete_profile_screen.dart';
-import 'package:chibi/view/welcome/welcome_screen.dart';
-import 'package:chibi/view/your_goal/your_goal_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

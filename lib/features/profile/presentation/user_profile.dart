@@ -1,10 +1,10 @@
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/view/profile/widgets/setting_row.dart';
-import 'package:chibi/view/profile/widgets/title_subtitle_cell.dart';
+import 'package:chibi/features/profile/presentation/widgets/setting_row.dart';
+import 'package:chibi/features/profile/presentation/widgets/title_subtitle_cell.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_widgets//round_button.dart';
+import '../../../global_widgets/round_button.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);

@@ -1,7 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/view/login/login_screen.dart';
-import 'package:chibi/view/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_widgets//round_gradient_button.dart';
@@ -146,12 +144,6 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                     ),
                     const Spacer(),
                     SizedBox(height: media.width * 0.05),
-                    RoundGradientButton(
-                      title: "Confirm",
-                      onPressed: () {
-                        Navigator.pushNamed(context, WelcomeScreen.routeName);
-                      },
-                    )
                   ],
                 ),
               ),
