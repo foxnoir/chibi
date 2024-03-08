@@ -368,8 +368,8 @@ file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/internet_connection_checker-1
 file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/internet_connection_checker-1.0.0+1/lib/
 intl
 2.12
-file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/intl-0.17.0/
-file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/intl-0.17.0/lib/
+file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/intl-0.18.1/
+file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/intl-0.18.1/lib/
 io
 2.12
 file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/io-1.0.4/
@@ -851,7 +851,7 @@ chibi
 file:///Users/tanja.polz/Documents/foxnoir/chibi/
 file:///Users/tanja.polz/Documents/foxnoir/chibi/lib/
 calendar_agenda
-2.12
+3.0
 file:///Users/tanja.polz/Documents/foxnoir/chibi/dev_lib/calendar_agenda/
 file:///Users/tanja.polz/Documents/foxnoir/chibi/dev_lib/calendar_agenda/lib/
 sky_engine
@@ -862,6 +862,10 @@ flutter
 3.2
 file:///Users/tanja.polz/flutter/packages/flutter/
 file:///Users/tanja.polz/flutter/packages/flutter/lib/
+flutter_localizations
+3.2
+file:///Users/tanja.polz/flutter/packages/flutter_localizations/
+file:///Users/tanja.polz/flutter/packages/flutter_localizations/lib/
 flutter_test
 3.2
 file:///Users/tanja.polz/flutter/packages/flutter_test/

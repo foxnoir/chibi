@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 
 // Method used to initialized the dependency injection. Called in main.
 @InjectableInit(ignoreUnregisteredTypes: [])
-GetIt configureInjection(String env) => DI.getIt.init();
+Future<void> configureInjection(String env) => DI.getIt.init();
 
 // Class to use GetIt for dependency injection.
 

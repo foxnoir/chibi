@@ -7,9 +7,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
-
 import 'package:chibi/global_widgets//round_button.dart';
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/HomeScreen";
