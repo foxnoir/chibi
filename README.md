@@ -15,7 +15,7 @@
 <!-- PROJECT desc -->
   <p align="left">
       Because my gym's app sucks.
-      The code bases on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
+      The code is based on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
   </p>
 
   <!-- PROJECT link -->
@@ -274,6 +274,9 @@ feature/
 
 ## Images 
 - [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © [reinbowsketch](https://www.redbubble.com/de/people/reinbowsketch/shop) 
+- [Chibiusa Profile](https://fuckyeahsailorchibimoon.tumblr.com/post/122936579729)  -> ©Naoko Takeuchi
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
