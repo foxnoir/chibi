@@ -1,1 +1,0 @@
- /Users/tanja.polz/Documents/foxnoir/chibi/.dart_tool/flutter_build/ef3e083768a311ec83a3e6a145b9326a/native_assets.yaml: 

@@ -290,37 +290,38 @@ class CalendarAgendaState extends State<CalendarAgenda>
           ),
           Positioned(
             top: widget.appbar ? 50.0 : 0.0,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  leading,
-                  widget.fullCalendar!
-                      ? GestureDetector(
-                          onTap: () => widget.fullCalendar!
-                              ? _showFullCalendar(_locale, widget.weekDay)
-                              : null,
-                          child: Row(
-                            children: [
-                              Text(
-                                DateFormat.yMMMM(Locale(_locale).toString())
-                                    .format(_selectedDate!),
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: widget.dateColor,
-                                  fontWeight: FontWeight.w400,
+            child:  Container(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    leading,
+                    widget.fullCalendar!
+                        ? GestureDetector(
+                            onTap: () => widget.fullCalendar!
+                                ? _showFullCalendar(_locale, widget.weekDay)
+                                : null,
+                            child: Row(
+                              children: [
+                                Text(
+                                  DateFormat.yMMMM(Locale(_locale).toString())
+                                      .format(_selectedDate!),
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    color: widget.dateColor,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        )
-                      : SizedBox(),
-                  training
-                ],
+                              ],
+                            ),
+                          )
+                        : SizedBox(),
+                    training
+                  ],
+                ),
               ),
-            ),
+            
           ),
           Positioned(
             bottom: 0.0,

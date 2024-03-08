@@ -1,0 +1,1 @@
+ /Users/tanja.polz/Documents/foxnoir/chibi/.dart_tool/flutter_gen/gen_l10n/app_localizations_de.dart /Users/tanja.polz/Documents/foxnoir/chibi/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /Users/tanja.polz/Documents/foxnoir/chibi/l10n.yaml /Users/tanja.polz/Documents/foxnoir/chibi/lib/l10n/app_de.arb

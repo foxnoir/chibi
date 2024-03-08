@@ -48,7 +48,6 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colours.white,
       appBar: AppBar(
         backgroundColor: Colours.white,
         centerTitle: true,
