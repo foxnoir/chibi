@@ -20,7 +20,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -35,7 +35,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   "Hey there,",
                   style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontSize: 16,
                   ),
                 ),
@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   "Create an Account",
                   style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontSize: 20,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w700,
@@ -90,7 +90,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
-                            color: Colours.grayColor,
+                            color: Colours.gray,
                           ))),
                 ),
                 SizedBox(
@@ -109,13 +109,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           isCheck
                               ? Icons.check_box_outline_blank_outlined
                               : Icons.check_box_outlined,
-                          color: Colours.grayColor,
+                          color: Colours.gray,
                         )),
                     Expanded(
                       child: Text(
                           "By continuing you accept our Privacy Policy and\nTerm of Use",
                           style: TextStyle(
-                            color: Colours.grayColor,
+                            color: Colours.gray,
                             fontSize: 10,
                           )),
                     )
@@ -140,18 +140,18 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: Colours.grayColor.withOpacity(0.5),
+                      color: Colours.gray.withOpacity(0.5),
                     )),
                     Text("  Or  ",
                         style: TextStyle(
-                            color: Colours.grayColor,
+                            color: Colours.gray,
                             fontSize: 12,
                             fontWeight: FontWeight.w400)),
                     Expanded(
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: Colours.grayColor.withOpacity(0.5),
+                      color: Colours.gray.withOpacity(0.5),
                     )),
                   ],
                 ),
@@ -217,7 +217,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       textAlign: TextAlign.center,
                       text: TextSpan(
                           style: TextStyle(
-                              color: Colours.blackColor,
+                              color: Colours.black,
                               fontSize: 14,
                               fontWeight: FontWeight.w400),
                           children: [

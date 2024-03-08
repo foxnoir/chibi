@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: Stack(
         alignment: Alignment.bottomRight,
         children: [
@@ -87,7 +87,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: IconButton(
                     icon: const Icon(
                       Icons.navigate_next,
-                      color: Colours.whiteColor,
+                      color: Colours.white,
                     ),
                     onPressed: () {
                       if (selectedIndex < 3) {

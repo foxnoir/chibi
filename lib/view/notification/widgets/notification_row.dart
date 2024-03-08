@@ -30,14 +30,14 @@ class NotificationRow extends StatelessWidget {
               Text(
                 nObj["title"].toString(),
                 style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 12),
               ),
               Text(
                 nObj["time"].toString(),
                 style: TextStyle(
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                   fontSize: 10,
                 ),
               ),

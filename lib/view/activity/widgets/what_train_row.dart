@@ -12,7 +12,7 @@ class WhatTrainRow extends StatelessWidget {
     return Container(
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         decoration: BoxDecoration(
-          color: Colours.whiteColor,
+          color: Colours.white,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Container(
@@ -33,7 +33,7 @@ class WhatTrainRow extends StatelessWidget {
                     Text(
                       wObj["title"].toString(),
                       style: TextStyle(
-                          color: Colours.blackColor,
+                          color: Colours.black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
@@ -43,7 +43,7 @@ class WhatTrainRow extends StatelessWidget {
                     Text(
                       "${wObj["exercises"].toString()} | ${wObj["time"].toString()}",
                       style: TextStyle(
-                        color: Colours.grayColor,
+                        color: Colours.gray,
                         fontSize: 12,
                       ),
                     ),
@@ -68,7 +68,7 @@ class WhatTrainRow extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      color: Colours.whiteColor.withOpacity(0.54),
+                      color: Colours.white.withOpacity(0.54),
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),

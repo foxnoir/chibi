@@ -1,11 +1,9 @@
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/workour_detail_view/widgets/exercises_set_section.dart';
 import 'package:chibi/view/workour_detail_view/widgets/icon_title_next_row.dart';
 import 'package:chibi/view/workout_schedule_view/workout_schedule_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_widgets//round_button.dart';
 import 'exercises_stpe_details.dart';
 
 class WorkoutDetailView extends StatefulWidget {
@@ -124,7 +122,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                   width: 40,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: Colours.lightGrayColor,
+                      color: Colours.lightgray,
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
                     "assets/icons/back_icon.png",
@@ -143,7 +141,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                     width: 40,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                        color: Colours.lightGrayColor,
+                        color: Colours.lightgray,
                         borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
                       "assets/icons/more_icon.png",
@@ -177,7 +175,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           decoration: BoxDecoration(
-              color: Colours.whiteColor,
+              color: Colours.white,
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(25), topRight: Radius.circular(25))),
           child: Scaffold(
@@ -194,7 +192,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                         width: 50,
                         height: 4,
                         decoration: BoxDecoration(
-                            color: Colours.grayColor.withOpacity(0.3),
+                            color: Colours.gray.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(3)),
                       ),
                       SizedBox(
@@ -210,14 +208,14 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                                 Text(
                                   widget.dObj["title"].toString(),
                                   style: TextStyle(
-                                      color: Colours.blackColor,
+                                      color: Colours.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700),
                                 ),
                                 Text(
                                   "${widget.dObj["exercises"].toString()} | ${widget.dObj["time"].toString()} | 320 Calories Burn",
                                   style: TextStyle(
-                                      color: Colours.grayColor, fontSize: 12),
+                                      color: Colours.gray, fontSize: 12),
                                 ),
                               ],
                             ),
@@ -263,7 +261,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                           Text(
                             "You'll Need",
                             style: TextStyle(
-                                color: Colours.blackColor,
+                                color: Colours.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -271,8 +269,8 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                             onPressed: () {},
                             child: Text(
                               "${youArr.length} Items",
-                              style: TextStyle(
-                                  color: Colours.grayColor, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colours.gray, fontSize: 12),
                             ),
                           )
                         ],
@@ -296,7 +294,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                                         height: media.width * 0.35,
                                         width: media.width * 0.35,
                                         decoration: BoxDecoration(
-                                            color: Colours.lightGrayColor,
+                                            color: Colours.lightgray,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         alignment: Alignment.center,
@@ -312,7 +310,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                                         child: Text(
                                           yObj["title"].toString(),
                                           style: TextStyle(
-                                              color: Colours.blackColor,
+                                              color: Colours.black,
                                               fontSize: 12),
                                         ),
                                       )
@@ -329,7 +327,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                           Text(
                             "Exercises",
                             style: TextStyle(
-                                color: Colours.blackColor,
+                                color: Colours.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -337,8 +335,8 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                             onPressed: () {},
                             child: Text(
                               "${youArr.length} Sets",
-                              style: TextStyle(
-                                  color: Colours.grayColor, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colours.gray, fontSize: 12),
                             ),
                           )
                         ],

@@ -40,7 +40,7 @@ class RoundButton extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 11,
-            color: Colours.whiteColor,
+            color: Colours.white,
             fontFamily: "Poppins",
             fontWeight: FontWeight.w400,
           ),

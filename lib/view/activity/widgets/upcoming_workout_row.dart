@@ -18,7 +18,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color: Colours.whiteColor,
+            color: Colours.white,
             borderRadius: BorderRadius.circular(15),
             boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
         child: Row(
@@ -42,14 +42,14 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                 Text(
                   widget.wObj["title"].toString(),
                   style: TextStyle(
-                      color: Colours.blackColor,
+                      color: Colours.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   widget.wObj["time"].toString(),
                   style: TextStyle(
-                    color: Colours.grayColor,
+                    color: Colours.gray,
                     fontSize: 10,
                   ),
                 ),
@@ -94,7 +94,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                   size: const Size(10, 10),
                   child: DecoratedBox(
                     decoration: BoxDecoration(
-                      color: Colours.whiteColor,
+                      color: Colours.white,
                       borderRadius:
                           const BorderRadius.all(Radius.circular(50.0)),
                       boxShadow: const [

@@ -48,9 +48,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colours.whiteColor,
+        backgroundColor: Colours.white,
         appBar: AppBar(
-          backgroundColor: Colours.whiteColor,
+          backgroundColor: Colours.white,
           centerTitle: true,
           elevation: 0,
           leading: InkWell(
@@ -63,7 +63,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: Colours.lightGrayColor,
+                  color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/back_icon.png",
@@ -76,7 +76,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           title: const Text(
             "Notification",
             style: TextStyle(
-                color: Colours.blackColor,
+                color: Colours.black,
                 fontSize: 16,
                 fontWeight: FontWeight.w700),
           ),
@@ -89,7 +89,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 width: 40,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    color: Colours.lightGrayColor,
+                    color: Colours.lightgray,
                     borderRadius: BorderRadius.circular(10)),
                 child: Image.asset(
                   "assets/icons/more_icon.png",
@@ -109,7 +109,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             }),
             separatorBuilder: (context, index) {
               return Divider(
-                color: Colours.grayColor.withOpacity(0.5),
+                color: Colours.gray.withOpacity(0.5),
                 height: 1,
               );
             },

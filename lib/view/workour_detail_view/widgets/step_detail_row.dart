@@ -39,7 +39,7 @@ class StepDetailRow extends StatelessWidget {
                 width: 18,
                 height: 18,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colours.whiteColor, width: 3),
+                  border: Border.all(color: Colours.white, width: 3),
                   borderRadius: BorderRadius.circular(9),
                 ),
               ),
@@ -63,13 +63,13 @@ class StepDetailRow extends StatelessWidget {
               Text(
                 sObj["title"].toString(),
                 style: const TextStyle(
-                  color: Colours.blackColor,
+                  color: Colours.black,
                   fontSize: 14,
                 ),
               ),
               Text(
                 sObj["detail"].toString(),
-                style: const TextStyle(color: Colours.grayColor, fontSize: 12),
+                style: const TextStyle(color: Colours.gray, fontSize: 12),
               ),
             ],
           ),

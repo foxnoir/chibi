@@ -30,14 +30,14 @@ class LatestActivityRow extends StatelessWidget {
                 Text(
                   wObj["title"].toString(),
                   style: TextStyle(
-                      color: Colours.blackColor,
+                      color: Colours.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   wObj["time"].toString(),
                   style: TextStyle(
-                    color: Colours.grayColor,
+                    color: Colours.gray,
                     fontSize: 10,
                   ),
                 ),

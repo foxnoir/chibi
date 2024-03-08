@@ -194,6 +194,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "localization",
+      "rootUri": "file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/localization-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/tanja.polz/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
@@ -344,7 +350,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-03-08T08:09:47.125516Z",
+  "generated": "2024-03-08T09:05:27.716378Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }

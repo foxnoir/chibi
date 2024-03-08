@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                       "Hey there,",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                       ),
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                       "Welcome Back",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 20,
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.w700,
@@ -73,13 +73,13 @@ class LoginScreen extends StatelessWidget {
                           width: 20,
                           height: 20,
                           fit: BoxFit.contain,
-                          color: Colours.grayColor,
+                          color: Colours.gray,
                         ))),
               ),
               SizedBox(height: media.width * 0.03),
               const Text("Forgot your password?",
                   style: TextStyle(
-                    color: Colours.grayColor,
+                    color: Colours.gray,
                     fontSize: 10,
                   )),
               const Spacer(),
@@ -96,18 +96,18 @@ class LoginScreen extends StatelessWidget {
                       child: Container(
                     width: double.maxFinite,
                     height: 1,
-                    color: Colours.grayColor.withOpacity(0.5),
+                    color: Colours.gray.withOpacity(0.5),
                   )),
                   Text("  Or  ",
                       style: TextStyle(
-                          color: Colours.grayColor,
+                          color: Colours.gray,
                           fontSize: 12,
                           fontWeight: FontWeight.w400)),
                   Expanded(
                       child: Container(
                     width: double.maxFinite,
                     height: 1,
-                    color: Colours.grayColor.withOpacity(0.5),
+                    color: Colours.gray.withOpacity(0.5),
                   )),
                 ],
               ),
@@ -173,7 +173,7 @@ class LoginScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                         style: TextStyle(
-                            color: Colours.blackColor,
+                            color: Colours.black,
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
                         children: [

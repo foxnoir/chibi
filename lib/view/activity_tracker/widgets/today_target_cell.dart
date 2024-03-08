@@ -15,7 +15,7 @@ class TodayTargetCell extends StatelessWidget {
       height: 70,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colours.whiteColor,
+        color: Colours.white,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
@@ -47,7 +47,7 @@ class TodayTargetCell extends StatelessWidget {
                 child: Text(
                   value,
                   style: TextStyle(
-                      color: Colours.whiteColor.withOpacity(0.7),
+                      color: Colours.white.withOpacity(0.7),
                       fontWeight: FontWeight.w700,
                       fontSize: 14),
                 ),
@@ -55,7 +55,7 @@ class TodayTargetCell extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: Colours.blackColor,
+                  color: Colours.black,
                   fontSize: 12,
                 ),
               ),

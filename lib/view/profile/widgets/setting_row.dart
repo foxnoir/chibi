@@ -30,7 +30,7 @@ class SettingRow extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyle(
-                  color: Colours.blackColor,
+                  color: Colours.black,
                   fontSize: 12,
                 ),
               ),

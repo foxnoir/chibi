@@ -37,7 +37,7 @@ class _CameraScreenState extends State<CameraScreen> {
     var media = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colours.whiteColor,
+        backgroundColor: Colours.white,
         centerTitle: true,
         elevation: 0,
         leadingWidth: 0,
@@ -45,9 +45,7 @@ class _CameraScreenState extends State<CameraScreen> {
         title: Text(
           "Progress Photo",
           style: TextStyle(
-              color: Colours.blackColor,
-              fontSize: 16,
-              fontWeight: FontWeight.w700),
+              color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
         actions: [
           InkWell(
@@ -58,7 +56,7 @@ class _CameraScreenState extends State<CameraScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: Colours.lightGrayColor,
+                  color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -70,7 +68,7 @@ class _CameraScreenState extends State<CameraScreen> {
           )
         ],
       ),
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +89,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colours.whiteColor,
+                              color: Colours.white,
                               borderRadius: BorderRadius.circular(30)),
                           width: 50,
                           height: 50,
@@ -119,7 +117,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 Text(
                                   "Next Photos Fall On July 08",
                                   style: TextStyle(
-                                      color: Colours.blackColor,
+                                      color: Colours.black,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700),
                                 ),
@@ -132,7 +130,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 onPressed: () {},
                                 icon: Icon(
                                   Icons.close,
-                                  color: Colours.grayColor,
+                                  color: Colours.gray,
                                   size: 15,
                                 )))
                       ],
@@ -164,7 +162,7 @@ class _CameraScreenState extends State<CameraScreen> {
                               Text(
                                 "Track Your Progress Each\nMonth With Photo",
                                 style: TextStyle(
-                                  color: Colours.blackColor,
+                                  color: Colours.black,
                                   fontSize: 12,
                                 ),
                               ),
@@ -201,7 +199,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       Text(
                         "Compare my Photo",
                         style: TextStyle(
-                            color: Colours.blackColor,
+                            color: Colours.black,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
                       ),
@@ -233,7 +231,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       Text(
                         "Gallery",
                         style: TextStyle(
-                            color: Colours.blackColor,
+                            color: Colours.black,
                             fontSize: 16,
                             fontWeight: FontWeight.w700),
                       ),
@@ -241,8 +239,7 @@ class _CameraScreenState extends State<CameraScreen> {
                           onPressed: () {},
                           child: Text(
                             "See more",
-                            style: TextStyle(
-                                color: Colours.grayColor, fontSize: 12),
+                            style: TextStyle(color: Colours.gray, fontSize: 12),
                           ))
                     ],
                   ),
@@ -263,8 +260,8 @@ class _CameraScreenState extends State<CameraScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               pObj["time"].toString(),
-                              style: TextStyle(
-                                  color: Colours.grayColor, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colours.gray, fontSize: 12),
                             ),
                           ),
                           SizedBox(
@@ -279,7 +276,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                       const EdgeInsets.symmetric(horizontal: 4),
                                   width: 100,
                                   decoration: BoxDecoration(
-                                    color: Colours.lightGrayColor,
+                                    color: Colours.lightgray,
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: ClipRRect(
@@ -331,7 +328,7 @@ class _CameraScreenState extends State<CameraScreen> {
           child: Icon(
             Icons.photo_camera,
             size: 20,
-            color: Colours.whiteColor,
+            color: Colours.white,
           ),
         ),
       ),

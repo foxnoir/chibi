@@ -13,7 +13,7 @@ class CompleteProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -28,7 +28,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 Text(
                   "Let’s complete your profile",
                   style: TextStyle(
-                      color: Colours.blackColor,
+                      color: Colours.black,
                       fontSize: 20,
                       fontWeight: FontWeight.w700),
                 ),
@@ -36,7 +36,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 Text(
                   "It will help us to know more about you!",
                   style: TextStyle(
-                    color: Colours.grayColor,
+                    color: Colours.gray,
                     fontSize: 12,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w400,
@@ -45,7 +45,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 SizedBox(height: 25),
                 Container(
                   decoration: BoxDecoration(
-                      color: Colours.lightGrayColor,
+                      color: Colours.lightgray,
                       borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     children: [
@@ -59,7 +59,7 @@ class CompleteProfileScreen extends StatelessWidget {
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
-                            color: Colours.grayColor,
+                            color: Colours.gray,
                           )),
                       Expanded(
                           child: DropdownButtonHideUnderline(
@@ -70,14 +70,14 @@ class CompleteProfileScreen extends StatelessWidget {
                                   child: Text(
                                     name,
                                     style: const TextStyle(
-                                        color: Colours.grayColor, fontSize: 14),
+                                        color: Colours.gray, fontSize: 14),
                                   )))
                               .toList(),
                           onChanged: (value) {},
                           isExpanded: true,
                           hint: Text("Choose Gender",
                               style: const TextStyle(
-                                  color: Colours.grayColor, fontSize: 12)),
+                                  color: Colours.gray, fontSize: 12)),
                         ),
                       )),
                       SizedBox(

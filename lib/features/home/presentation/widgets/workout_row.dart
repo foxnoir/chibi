@@ -13,7 +13,7 @@ class WorkoutRow extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
         decoration: BoxDecoration(
-            color: Colours.whiteColor,
+            color: Colours.white,
             borderRadius: BorderRadius.circular(20),
             boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
         child: Row(
@@ -36,12 +36,12 @@ class WorkoutRow extends StatelessWidget {
               children: [
                 Text(
                   wObj["name"].toString(),
-                  style: TextStyle(color: Colours.blackColor, fontSize: 12),
+                  style: TextStyle(color: Colours.black, fontSize: 12),
                 ),
                 Text(
                   "${wObj["kcal"].toString()} Calories Burn | ${wObj["time"].toString()}minutes",
                   style: TextStyle(
-                    color: Colours.grayColor,
+                    color: Colours.gray,
                     fontSize: 10,
                   ),
                 ),

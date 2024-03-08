@@ -1,4 +1,5 @@
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class ExercisesRow extends StatelessWidget {
@@ -32,14 +33,14 @@ class ExercisesRow extends StatelessWidget {
               Text(
                 eObj["title"].toString(),
                 style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontSize: 14,
                     fontWeight: FontWeight.w500),
               ),
               Text(
                 eObj["value"].toString(),
                 style: TextStyle(
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                   fontSize: 12,
                 ),
               ),

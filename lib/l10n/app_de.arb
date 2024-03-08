@@ -1,0 +1,6 @@
+{
+  "details": "Details",
+  "@details": {
+    "description": "Labeling of the buttons that lead to the detail view."
+  }
+}

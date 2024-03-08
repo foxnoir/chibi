@@ -13,7 +13,7 @@ class TitleSubtitleCell extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       decoration: BoxDecoration(
-          color: Colours.whiteColor,
+          color: Colours.white,
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
       child: Column(
@@ -31,7 +31,7 @@ class TitleSubtitleCell extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  color: Colours.whiteColor.withOpacity(0.7),
+                  color: Colours.white.withOpacity(0.7),
                   fontWeight: FontWeight.w500,
                   fontSize: 14),
             ),
@@ -39,7 +39,7 @@ class TitleSubtitleCell extends StatelessWidget {
           Text(
             subtitle,
             style: TextStyle(
-              color: Colours.grayColor,
+              color: Colours.gray,
               fontSize: 12,
             ),
           ),

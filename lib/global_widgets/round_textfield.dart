@@ -24,8 +24,7 @@ class RoundTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colours.lightGrayColor,
-          borderRadius: BorderRadius.circular(15)),
+          color: Colours.lightgray, borderRadius: BorderRadius.circular(15)),
       child: TextField(
         controller: textEditingController,
         keyboardType: textInputType,
@@ -45,10 +44,10 @@ class RoundTextField extends StatelessWidget {
                   width: 20,
                   height: 20,
                   fit: BoxFit.contain,
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                 )),
             suffixIcon: rightIcon,
-            hintStyle: TextStyle(fontSize: 12, color: Colours.grayColor)),
+            hintStyle: TextStyle(fontSize: 12, color: Colours.gray)),
       ),
     );
   }

@@ -30,7 +30,7 @@ class StartScreen extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 36,
-                color: Colours.blackColor,
+                color: Colours.black,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -50,7 +50,7 @@ class StartScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, OnBoardingScreen.routeName);
                 },
-                color: Colours.whiteColor,
+                color: Colours.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25)),
                 textColor: Colours.primaryColor1,

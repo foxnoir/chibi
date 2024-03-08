@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final tooltipsOnBar = lineBarsData[0];
 
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -183,14 +183,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           "Welcome Back,",
                           style: TextStyle(
-                            color: Colours.midGrayColor,
+                            color: Colours.midgray,
                             fontSize: 12,
                           ),
                         ),
                         Text(
                           "Stefani Wong",
                           style: TextStyle(
-                            color: Colours.blackColor,
+                            color: Colours.black,
                             fontSize: 20,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w700,
@@ -240,14 +240,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "BMI (Body Mass Index)",
                                   style: TextStyle(
-                                      color: Colours.whiteColor,
+                                      color: Colours.white,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "You have a normal weight",
                                   style: TextStyle(
-                                    color: Colours.whiteColor.withOpacity(0.7),
+                                    color: Colours.white.withOpacity(0.7),
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -301,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         "Today Target",
                         style: TextStyle(
-                          color: Colours.blackColor,
+                          color: Colours.black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                         ),
@@ -325,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   "Activity Status",
                   style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
@@ -352,7 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Heart Rate",
                                 style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500),
                               ),
@@ -370,7 +370,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "78 BPM",
                                   style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -490,7 +490,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 25, horizontal: 10),
                       decoration: BoxDecoration(
-                          color: Colours.whiteColor,
+                          color: Colours.white,
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -521,7 +521,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Water Intake",
                               style: TextStyle(
-                                  color: Colours.blackColor,
+                                  color: Colours.black,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -539,7 +539,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Text(
                                 "4 Liters",
                                 style: TextStyle(
-                                  color: Colours.blackColor,
+                                  color: Colours.black,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -549,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Real time updates",
                               style: TextStyle(
-                                  color: Colours.blackColor,
+                                  color: Colours.black,
                                   fontSize: 10,
                                   fontWeight: FontWeight.w400),
                             ),
@@ -597,7 +597,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         Text(
                                           obj["title"].toString(),
                                           style: TextStyle(
-                                              color: Colours.blackColor,
+                                              color: Colours.black,
                                               fontSize: 11,
                                               fontWeight: FontWeight.w400),
                                         ),
@@ -618,7 +618,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           child: Text(
                                             obj["subtitle"].toString(),
                                             style: TextStyle(
-                                              color: Colours.blackColor,
+                                              color: Colours.black,
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -646,7 +646,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: Colours.whiteColor,
+                              color: Colours.white,
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -657,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Sleep",
                                 style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -675,7 +675,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "8h 20m",
                                   style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -697,7 +697,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: Colours.whiteColor,
+                              color: Colours.white,
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -708,7 +708,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Calories",
                                 style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -726,7 +726,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "760 kCal",
                                   style: TextStyle(
-                                    color: Colours.blackColor,
+                                    color: Colours.black,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -753,7 +753,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Text("230kCal\nleft",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                              color: Colours.whiteColor,
+                                              color: Colours.white,
                                               fontSize: 10,
                                               fontWeight: FontWeight.w400,
                                             )),
@@ -784,7 +784,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       "Workout Progress",
                       style: TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
@@ -803,17 +803,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Text(
                                     name,
                                     style: const TextStyle(
-                                        color: Colours.blackColor,
-                                        fontSize: 14),
+                                        color: Colours.black, fontSize: 14),
                                   )))
                               .toList(),
                           onChanged: (value) {},
-                          icon: Icon(Icons.expand_more,
-                              color: Colours.whiteColor),
+                          icon: Icon(Icons.expand_more, color: Colours.white),
                           hint: Text("Weekly",
                               textAlign: TextAlign.center,
                               style: const TextStyle(
-                                  color: Colours.whiteColor, fontSize: 12)),
+                                  color: Colours.white, fontSize: 12)),
                         ),
                       ),
                     )
@@ -920,7 +918,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           drawVerticalLine: false,
                           getDrawingHorizontalLine: (value) {
                             return FlLine(
-                              color: Colours.grayColor.withOpacity(0.15),
+                              color: Colours.gray.withOpacity(0.15),
                               strokeWidth: 2,
                             );
                           },
@@ -942,7 +940,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       "Latest Workout",
                       style: TextStyle(
-                          color: Colours.blackColor,
+                          color: Colours.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w700),
                     ),
@@ -951,7 +949,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         "See More",
                         style: TextStyle(
-                            color: Colours.grayColor,
+                            color: Colours.gray,
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
@@ -988,7 +986,7 @@ class _HomeScreenState extends State<HomeScreen> {
       2,
       (i) {
         const color0 = Colours.secondaryColor2;
-        const color1 = Colours.whiteColor;
+        const color1 = Colours.white;
 
         switch (i) {
           case 0:
@@ -1001,7 +999,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 badgeWidget: Text(
                   "20.1",
                   style: TextStyle(
-                      color: Colours.whiteColor,
+                      color: Colours.white,
                       fontWeight: FontWeight.w700,
                       fontSize: 12),
                 ));
@@ -1054,7 +1052,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Text(text,
         style: TextStyle(
-          color: Colours.grayColor,
+          color: Colours.gray,
           fontSize: 12,
         ),
         textAlign: TextAlign.center);
@@ -1069,7 +1067,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     var style = TextStyle(
-      color: Colours.grayColor,
+      color: Colours.gray,
       fontSize: 12,
     );
     Widget text;

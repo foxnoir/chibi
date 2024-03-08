@@ -35,7 +35,7 @@ class RoundGradientButton extends StatelessWidget {
             title,
             style: TextStyle(
               fontSize: 16,
-              color: Colours.whiteColor,
+              color: Colours.white,
               fontFamily: "Poppins",
               fontWeight: FontWeight.w700,
             ),

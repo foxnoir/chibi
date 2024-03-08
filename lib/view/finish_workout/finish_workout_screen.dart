@@ -12,7 +12,7 @@ class FinishWorkoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -34,7 +34,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "Congratulations, You Have Finished Your Workout",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colours.blackColor,
+                  color: Colours.black,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
@@ -46,7 +46,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "Exercises is king and nutrition is queen. Combine the two and you will have a kingdom",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                   fontSize: 12,
                 ),
               ),
@@ -57,7 +57,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "-Jack Lalanne",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                   fontSize: 12,
                 ),
               ),

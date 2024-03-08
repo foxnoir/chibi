@@ -32,9 +32,9 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       appBar: AppBar(
-        backgroundColor: Colours.whiteColor,
+        backgroundColor: Colours.white,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -47,7 +47,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
             width: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Colours.lightGrayColor,
+                color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
               "assets/icons/back_icon.png",
@@ -60,9 +60,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
         title: const Text(
           "Activity Tracker",
           style: TextStyle(
-              color: Colours.blackColor,
-              fontSize: 16,
-              fontWeight: FontWeight.w700),
+              color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
         actions: [
           InkWell(
@@ -73,7 +71,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: Colours.lightGrayColor,
+                  color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -108,7 +106,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         const Text(
                           "Today Target",
                           style: TextStyle(
-                              color: Colours.blackColor,
+                              color: Colours.black,
                               fontSize: 14,
                               fontWeight: FontWeight.w700),
                         ),
@@ -177,7 +175,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   const Text(
                     "Activity Progress",
                     style: TextStyle(
-                      color: Colours.blackColor,
+                      color: Colours.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -196,16 +194,16 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 child: Text(
                                   name,
                                   style: const TextStyle(
-                                      color: Colours.blackColor, fontSize: 14),
+                                      color: Colours.black, fontSize: 14),
                                 )))
                             .toList(),
                         onChanged: (value) {},
-                        icon: const Icon(Icons.expand_more,
-                            color: Colours.whiteColor),
+                        icon:
+                            const Icon(Icons.expand_more, color: Colours.white),
                         hint: const Text("Weekly",
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colours.whiteColor, fontSize: 12)),
+                            style:
+                                TextStyle(color: Colours.white, fontSize: 12)),
                       ),
                     ),
                   )
@@ -219,7 +217,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
                 decoration: BoxDecoration(
-                    color: Colours.whiteColor,
+                    color: Colours.white,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 3)
@@ -268,7 +266,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                             TextSpan(
                               text: (rod.toY - 1).toString(),
                               style: const TextStyle(
-                                color: Colours.whiteColor,
+                                color: Colours.white,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -327,7 +325,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   const Text(
                     "Latest Workout",
                     style: TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 16,
                         fontWeight: FontWeight.w700),
                   ),
@@ -336,7 +334,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     child: const Text(
                       "See More",
                       style: TextStyle(
-                          color: Colours.grayColor,
+                          color: Colours.gray,
                           fontSize: 14,
                           fontWeight: FontWeight.w700),
                     ),
@@ -364,7 +362,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
 
   Widget getTitles(double value, TitleMeta meta) {
     var style = const TextStyle(
-      color: Colours.grayColor,
+      color: Colours.gray,
       fontWeight: FontWeight.w500,
       fontSize: 12,
     );
@@ -454,7 +452,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
             toY: 20,
-            color: Colours.lightGrayColor,
+            color: Colours.lightgray,
           ),
         ),
       ],

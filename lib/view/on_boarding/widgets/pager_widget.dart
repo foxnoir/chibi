@@ -27,7 +27,7 @@ class PagerWidget extends StatelessWidget {
                   Text(
                     obj["title"],
                     style: const TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 24,
                         fontWeight: FontWeight.w700),
                   ),
@@ -37,7 +37,7 @@ class PagerWidget extends StatelessWidget {
                     child: Text(
                       obj["subtitle"],
                       style: const TextStyle(
-                        color: Colours.grayColor,
+                        color: Colours.gray,
                         fontSize: 14,
                       ),
                     ),

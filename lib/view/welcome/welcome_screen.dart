@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
@@ -27,7 +27,7 @@ class WelcomeScreen extends StatelessWidget {
               const Text(
                 "Welcome, Stefani",
                 style: TextStyle(
-                    color: Colours.blackColor,
+                    color: Colours.black,
                     fontSize: 20,
                     fontWeight: FontWeight.w700),
               ),
@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                 "You are all set now, let’s reach your\ngoals together with us",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colours.grayColor,
+                  color: Colours.gray,
                   fontSize: 12,
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w400,

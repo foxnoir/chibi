@@ -42,8 +42,10 @@ dependencies:
   animated_toggle_switch: ^0.8.2
   flutter_native_splash: ^2.3.13
   readmore: ^2.2.0
+  localization: ^2.1.1
   calendar_agenda:
     path: dev_lib/calendar_agenda/
+  intl: ^0.17.0
 
 flutter_native_splash:
   color: "#f8f8f8"

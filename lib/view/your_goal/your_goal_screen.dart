@@ -42,7 +42,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colours.whiteColor,
+      backgroundColor: Colours.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -75,7 +75,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   obj["title"],
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    color: Colours.whiteColor,
+                                    color: Colours.white,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -84,7 +84,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                 Container(
                                   width: 50,
                                   height: 1,
-                                  color: Colours.lightGrayColor,
+                                  color: Colours.lightgray,
                                 ),
                                 SizedBox(height: media.width * 0.02),
                                 Text(
@@ -94,7 +94,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   softWrap: true,
                                   maxLines: 3,
                                   style: const TextStyle(
-                                    color: Colours.whiteColor,
+                                    color: Colours.white,
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -129,7 +129,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                       "What is your goal ?",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colours.blackColor,
+                        color: Colours.black,
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
                       ),
@@ -139,7 +139,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                       "It will help us to choose a best\nprogram for you",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colours.grayColor,
+                        color: Colours.gray,
                         fontSize: 12,
                         fontFamily: "Poppins",
                       ),
