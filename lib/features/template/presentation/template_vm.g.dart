@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'temmplate_vm.dart';
+part of 'template_vm.dart';
 
 // **************************************************************************
 // StoreGenerator
