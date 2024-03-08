@@ -273,8 +273,7 @@ feature/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Images 
-- [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © (https://www.redbubble.com/de/people/reinbowsketch/shop)
-
+- [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © [reinbowsketch](https://www.redbubble.com/de/people/reinbowsketch/shop) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
