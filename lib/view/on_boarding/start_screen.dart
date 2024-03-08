@@ -1,7 +1,7 @@
 import 'package:chibi/view/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/app_colors.dart';
+import '../../core/theme/colours.dart';
 
 class StartScreen extends StatelessWidget {
   static String routeName = "/StartScreen";
@@ -18,7 +18,7 @@ class StartScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.centerRight,
             end: Alignment.centerLeft,
-            colors: [AppColors.primaryColor1, AppColors.primaryColor2],
+            colors: [Colours.primaryColor1, Colours.primaryColor2],
           ),
         ),
         child: Column(
@@ -30,7 +30,7 @@ class StartScreen extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 36,
-                color: AppColors.blackColor,
+                color: Colours.blackColor,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -50,10 +50,10 @@ class StartScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, OnBoardingScreen.routeName);
                 },
-                color: AppColors.whiteColor,
+                color: Colours.whiteColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25)),
-                textColor: AppColors.primaryColor1,
+                textColor: Colours.primaryColor1,
                 child: const Text(
                   "Get Started",
                   style: TextStyle(

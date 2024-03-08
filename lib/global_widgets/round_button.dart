@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 
 enum RoundButtonType { primaryBG, secondaryBG }
 
@@ -21,8 +21,8 @@ class RoundButton extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: type == RoundButtonType.secondaryBG
-                  ? AppColors.secondaryG
-                  : AppColors.primaryG,
+                  ? Colours.secondaryG
+                  : Colours.primaryG,
               begin: Alignment.centerLeft,
               end: Alignment.centerRight),
           borderRadius: BorderRadius.circular(25),
@@ -35,12 +35,12 @@ class RoundButton extends StatelessWidget {
         height: 50,
         onPressed: onPressed,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-        textColor: AppColors.primaryColor1,
+        textColor: Colours.primaryColor1,
         child: Text(
           title,
           style: TextStyle(
             fontSize: 11,
-            color: AppColors.whiteColor,
+            color: Colours.whiteColor,
             fontFamily: "Poppins",
             fontWeight: FontWeight.w400,
           ),

@@ -1,5 +1,5 @@
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class UpcomingWorkoutRow extends StatefulWidget {
@@ -18,7 +18,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color: Colours.whiteColor,
             borderRadius: BorderRadius.circular(15),
             boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
         child: Row(
@@ -42,14 +42,14 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                 Text(
                   widget.wObj["title"].toString(),
                   style: TextStyle(
-                      color: AppColors.blackColor,
+                      color: Colours.blackColor,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   widget.wObj["time"].toString(),
                   style: TextStyle(
-                    color: AppColors.grayColor,
+                    color: Colours.grayColor,
                     fontSize: 10,
                   ),
                 ),
@@ -80,7 +80,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             gradient:
-                                LinearGradient(colors: AppColors.secondaryG),
+                                LinearGradient(colors: Colours.secondaryG),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(50.0)),
                           ),
@@ -94,7 +94,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
                   size: const Size(10, 10),
                   child: DecoratedBox(
                     decoration: BoxDecoration(
-                      color: AppColors.whiteColor,
+                      color: Colours.whiteColor,
                       borderRadius:
                           const BorderRadius.all(Radius.circular(50.0)),
                       boxShadow: const [

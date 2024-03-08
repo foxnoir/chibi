@@ -1,5 +1,5 @@
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class StepDetailRow extends StatelessWidget {
@@ -18,7 +18,7 @@ class StepDetailRow extends StatelessWidget {
           child: Text(
             sObj["no"].toString(),
             style: const TextStyle(
-              color: AppColors.secondaryColor1,
+              color: Colours.secondaryColor1,
               fontSize: 14,
             ),
           ),
@@ -31,7 +31,7 @@ class StepDetailRow extends StatelessWidget {
               width: 20,
               height: 20,
               decoration: BoxDecoration(
-                color: AppColors.secondaryColor1,
+                color: Colours.secondaryColor1,
                 borderRadius: BorderRadius.circular(10),
               ),
               alignment: Alignment.center,
@@ -39,7 +39,7 @@ class StepDetailRow extends StatelessWidget {
                 width: 18,
                 height: 18,
                 decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.whiteColor, width: 3),
+                  border: Border.all(color: Colours.whiteColor, width: 3),
                   borderRadius: BorderRadius.circular(9),
                 ),
               ),
@@ -48,7 +48,7 @@ class StepDetailRow extends StatelessWidget {
               const DottedDashedLine(
                   height: 80,
                   width: 0,
-                  dashColor: AppColors.secondaryColor1,
+                  dashColor: Colours.secondaryColor1,
                   axis: Axis.vertical)
           ],
         ),
@@ -63,14 +63,13 @@ class StepDetailRow extends StatelessWidget {
               Text(
                 sObj["title"].toString(),
                 style: const TextStyle(
-                  color: AppColors.blackColor,
+                  color: Colours.blackColor,
                   fontSize: 14,
                 ),
               ),
               Text(
                 sObj["detail"].toString(),
-                style:
-                    const TextStyle(color: AppColors.grayColor, fontSize: 12),
+                style: const TextStyle(color: Colours.grayColor, fontSize: 12),
               ),
             ],
           ),

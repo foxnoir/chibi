@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_widgets//round_gradient_button.dart';
@@ -20,7 +20,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -35,7 +35,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   "Hey there,",
                   style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 16,
                   ),
                 ),
@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Text(
                   "Create an Account",
                   style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 20,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w700,
@@ -90,7 +90,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                           ))),
                 ),
                 SizedBox(
@@ -109,13 +109,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           isCheck
                               ? Icons.check_box_outline_blank_outlined
                               : Icons.check_box_outlined,
-                          color: AppColors.grayColor,
+                          color: Colours.grayColor,
                         )),
                     Expanded(
                       child: Text(
                           "By continuing you accept our Privacy Policy and\nTerm of Use",
                           style: TextStyle(
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                             fontSize: 10,
                           )),
                     )
@@ -140,18 +140,18 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: AppColors.grayColor.withOpacity(0.5),
+                      color: Colours.grayColor.withOpacity(0.5),
                     )),
                     Text("  Or  ",
                         style: TextStyle(
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                             fontSize: 12,
                             fontWeight: FontWeight.w400)),
                     Expanded(
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: AppColors.grayColor.withOpacity(0.5),
+                      color: Colours.grayColor.withOpacity(0.5),
                     )),
                   ],
                 ),
@@ -170,7 +170,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(14),
                           border: Border.all(
-                            color: AppColors.primaryColor1.withOpacity(0.5),
+                            color: Colours.primaryColor1.withOpacity(0.5),
                             width: 1,
                           ),
                         ),
@@ -193,7 +193,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(14),
                           border: Border.all(
-                            color: AppColors.primaryColor1.withOpacity(0.5),
+                            color: Colours.primaryColor1.withOpacity(0.5),
                             width: 1,
                           ),
                         ),
@@ -217,7 +217,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       textAlign: TextAlign.center,
                       text: TextSpan(
                           style: TextStyle(
-                              color: AppColors.blackColor,
+                              color: Colours.blackColor,
                               fontSize: 14,
                               fontWeight: FontWeight.w400),
                           children: [
@@ -227,7 +227,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             TextSpan(
                                 text: "Login",
                                 style: TextStyle(
-                                    color: AppColors.secondaryColor1,
+                                    color: Colours.secondaryColor1,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w800)),
                           ]),

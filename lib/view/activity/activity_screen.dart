@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/activity/widgets/upcoming_workout_row.dart';
 import 'package:chibi/view/activity/widgets/what_train_row.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -54,7 +54,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
     var media = MediaQuery.of(context).size;
     return Container(
       decoration:
-          BoxDecoration(gradient: LinearGradient(colors: AppColors.primaryG)),
+          BoxDecoration(gradient: LinearGradient(colors: Colours.primaryG)),
       child: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return [
@@ -66,7 +66,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
               title: const Text(
                 "Workout Tracker",
                 style: TextStyle(
-                    color: AppColors.whiteColor,
+                    color: Colours.whiteColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
@@ -79,7 +79,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     width: 40,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                        color: AppColors.lightGrayColor,
+                        color: Colours.lightGrayColor,
                         borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
                       "assets/icons/more_icon.png",
@@ -142,14 +142,14 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                 radius: 3,
                                 color: Colors.white,
                                 strokeWidth: 3,
-                                strokeColor: AppColors.secondaryColor1,
+                                strokeColor: Colours.secondaryColor1,
                               ),
                             ),
                           );
                         }).toList();
                       },
                       touchTooltipData: LineTouchTooltipData(
-                        tooltipBgColor: AppColors.secondaryColor1,
+                        tooltipBgColor: Colours.secondaryColor1,
                         tooltipRoundedRadius: 20,
                         getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                           return lineBarsSpot.map((lineBarSpot) {
@@ -185,7 +185,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       drawVerticalLine: false,
                       getDrawingHorizontalLine: (value) {
                         return FlLine(
-                          color: AppColors.whiteColor.withOpacity(0.15),
+                          color: Colours.whiteColor.withOpacity(0.15),
                           strokeWidth: 2,
                         );
                       },
@@ -205,7 +205,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
         body: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
-                color: AppColors.whiteColor,
+                color: Colours.whiteColor,
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25))),
@@ -221,7 +221,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       width: 50,
                       height: 4,
                       decoration: BoxDecoration(
-                          color: AppColors.grayColor.withOpacity(0.3),
+                          color: Colours.grayColor.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(3)),
                     ),
                     SizedBox(
@@ -231,7 +231,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 15),
                       decoration: BoxDecoration(
-                        color: AppColors.primaryColor2.withOpacity(0.3),
+                        color: Colours.primaryColor2.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Row(
@@ -240,7 +240,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           Text(
                             "Daily Workout Schedule",
                             style: TextStyle(
-                                color: AppColors.blackColor,
+                                color: Colours.blackColor,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -272,7 +272,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         Text(
                           "Upcoming Workout",
                           style: TextStyle(
-                              color: AppColors.blackColor,
+                              color: Colours.blackColor,
                               fontSize: 16,
                               fontWeight: FontWeight.w700),
                         ),
@@ -281,7 +281,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           child: Text(
                             "See More",
                             style: TextStyle(
-                                color: AppColors.grayColor,
+                                color: Colours.grayColor,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -306,7 +306,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         Text(
                           "What Do You Want to Train",
                           style: TextStyle(
-                              color: AppColors.blackColor,
+                              color: Colours.blackColor,
                               fontSize: 16,
                               fontWeight: FontWeight.w700),
                         ),
@@ -355,7 +355,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
-        color: AppColors.whiteColor,
+        color: Colours.whiteColor,
         barWidth: 4,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
@@ -373,7 +373,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
         isCurved: true,
-        color: AppColors.whiteColor.withOpacity(0.5),
+        color: Colours.whiteColor.withOpacity(0.5),
         barWidth: 2,
         isStrokeCapRound: true,
         dotData: FlDotData(show: false),
@@ -425,7 +425,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
     return Text(text,
         style: TextStyle(
-          color: AppColors.whiteColor,
+          color: Colours.whiteColor,
           fontSize: 12,
         ),
         textAlign: TextAlign.center);
@@ -440,7 +440,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     var style = TextStyle(
-      color: AppColors.whiteColor,
+      color: Colours.whiteColor,
       fontSize: 12,
     );
     Widget text;

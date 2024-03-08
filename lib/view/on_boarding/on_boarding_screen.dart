@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/on_boarding/widgets/pager_widget.dart';
 import 'package:chibi/view/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: Stack(
         alignment: Alignment.bottomRight,
         children: [
@@ -71,7 +71,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   width: 70,
                   height: 70,
                   child: CircularProgressIndicator(
-                    color: AppColors.primaryColor1,
+                    color: Colours.primaryColor1,
                     value: (selectedIndex + 1) / 4,
                     strokeWidth: 3,
                   ),
@@ -83,11 +83,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   height: 60,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(35),
-                      color: AppColors.primaryColor1),
+                      color: Colours.primaryColor1),
                   child: IconButton(
                     icon: const Icon(
                       Icons.navigate_next,
-                      color: AppColors.whiteColor,
+                      color: Colours.whiteColor,
                     ),
                     onPressed: () {
                       if (selectedIndex < 3) {

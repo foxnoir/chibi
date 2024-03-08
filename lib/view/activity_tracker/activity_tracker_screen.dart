@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/activity_tracker/widgets/latest_activity_row.dart';
 import 'package:chibi/view/activity_tracker/widgets/today_target_cell.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -32,9 +32,9 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -47,7 +47,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
             width: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: AppColors.lightGrayColor,
+                color: Colours.lightGrayColor,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
               "assets/icons/back_icon.png",
@@ -60,7 +60,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
         title: const Text(
           "Activity Tracker",
           style: TextStyle(
-              color: AppColors.blackColor,
+              color: Colours.blackColor,
               fontSize: 16,
               fontWeight: FontWeight.w700),
         ),
@@ -73,7 +73,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -95,8 +95,8 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
-                    AppColors.primaryColor2.withOpacity(0.3),
-                    AppColors.primaryColor1.withOpacity(0.3)
+                    Colours.primaryColor2.withOpacity(0.3),
+                    Colours.primaryColor1.withOpacity(0.3)
                   ]),
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -108,7 +108,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         const Text(
                           "Today Target",
                           style: TextStyle(
-                              color: AppColors.blackColor,
+                              color: Colours.blackColor,
                               fontSize: 14,
                               fontWeight: FontWeight.w700),
                         ),
@@ -118,7 +118,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
-                                colors: AppColors.primaryG,
+                                colors: Colours.primaryG,
                               ),
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -128,7 +128,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 height: 30,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25)),
-                                textColor: AppColors.primaryColor1,
+                                textColor: Colours.primaryColor1,
                                 minWidth: double.maxFinite,
                                 elevation: 0,
                                 color: Colors.transparent,
@@ -177,7 +177,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   const Text(
                     "Activity Progress",
                     style: TextStyle(
-                      color: AppColors.blackColor,
+                      color: Colours.blackColor,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -186,7 +186,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     height: 35,
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: AppColors.primaryG),
+                        gradient: LinearGradient(colors: Colours.primaryG),
                         borderRadius: BorderRadius.circular(15)),
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton(
@@ -196,17 +196,16 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 child: Text(
                                   name,
                                   style: const TextStyle(
-                                      color: AppColors.blackColor,
-                                      fontSize: 14),
+                                      color: Colours.blackColor, fontSize: 14),
                                 )))
                             .toList(),
                         onChanged: (value) {},
                         icon: const Icon(Icons.expand_more,
-                            color: AppColors.whiteColor),
+                            color: Colours.whiteColor),
                         hint: const Text("Weekly",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: AppColors.whiteColor, fontSize: 12)),
+                                color: Colours.whiteColor, fontSize: 12)),
                       ),
                     ),
                   )
@@ -220,7 +219,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
                 decoration: BoxDecoration(
-                    color: AppColors.whiteColor,
+                    color: Colours.whiteColor,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 3)
@@ -269,7 +268,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                             TextSpan(
                               text: (rod.toY - 1).toString(),
                               style: const TextStyle(
-                                color: AppColors.whiteColor,
+                                color: Colours.whiteColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -328,7 +327,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   const Text(
                     "Latest Workout",
                     style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w700),
                   ),
@@ -337,7 +336,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     child: const Text(
                       "See More",
                       style: TextStyle(
-                          color: AppColors.grayColor,
+                          color: Colours.grayColor,
                           fontSize: 14,
                           fontWeight: FontWeight.w700),
                     ),
@@ -365,7 +364,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
 
   Widget getTitles(double value, TitleMeta meta) {
     var style = const TextStyle(
-      color: AppColors.grayColor,
+      color: Colours.grayColor,
       fontWeight: FontWeight.w500,
       fontSize: 12,
     );
@@ -406,25 +405,25 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
   List<BarChartGroupData> showingGroups() => List.generate(7, (i) {
         switch (i) {
           case 0:
-            return makeGroupData(0, 5, AppColors.primaryG,
+            return makeGroupData(0, 5, Colours.primaryG,
                 isTouched: i == touchedIndex);
           case 1:
-            return makeGroupData(1, 10.5, AppColors.secondaryG,
+            return makeGroupData(1, 10.5, Colours.secondaryG,
                 isTouched: i == touchedIndex);
           case 2:
-            return makeGroupData(2, 5, AppColors.primaryG,
+            return makeGroupData(2, 5, Colours.primaryG,
                 isTouched: i == touchedIndex);
           case 3:
-            return makeGroupData(3, 7.5, AppColors.secondaryG,
+            return makeGroupData(3, 7.5, Colours.secondaryG,
                 isTouched: i == touchedIndex);
           case 4:
-            return makeGroupData(4, 15, AppColors.primaryG,
+            return makeGroupData(4, 15, Colours.primaryG,
                 isTouched: i == touchedIndex);
           case 5:
-            return makeGroupData(5, 5.5, AppColors.secondaryG,
+            return makeGroupData(5, 5.5, Colours.secondaryG,
                 isTouched: i == touchedIndex);
           case 6:
-            return makeGroupData(6, 8.5, AppColors.primaryG,
+            return makeGroupData(6, 8.5, Colours.primaryG,
                 isTouched: i == touchedIndex);
           default:
             return throw Error();
@@ -455,7 +454,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
             toY: 20,
-            color: AppColors.lightGrayColor,
+            color: Colours.lightGrayColor,
           ),
         ),
       ],

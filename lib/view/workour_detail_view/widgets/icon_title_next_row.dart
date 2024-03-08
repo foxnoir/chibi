@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class IconTitleNextRow extends StatelessWidget {
@@ -44,7 +44,7 @@ class IconTitleNextRow extends StatelessWidget {
             Expanded(
               child: Text(
                 title,
-                style: TextStyle(color: AppColors.grayColor, fontSize: 12),
+                style: TextStyle(color: Colours.grayColor, fontSize: 12),
               ),
             ),
             SizedBox(
@@ -52,7 +52,7 @@ class IconTitleNextRow extends StatelessWidget {
               child: Text(
                 time,
                 textAlign: TextAlign.right,
-                style: TextStyle(color: AppColors.grayColor, fontSize: 12),
+                style: TextStyle(color: Colours.grayColor, fontSize: 12),
               ),
             ),
             const SizedBox(width: 8),

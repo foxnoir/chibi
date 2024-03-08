@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class TodayTargetCell extends StatelessWidget {
@@ -15,7 +15,7 @@ class TodayTargetCell extends StatelessWidget {
       height: 70,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppColors.whiteColor,
+        color: Colours.whiteColor,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
@@ -38,7 +38,7 @@ class TodayTargetCell extends StatelessWidget {
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {
                   return LinearGradient(
-                          colors: AppColors.primaryG,
+                          colors: Colours.primaryG,
                           begin: Alignment.centerLeft,
                           end: Alignment.centerRight)
                       .createShader(
@@ -47,7 +47,7 @@ class TodayTargetCell extends StatelessWidget {
                 child: Text(
                   value,
                   style: TextStyle(
-                      color: AppColors.whiteColor.withOpacity(0.7),
+                      color: Colours.whiteColor.withOpacity(0.7),
                       fontWeight: FontWeight.w700,
                       fontSize: 14),
                 ),
@@ -55,7 +55,7 @@ class TodayTargetCell extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: AppColors.blackColor,
+                  color: Colours.blackColor,
                   fontSize: 12,
                 ),
               ),

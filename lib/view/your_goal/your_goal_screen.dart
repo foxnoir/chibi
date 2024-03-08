@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/login/login_screen.dart';
 import 'package:chibi/view/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +42,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: Stack(
           children: [
@@ -53,7 +53,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(22),
                             gradient: LinearGradient(
-                                colors: AppColors.primaryG,
+                                colors: Colours.primaryG,
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight),
                           ),
@@ -75,7 +75,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   obj["title"],
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    color: AppColors.whiteColor,
+                                    color: Colours.whiteColor,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -84,7 +84,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                 Container(
                                   width: 50,
                                   height: 1,
-                                  color: AppColors.lightGrayColor,
+                                  color: Colours.lightGrayColor,
                                 ),
                                 SizedBox(height: media.width * 0.02),
                                 Text(
@@ -94,7 +94,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   softWrap: true,
                                   maxLines: 3,
                                   style: const TextStyle(
-                                    color: AppColors.whiteColor,
+                                    color: Colours.whiteColor,
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -129,7 +129,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                       "What is your goal ?",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
                       ),
@@ -139,7 +139,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                       "It will help us to choose a best\nprogram for you",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: AppColors.grayColor,
+                        color: Colours.grayColor,
                         fontSize: 12,
                         fontFamily: "Poppins",
                       ),

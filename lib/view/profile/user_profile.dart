@@ -1,5 +1,5 @@
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/profile/widgets/setting_row.dart';
 import 'package:chibi/view/profile/widgets/title_subtitle_cell.dart';
 import 'package:flutter/material.dart';
@@ -48,15 +48,15 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         centerTitle: true,
         elevation: 0,
         title: const Text(
           "Profile",
           style: TextStyle(
-              color: AppColors.blackColor,
+              color: Colours.blackColor,
               fontSize: 16,
               fontWeight: FontWeight.w700),
         ),
@@ -69,7 +69,7 @@ class _UserProfileState extends State<UserProfile> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -108,7 +108,7 @@ class _UserProfileState extends State<UserProfile> {
                         Text(
                           "Stefani Wong",
                           style: TextStyle(
-                            color: AppColors.blackColor,
+                            color: Colours.blackColor,
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                           ),
@@ -116,7 +116,7 @@ class _UserProfileState extends State<UserProfile> {
                         Text(
                           "Lose a Fat Program",
                           style: TextStyle(
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                             fontSize: 12,
                           ),
                         )
@@ -172,7 +172,7 @@ class _UserProfileState extends State<UserProfile> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                    color: AppColors.whiteColor,
+                    color: Colours.whiteColor,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -183,7 +183,7 @@ class _UserProfileState extends State<UserProfile> {
                     Text(
                       "Account",
                       style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                       ),
@@ -214,7 +214,7 @@ class _UserProfileState extends State<UserProfile> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                    color: AppColors.whiteColor,
+                    color: Colours.whiteColor,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -225,7 +225,7 @@ class _UserProfileState extends State<UserProfile> {
                     Text(
                       "Notification",
                       style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                       ),
@@ -247,7 +247,7 @@ class _UserProfileState extends State<UserProfile> {
                               child: Text(
                                 "Pop-up Notification",
                                 style: TextStyle(
-                                  color: AppColors.blackColor,
+                                  color: Colours.blackColor,
                                   fontSize: 12,
                                 ),
                               ),
@@ -278,7 +278,7 @@ class _UserProfileState extends State<UserProfile> {
                                         child: DecoratedBox(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(
-                                                colors: AppColors.secondaryG),
+                                                colors: Colours.secondaryG),
                                             borderRadius:
                                                 const BorderRadius.all(
                                                     Radius.circular(30.0)),
@@ -293,7 +293,7 @@ class _UserProfileState extends State<UserProfile> {
                                   size: const Size(10, 10),
                                   child: DecoratedBox(
                                     decoration: BoxDecoration(
-                                      color: AppColors.whiteColor,
+                                      color: Colours.whiteColor,
                                       borderRadius: const BorderRadius.all(
                                           Radius.circular(50.0)),
                                       boxShadow: const [
@@ -320,7 +320,7 @@ class _UserProfileState extends State<UserProfile> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                    color: AppColors.whiteColor,
+                    color: Colours.whiteColor,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -331,7 +331,7 @@ class _UserProfileState extends State<UserProfile> {
                     Text(
                       "Other",
                       style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                       ),

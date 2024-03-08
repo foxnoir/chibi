@@ -1,5 +1,5 @@
 import 'package:chibi/global_widgets//round_gradient_button.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_widgets//round_button.dart';
@@ -12,7 +12,7 @@ class FinishWorkoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -34,7 +34,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "Congratulations, You Have Finished Your Workout",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: AppColors.blackColor,
+                  color: Colours.blackColor,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
@@ -46,7 +46,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "Exercises is king and nutrition is queen. Combine the two and you will have a kingdom",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                   fontSize: 12,
                 ),
               ),
@@ -57,7 +57,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 "-Jack Lalanne",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                   fontSize: 12,
                 ),
               ),

@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class SettingRow extends StatelessWidget {
@@ -30,7 +30,7 @@ class SettingRow extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyle(
-                  color: AppColors.blackColor,
+                  color: Colours.blackColor,
                   fontSize: 12,
                 ),
               ),

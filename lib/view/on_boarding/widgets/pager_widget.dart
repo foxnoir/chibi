@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/app_colors.dart';
+import '../../../core/theme/colours.dart';
 
 class PagerWidget extends StatelessWidget {
-
   final Map obj;
 
   const PagerWidget({Key? key, required this.obj}) : super(key: key);
@@ -18,28 +17,33 @@ class PagerWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(obj["image"],width: media.width,fit: BoxFit.fitWidth),
+          Image.asset(obj["image"], width: media.width, fit: BoxFit.fitWidth),
           Padding(
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 15),
-                  Text(obj["title"],style:const TextStyle(color: AppColors.blackColor,fontSize: 24,fontWeight: FontWeight.w700),),
+                  Text(
+                    obj["title"],
+                    style: const TextStyle(
+                        color: Colours.blackColor,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700),
+                  ),
                   const SizedBox(height: 15),
                   SizedBox(
                     width: 315,
                     child: Text(
                       obj["subtitle"],
                       style: const TextStyle(
-                        color: AppColors.grayColor,
+                        color: Colours.grayColor,
                         fontSize: 14,
                       ),
                     ),
                   )
                 ],
-              )
-          ),
+              )),
         ],
       ),
     );

@@ -1,5 +1,5 @@
-import 'package:chibi/routes.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/routes.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/dashboard/dashboard_screen.dart';
 import 'package:chibi/view/login/login_screen.dart';
 import 'package:chibi/view/profile/complete_profile_screen.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: routes,
       theme: ThemeData(
-          primaryColor: AppColors.primaryColor1,
+          primaryColor: Colours.primaryColor1,
           useMaterial3: true,
           fontFamily: "Poppins"),
       home: const DashboardScreen(),

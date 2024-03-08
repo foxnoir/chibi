@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../global_widgets//round_button.dart';
@@ -12,15 +12,15 @@ class WhatTrainRow extends StatelessWidget {
     return Container(
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         decoration: BoxDecoration(
-          color: AppColors.whiteColor,
+          color: Colours.whiteColor,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              AppColors.primaryColor2.withOpacity(0.3),
-              AppColors.primaryColor1.withOpacity(0.3)
+              Colours.primaryColor2.withOpacity(0.3),
+              Colours.primaryColor1.withOpacity(0.3)
             ]),
             borderRadius: BorderRadius.circular(15),
           ),
@@ -33,7 +33,7 @@ class WhatTrainRow extends StatelessWidget {
                     Text(
                       wObj["title"].toString(),
                       style: TextStyle(
-                          color: AppColors.blackColor,
+                          color: Colours.blackColor,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
@@ -43,7 +43,7 @@ class WhatTrainRow extends StatelessWidget {
                     Text(
                       "${wObj["exercises"].toString()} | ${wObj["time"].toString()}",
                       style: TextStyle(
-                        color: AppColors.grayColor,
+                        color: Colours.grayColor,
                         fontSize: 12,
                       ),
                     ),
@@ -68,7 +68,7 @@ class WhatTrainRow extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      color: AppColors.whiteColor.withOpacity(0.54),
+                      color: Colours.whiteColor.withOpacity(0.54),
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),

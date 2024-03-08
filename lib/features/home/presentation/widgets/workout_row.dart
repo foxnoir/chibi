@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart';
 
@@ -13,7 +13,7 @@ class WorkoutRow extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
         decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color: Colours.whiteColor,
             borderRadius: BorderRadius.circular(20),
             boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
         child: Row(
@@ -36,12 +36,12 @@ class WorkoutRow extends StatelessWidget {
               children: [
                 Text(
                   wObj["name"].toString(),
-                  style: TextStyle(color: AppColors.blackColor, fontSize: 12),
+                  style: TextStyle(color: Colours.blackColor, fontSize: 12),
                 ),
                 Text(
                   "${wObj["kcal"].toString()} Calories Burn | ${wObj["time"].toString()}minutes",
                   style: TextStyle(
-                    color: AppColors.grayColor,
+                    color: Colours.grayColor,
                     fontSize: 10,
                   ),
                 ),
@@ -59,7 +59,7 @@ class WorkoutRow extends StatelessWidget {
                   duration: const Duration(seconds: 3),
                   borderRadius: BorderRadius.circular(7.5),
                   gradientColor: LinearGradient(
-                      colors: AppColors.primaryG,
+                      colors: Colours.primaryG,
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight),
                 ),

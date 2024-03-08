@@ -1,5 +1,5 @@
 import 'package:chibi/global_widgets//round_gradient_button.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/workour_detail_view/widgets/step_detail_row.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
     var media = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -59,7 +59,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
             width: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: AppColors.lightGrayColor,
+                color: Colours.lightGrayColor,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
               "assets/icons/closed_btn.png",
@@ -78,7 +78,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -90,7 +90,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
           )
         ],
       ),
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
@@ -104,7 +104,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                     width: media.width,
                     height: media.width * 0.43,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: AppColors.primaryG),
+                        gradient: LinearGradient(colors: Colours.primaryG),
                         borderRadius: BorderRadius.circular(20)),
                     child: Image.asset(
                       "assets/images/video_temp.png",
@@ -117,7 +117,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                     width: media.width,
                     height: media.width * 0.43,
                     decoration: BoxDecoration(
-                        color: AppColors.blackColor.withOpacity(0.2),
+                        color: Colours.blackColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20)),
                   ),
                   IconButton(
@@ -136,7 +136,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               Text(
                 widget.eObj["title"].toString(),
                 style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
@@ -146,7 +146,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               Text(
                 "Easy | 390 Calories Burn",
                 style: TextStyle(
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                   fontSize: 12,
                 ),
               ),
@@ -156,7 +156,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               Text(
                 "Descriptions",
                 style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
@@ -166,12 +166,12 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               ReadMoreText(
                 'A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide',
                 trimLines: 4,
-                colorClickableText: AppColors.blackColor,
+                colorClickableText: Colours.blackColor,
                 trimMode: TrimMode.Line,
                 trimCollapsedText: ' Read More ...',
                 trimExpandedText: ' Read Less',
                 style: TextStyle(
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                   fontSize: 12,
                 ),
                 moreStyle:
@@ -186,7 +186,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   Text(
                     "How To Do It",
                     style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w700),
                   ),
@@ -194,8 +194,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                     onPressed: () {},
                     child: Text(
                       "${stepArr.length} Sets",
-                      style:
-                          TextStyle(color: AppColors.grayColor, fontSize: 12),
+                      style: TextStyle(color: Colours.grayColor, fontSize: 12),
                     ),
                   )
                 ],
@@ -216,7 +215,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               Text(
                 "Custom Repetitions",
                 style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
@@ -230,10 +229,10 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                     decoration: BoxDecoration(
                       border: Border(
                         top: BorderSide(
-                            color: AppColors.grayColor.withOpacity(0.2),
+                            color: Colours.grayColor.withOpacity(0.2),
                             width: 1),
                         bottom: BorderSide(
-                            color: AppColors.grayColor.withOpacity(0.2),
+                            color: Colours.grayColor.withOpacity(0.2),
                             width: 1),
                       ),
                     ),
@@ -252,20 +251,20 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                         ),
                         Text(
                           " ${(index + 1) * 15} Calories Burn",
-                          style: TextStyle(
-                              color: AppColors.grayColor, fontSize: 10),
+                          style:
+                              TextStyle(color: Colours.grayColor, fontSize: 10),
                         ),
                         Text(
                           " ${index + 1} ",
                           style: TextStyle(
-                              color: AppColors.grayColor,
+                              color: Colours.grayColor,
                               fontSize: 24,
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
                           " times",
-                          style: TextStyle(
-                              color: AppColors.grayColor, fontSize: 16),
+                          style:
+                              TextStyle(color: Colours.grayColor, fontSize: 16),
                         )
                       ],
                     );

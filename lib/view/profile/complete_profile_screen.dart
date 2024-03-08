@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/your_goal/your_goal_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class CompleteProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -28,7 +28,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 Text(
                   "Let’s complete your profile",
                   style: TextStyle(
-                      color: AppColors.blackColor,
+                      color: Colours.blackColor,
                       fontSize: 20,
                       fontWeight: FontWeight.w700),
                 ),
@@ -36,7 +36,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 Text(
                   "It will help us to know more about you!",
                   style: TextStyle(
-                    color: AppColors.grayColor,
+                    color: Colours.grayColor,
                     fontSize: 12,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w400,
@@ -45,7 +45,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 SizedBox(height: 25),
                 Container(
                   decoration: BoxDecoration(
-                      color: AppColors.lightGrayColor,
+                      color: Colours.lightGrayColor,
                       borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     children: [
@@ -59,7 +59,7 @@ class CompleteProfileScreen extends StatelessWidget {
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                           )),
                       Expanded(
                           child: DropdownButtonHideUnderline(
@@ -70,15 +70,14 @@ class CompleteProfileScreen extends StatelessWidget {
                                   child: Text(
                                     name,
                                     style: const TextStyle(
-                                        color: AppColors.grayColor,
-                                        fontSize: 14),
+                                        color: Colours.grayColor, fontSize: 14),
                                   )))
                               .toList(),
                           onChanged: (value) {},
                           isExpanded: true,
                           hint: Text("Choose Gender",
                               style: const TextStyle(
-                                  color: AppColors.grayColor, fontSize: 12)),
+                                  color: Colours.grayColor, fontSize: 12)),
                         ),
                       )),
                       SizedBox(

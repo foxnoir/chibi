@@ -1,6 +1,6 @@
 import 'package:chibi/global_widgets//round_button.dart';
 import 'package:chibi/global_widgets//round_gradient_button.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class CameraScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _CameraScreenState extends State<CameraScreen> {
     var media = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         centerTitle: true,
         elevation: 0,
         leadingWidth: 0,
@@ -45,7 +45,7 @@ class _CameraScreenState extends State<CameraScreen> {
         title: Text(
           "Progress Photo",
           style: TextStyle(
-              color: AppColors.blackColor,
+              color: Colours.blackColor,
               fontSize: 16,
               fontWeight: FontWeight.w700),
         ),
@@ -58,7 +58,7 @@ class _CameraScreenState extends State<CameraScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -70,7 +70,7 @@ class _CameraScreenState extends State<CameraScreen> {
           )
         ],
       ),
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +91,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: AppColors.whiteColor,
+                              color: Colours.whiteColor,
                               borderRadius: BorderRadius.circular(30)),
                           width: 50,
                           height: 50,
@@ -119,7 +119,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 Text(
                                   "Next Photos Fall On July 08",
                                   style: TextStyle(
-                                      color: AppColors.blackColor,
+                                      color: Colours.blackColor,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w700),
                                 ),
@@ -132,7 +132,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 onPressed: () {},
                                 icon: Icon(
                                   Icons.close,
-                                  color: AppColors.grayColor,
+                                  color: Colours.grayColor,
                                   size: 15,
                                 )))
                       ],
@@ -148,8 +148,8 @@ class _CameraScreenState extends State<CameraScreen> {
                     height: media.width * 0.4,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
-                          AppColors.primaryColor2.withOpacity(0.4),
-                          AppColors.primaryColor1.withOpacity(0.4)
+                          Colours.primaryColor2.withOpacity(0.4),
+                          Colours.primaryColor1.withOpacity(0.4)
                         ]),
                         borderRadius: BorderRadius.circular(20)),
                     child: Row(
@@ -164,7 +164,7 @@ class _CameraScreenState extends State<CameraScreen> {
                               Text(
                                 "Track Your Progress Each\nMonth With Photo",
                                 style: TextStyle(
-                                  color: AppColors.blackColor,
+                                  color: Colours.blackColor,
                                   fontSize: 12,
                                 ),
                               ),
@@ -192,7 +192,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   decoration: BoxDecoration(
-                    color: AppColors.primaryColor2.withOpacity(0.3),
+                    color: Colours.primaryColor2.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Row(
@@ -201,7 +201,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       Text(
                         "Compare my Photo",
                         style: TextStyle(
-                            color: AppColors.blackColor,
+                            color: Colours.blackColor,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
                       ),
@@ -233,7 +233,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       Text(
                         "Gallery",
                         style: TextStyle(
-                            color: AppColors.blackColor,
+                            color: Colours.blackColor,
                             fontSize: 16,
                             fontWeight: FontWeight.w700),
                       ),
@@ -242,7 +242,7 @@ class _CameraScreenState extends State<CameraScreen> {
                           child: Text(
                             "See more",
                             style: TextStyle(
-                                color: AppColors.grayColor, fontSize: 12),
+                                color: Colours.grayColor, fontSize: 12),
                           ))
                     ],
                   ),
@@ -264,7 +264,7 @@ class _CameraScreenState extends State<CameraScreen> {
                             child: Text(
                               pObj["time"].toString(),
                               style: TextStyle(
-                                  color: AppColors.grayColor, fontSize: 12),
+                                  color: Colours.grayColor, fontSize: 12),
                             ),
                           ),
                           SizedBox(
@@ -279,7 +279,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                       const EdgeInsets.symmetric(horizontal: 4),
                                   width: 100,
                                   decoration: BoxDecoration(
-                                    color: AppColors.lightGrayColor,
+                                    color: Colours.lightGrayColor,
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: ClipRRect(
@@ -321,7 +321,7 @@ class _CameraScreenState extends State<CameraScreen> {
           width: 55,
           height: 55,
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: AppColors.secondaryG),
+              gradient: LinearGradient(colors: Colours.secondaryG),
               borderRadius: BorderRadius.circular(27.5),
               boxShadow: const [
                 BoxShadow(
@@ -331,7 +331,7 @@ class _CameraScreenState extends State<CameraScreen> {
           child: Icon(
             Icons.photo_camera,
             size: 20,
-            color: AppColors.whiteColor,
+            color: Colours.whiteColor,
           ),
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 
 class RoundTextField extends StatelessWidget {
   final TextEditingController? textEditingController;
@@ -24,7 +24,7 @@ class RoundTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColors.lightGrayColor,
+          color: Colours.lightGrayColor,
           borderRadius: BorderRadius.circular(15)),
       child: TextField(
         controller: textEditingController,
@@ -45,10 +45,10 @@ class RoundTextField extends StatelessWidget {
                   width: 20,
                   height: 20,
                   fit: BoxFit.contain,
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                 )),
             suffixIcon: rightIcon,
-            hintStyle: TextStyle(fontSize: 12, color: AppColors.grayColor)),
+            hintStyle: TextStyle(fontSize: 12, color: Colours.grayColor)),
       ),
     );
   }

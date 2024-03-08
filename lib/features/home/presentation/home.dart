@@ -1,5 +1,5 @@
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/activity_tracker/activity_tracker_screen.dart';
 import 'package:chibi/view/finish_workout/finish_workout_screen.dart';
 import 'package:chibi/features/home/presentation/widgets/workout_row.dart';
@@ -74,8 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
         gradient: LinearGradient(colors: [
-          AppColors.primaryColor2.withOpacity(0.5),
-          AppColors.primaryColor1.withOpacity(0.5),
+          Colours.primaryColor2.withOpacity(0.5),
+          Colours.primaryColor1.withOpacity(0.5),
         ]),
         barWidth: 4,
         isStrokeCapRound: true,
@@ -95,8 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
         isCurved: true,
         gradient: LinearGradient(colors: [
-          AppColors.secondaryColor2.withOpacity(0.5),
-          AppColors.secondaryColor1.withOpacity(0.5),
+          Colours.secondaryColor2.withOpacity(0.5),
+          Colours.secondaryColor1.withOpacity(0.5),
         ]),
         barWidth: 2,
         isStrokeCapRound: true,
@@ -152,13 +152,13 @@ class _HomeScreenState extends State<HomeScreen> {
         belowBarData: BarAreaData(
           show: true,
           gradient: LinearGradient(colors: [
-            AppColors.primaryColor2.withOpacity(0.4),
-            AppColors.primaryColor1.withOpacity(0.1),
+            Colours.primaryColor2.withOpacity(0.4),
+            Colours.primaryColor1.withOpacity(0.1),
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
         dotData: FlDotData(show: false),
         gradient: LinearGradient(
-          colors: AppColors.primaryG,
+          colors: Colours.primaryG,
         ),
       ),
     ];
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final tooltipsOnBar = lineBarsData[0];
 
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -183,14 +183,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           "Welcome Back,",
                           style: TextStyle(
-                            color: AppColors.midGrayColor,
+                            color: Colours.midGrayColor,
                             fontSize: 12,
                           ),
                         ),
                         Text(
                           "Stefani Wong",
                           style: TextStyle(
-                            color: AppColors.blackColor,
+                            color: Colours.blackColor,
                             fontSize: 20,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w700,
@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   height: media.width * 0.4,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: AppColors.primaryG),
+                      gradient: LinearGradient(colors: Colours.primaryG),
                       borderRadius: BorderRadius.circular(media.width * 0.065)),
                   child: Stack(
                     alignment: Alignment.center,
@@ -240,15 +240,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "BMI (Body Mass Index)",
                                   style: TextStyle(
-                                      color: AppColors.whiteColor,
+                                      color: Colours.whiteColor,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "You have a normal weight",
                                   style: TextStyle(
-                                    color:
-                                        AppColors.whiteColor.withOpacity(0.7),
+                                    color: Colours.whiteColor.withOpacity(0.7),
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -294,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                      color: AppColors.primaryColor1.withOpacity(0.3),
+                      color: Colours.primaryColor1.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -302,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         "Today Target",
                         style: TextStyle(
-                          color: AppColors.blackColor,
+                          color: Colours.blackColor,
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                         ),
@@ -326,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   "Activity Status",
                   style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
@@ -338,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: media.width * 0.4,
                     width: media.width,
                     decoration: BoxDecoration(
-                        color: AppColors.primaryColor2.withOpacity(0.3),
+                        color: Colours.primaryColor2.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(25)),
                     child: Stack(
                       alignment: Alignment.topLeft,
@@ -353,7 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Heart Rate",
                                 style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500),
                               ),
@@ -362,7 +361,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 blendMode: BlendMode.srcIn,
                                 shaderCallback: (bounds) {
                                   return LinearGradient(
-                                          colors: AppColors.primaryG,
+                                          colors: Colours.primaryG,
                                           begin: Alignment.centerLeft,
                                           end: Alignment.centerRight)
                                       .createShader(Rect.fromLTRB(
@@ -371,7 +370,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "78 BPM",
                                   style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -441,14 +440,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         radius: 3,
                                         color: Colors.white,
                                         strokeWidth: 2,
-                                        strokeColor: AppColors.secondaryColor2,
+                                        strokeColor: Colours.secondaryColor2,
                                       ),
                                     ),
                                   );
                                 }).toList();
                               },
                               touchTooltipData: LineTouchTooltipData(
-                                tooltipBgColor: AppColors.secondaryColor1,
+                                tooltipBgColor: Colours.secondaryColor1,
                                 tooltipRoundedRadius: 20,
                                 getTooltipItems:
                                     (List<LineBarSpot> lineBarsSpot) {
@@ -491,7 +490,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 25, horizontal: 10),
                       decoration: BoxDecoration(
-                          color: AppColors.whiteColor,
+                          color: Colours.whiteColor,
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -508,7 +507,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           duration: const Duration(seconds: 3),
                           borderRadius: BorderRadius.circular(30),
                           gradientColor: LinearGradient(
-                              colors: AppColors.primaryG,
+                              colors: Colours.primaryG,
                               begin: Alignment.bottomCenter,
                               end: Alignment.topCenter),
                         ),
@@ -522,7 +521,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Water Intake",
                               style: TextStyle(
-                                  color: AppColors.blackColor,
+                                  color: Colours.blackColor,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -531,7 +530,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               blendMode: BlendMode.srcIn,
                               shaderCallback: (bounds) {
                                 return LinearGradient(
-                                        colors: AppColors.primaryG,
+                                        colors: Colours.primaryG,
                                         begin: Alignment.centerLeft,
                                         end: Alignment.centerRight)
                                     .createShader(Rect.fromLTRB(
@@ -540,7 +539,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Text(
                                 "4 Liters",
                                 style: TextStyle(
-                                  color: AppColors.blackColor,
+                                  color: Colours.blackColor,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -550,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Real time updates",
                               style: TextStyle(
-                                  color: AppColors.blackColor,
+                                  color: Colours.blackColor,
                                   fontSize: 10,
                                   fontWeight: FontWeight.w400),
                             ),
@@ -573,7 +572,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             width: 10,
                                             height: 10,
                                             decoration: BoxDecoration(
-                                                color: AppColors.secondaryColor1
+                                                color: Colours.secondaryColor1
                                                     .withOpacity(0.5),
                                                 borderRadius:
                                                     BorderRadius.circular(5)),
@@ -583,8 +582,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               width: 0,
                                               height: media.width * 0.078,
                                               axis: Axis.vertical,
-                                              dashColor: AppColors
-                                                  .secondaryColor1
+                                              dashColor: Colours.secondaryColor1
                                                   .withOpacity(0.5),
                                             )
                                         ]),
@@ -599,7 +597,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         Text(
                                           obj["title"].toString(),
                                           style: TextStyle(
-                                              color: AppColors.blackColor,
+                                              color: Colours.blackColor,
                                               fontSize: 11,
                                               fontWeight: FontWeight.w400),
                                         ),
@@ -608,8 +606,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           blendMode: BlendMode.srcIn,
                                           shaderCallback: (bounds) {
                                             return LinearGradient(
-                                                    colors:
-                                                        AppColors.secondaryG,
+                                                    colors: Colours.secondaryG,
                                                     begin: Alignment.centerLeft,
                                                     end: Alignment.centerRight)
                                                 .createShader(Rect.fromLTRB(
@@ -621,7 +618,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           child: Text(
                                             obj["subtitle"].toString(),
                                             style: TextStyle(
-                                              color: AppColors.blackColor,
+                                              color: Colours.blackColor,
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -649,7 +646,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: AppColors.whiteColor,
+                              color: Colours.whiteColor,
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -660,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Sleep",
                                 style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -669,7 +666,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 blendMode: BlendMode.srcIn,
                                 shaderCallback: (bounds) {
                                   return LinearGradient(
-                                          colors: AppColors.primaryG,
+                                          colors: Colours.primaryG,
                                           begin: Alignment.centerLeft,
                                           end: Alignment.centerRight)
                                       .createShader(Rect.fromLTRB(
@@ -678,7 +675,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "8h 20m",
                                   style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -700,7 +697,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: AppColors.whiteColor,
+                              color: Colours.whiteColor,
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
@@ -711,7 +708,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "Calories",
                                 style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -720,7 +717,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 blendMode: BlendMode.srcIn,
                                 shaderCallback: (bounds) {
                                   return LinearGradient(
-                                          colors: AppColors.primaryG,
+                                          colors: Colours.primaryG,
                                           begin: Alignment.centerLeft,
                                           end: Alignment.centerRight)
                                       .createShader(Rect.fromLTRB(
@@ -729,7 +726,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "760 kCal",
                                   style: TextStyle(
-                                    color: AppColors.blackColor,
+                                    color: Colours.blackColor,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -750,13 +747,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                         alignment: Alignment.center,
                                         decoration: BoxDecoration(
                                             gradient: LinearGradient(
-                                                colors: AppColors.primaryG),
+                                                colors: Colours.primaryG),
                                             borderRadius: BorderRadius.circular(
                                                 media.width * 0.075)),
                                         child: Text("230kCal\nleft",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                              color: AppColors.whiteColor,
+                                              color: Colours.whiteColor,
                                               fontSize: 10,
                                               fontWeight: FontWeight.w400,
                                             )),
@@ -765,7 +762,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         startAngle: -180,
                                         progressStrokeWidth: 10,
                                         backStrokeWidth: 10,
-                                        progressColors: AppColors.primaryG,
+                                        progressColors: Colours.primaryG,
                                         backColor: Colors.grey.shade100,
                                         valueNotifier: ValueNotifier(60),
                                       )
@@ -787,7 +784,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       "Workout Progress",
                       style: TextStyle(
-                        color: AppColors.blackColor,
+                        color: Colours.blackColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
@@ -796,7 +793,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 35,
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: AppColors.primaryG),
+                          gradient: LinearGradient(colors: Colours.primaryG),
                           borderRadius: BorderRadius.circular(15)),
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton(
@@ -806,17 +803,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Text(
                                     name,
                                     style: const TextStyle(
-                                        color: AppColors.blackColor,
+                                        color: Colours.blackColor,
                                         fontSize: 14),
                                   )))
                               .toList(),
                           onChanged: (value) {},
                           icon: Icon(Icons.expand_more,
-                              color: AppColors.whiteColor),
+                              color: Colours.whiteColor),
                           hint: Text("Weekly",
                               textAlign: TextAlign.center,
                               style: const TextStyle(
-                                  color: AppColors.whiteColor, fontSize: 12)),
+                                  color: Colours.whiteColor, fontSize: 12)),
                         ),
                       ),
                     )
@@ -880,14 +877,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     radius: 3,
                                     color: Colors.white,
                                     strokeWidth: 3,
-                                    strokeColor: AppColors.secondaryColor1,
+                                    strokeColor: Colours.secondaryColor1,
                                   ),
                                 ),
                               );
                             }).toList();
                           },
                           touchTooltipData: LineTouchTooltipData(
-                            tooltipBgColor: AppColors.secondaryColor1,
+                            tooltipBgColor: Colours.secondaryColor1,
                             tooltipRoundedRadius: 20,
                             getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                               return lineBarsSpot.map((lineBarSpot) {
@@ -923,7 +920,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           drawVerticalLine: false,
                           getDrawingHorizontalLine: (value) {
                             return FlLine(
-                              color: AppColors.grayColor.withOpacity(0.15),
+                              color: Colours.grayColor.withOpacity(0.15),
                               strokeWidth: 2,
                             );
                           },
@@ -945,7 +942,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       "Latest Workout",
                       style: TextStyle(
-                          color: AppColors.blackColor,
+                          color: Colours.blackColor,
                           fontSize: 16,
                           fontWeight: FontWeight.w700),
                     ),
@@ -954,7 +951,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         "See More",
                         style: TextStyle(
-                            color: AppColors.grayColor,
+                            color: Colours.grayColor,
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
@@ -990,8 +987,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return List.generate(
       2,
       (i) {
-        const color0 = AppColors.secondaryColor2;
-        const color1 = AppColors.whiteColor;
+        const color0 = Colours.secondaryColor2;
+        const color1 = Colours.whiteColor;
 
         switch (i) {
           case 0:
@@ -1004,7 +1001,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 badgeWidget: Text(
                   "20.1",
                   style: TextStyle(
-                      color: AppColors.whiteColor,
+                      color: Colours.whiteColor,
                       fontWeight: FontWeight.w700,
                       fontSize: 12),
                 ));
@@ -1057,7 +1054,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Text(text,
         style: TextStyle(
-          color: AppColors.grayColor,
+          color: Colours.grayColor,
           fontSize: 12,
         ),
         textAlign: TextAlign.center);
@@ -1072,7 +1069,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     var style = TextStyle(
-      color: AppColors.grayColor,
+      color: Colours.grayColor,
       fontSize: 12,
     );
     Widget text;

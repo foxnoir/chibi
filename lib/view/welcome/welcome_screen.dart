@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
@@ -27,7 +27,7 @@ class WelcomeScreen extends StatelessWidget {
               const Text(
                 "Welcome, Stefani",
                 style: TextStyle(
-                    color: AppColors.blackColor,
+                    color: Colours.blackColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w700),
               ),
@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                 "You are all set now, let’s reach your\ngoals together with us",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: AppColors.grayColor,
+                  color: Colours.grayColor,
                   fontSize: 12,
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w400,

@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class TitleSubtitleCell extends StatelessWidget {
@@ -13,7 +13,7 @@ class TitleSubtitleCell extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       decoration: BoxDecoration(
-          color: AppColors.whiteColor,
+          color: Colours.whiteColor,
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
       child: Column(
@@ -22,7 +22,7 @@ class TitleSubtitleCell extends StatelessWidget {
             blendMode: BlendMode.srcIn,
             shaderCallback: (bounds) {
               return LinearGradient(
-                      colors: AppColors.primaryG,
+                      colors: Colours.primaryG,
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight)
                   .createShader(
@@ -31,7 +31,7 @@ class TitleSubtitleCell extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  color: AppColors.whiteColor.withOpacity(0.7),
+                  color: Colours.whiteColor.withOpacity(0.7),
                   fontWeight: FontWeight.w500,
                   fontSize: 14),
             ),
@@ -39,7 +39,7 @@ class TitleSubtitleCell extends StatelessWidget {
           Text(
             subtitle,
             style: TextStyle(
-              color: AppColors.grayColor,
+              color: Colours.grayColor,
               fontSize: 12,
             ),
           ),

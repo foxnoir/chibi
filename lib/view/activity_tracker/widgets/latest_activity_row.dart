@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class LatestActivityRow extends StatelessWidget {
@@ -30,14 +30,14 @@ class LatestActivityRow extends StatelessWidget {
                 Text(
                   wObj["title"].toString(),
                   style: TextStyle(
-                      color: AppColors.blackColor,
+                      color: Colours.blackColor,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   wObj["time"].toString(),
                   style: TextStyle(
-                    color: AppColors.grayColor,
+                    color: Colours.grayColor,
                     fontSize: 10,
                   ),
                 ),

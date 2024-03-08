@@ -15,7 +15,7 @@
 <!-- PROJECT desc -->
   <p align="left">
       Because my gym's app sucks.
-      The code bases on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>Explore the project »</strong></a> 
+      The code bases on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
   </p>
 
   <!-- PROJECT link -->

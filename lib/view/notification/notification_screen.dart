@@ -1,4 +1,4 @@
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/notification/widgets/notification_row.dart';
 import 'package:flutter/material.dart';
 
@@ -48,9 +48,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         appBar: AppBar(
-          backgroundColor: AppColors.whiteColor,
+          backgroundColor: Colours.whiteColor,
           centerTitle: true,
           elevation: 0,
           leading: InkWell(
@@ -63,7 +63,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/back_icon.png",
@@ -76,7 +76,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           title: const Text(
             "Notification",
             style: TextStyle(
-                color: AppColors.blackColor,
+                color: Colours.blackColor,
                 fontSize: 16,
                 fontWeight: FontWeight.w700),
           ),
@@ -89,7 +89,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 width: 40,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    color: AppColors.lightGrayColor,
+                    color: Colours.lightGrayColor,
                     borderRadius: BorderRadius.circular(10)),
                 child: Image.asset(
                   "assets/icons/more_icon.png",
@@ -109,7 +109,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             }),
             separatorBuilder: (context, index) {
               return Divider(
-                color: AppColors.grayColor.withOpacity(0.5),
+                color: Colours.grayColor.withOpacity(0.5),
                 height: 1,
               );
             },

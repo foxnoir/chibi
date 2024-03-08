@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 
 class RoundGradientButton extends StatelessWidget {
   final String title;
@@ -16,7 +16,7 @@ class RoundGradientButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: AppColors.primaryG,
+                colors: Colours.primaryG,
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight),
             borderRadius: BorderRadius.circular(25),
@@ -30,12 +30,12 @@ class RoundGradientButton extends StatelessWidget {
           onPressed: onPressed,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-          textColor: AppColors.primaryColor1,
+          textColor: Colours.primaryColor1,
           child: Text(
             title,
             style: TextStyle(
               fontSize: 16,
-              color: AppColors.whiteColor,
+              color: Colours.whiteColor,
               fontFamily: "Poppins",
               fontWeight: FontWeight.w700,
             ),

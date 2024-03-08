@@ -1,10 +1,10 @@
 import 'package:chibi/global_widgets//round_gradient_button.dart';
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_widgets//round_button.dart';
-import '../../utils/common.dart';
+import '../../core/common.dart';
 import '../workour_detail_view/widgets/icon_title_next_row.dart';
 
 class AddScheduleView extends StatefulWidget {
@@ -22,7 +22,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colours.whiteColor,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -35,7 +35,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             width: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: AppColors.lightGrayColor,
+                color: Colours.lightGrayColor,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
               "assets/icons/closed_btn.png",
@@ -48,7 +48,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
         title: Text(
           "Add Schedule",
           style: TextStyle(
-              color: AppColors.blackColor,
+              color: Colours.blackColor,
               fontSize: 16,
               fontWeight: FontWeight.w700),
         ),
@@ -61,7 +61,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               width: 40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: AppColors.lightGrayColor,
+                  color: Colours.lightGrayColor,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
                 "assets/icons/more_icon.png",
@@ -73,7 +73,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           )
         ],
       ),
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -89,7 +89,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               ),
               Text(
                 dateToString(widget.date, formatStr: "E, dd MMMM yyyy"),
-                style: TextStyle(color: AppColors.grayColor, fontSize: 14),
+                style: TextStyle(color: Colours.grayColor, fontSize: 14),
               ),
             ],
           ),
@@ -99,7 +99,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Text(
             "Time",
             style: TextStyle(
-                color: AppColors.blackColor,
+                color: Colours.blackColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w500),
           ),
@@ -119,7 +119,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Text(
             "Details Workout",
             style: TextStyle(
-                color: AppColors.blackColor,
+                color: Colours.blackColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w500),
           ),
@@ -130,7 +130,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               icon: "assets/icons/choose_workout.png",
               title: "Choose Workout",
               time: "Upperbody",
-              color: AppColors.lightGrayColor,
+              color: Colours.lightGrayColor,
               onPressed: () {}),
           const SizedBox(
             height: 10,
@@ -139,7 +139,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               icon: "assets/icons/difficulity_icon.png",
               title: "Difficulity",
               time: "Beginner",
-              color: AppColors.lightGrayColor,
+              color: Colours.lightGrayColor,
               onPressed: () {}),
           const SizedBox(
             height: 10,
@@ -148,7 +148,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               icon: "assets/icons/repetitions.png",
               title: "Custom Repetitions",
               time: "",
-              color: AppColors.lightGrayColor,
+              color: Colours.lightGrayColor,
               onPressed: () {}),
           const SizedBox(
             height: 10,
@@ -157,7 +157,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               icon: "assets/icons/repetitions.png",
               title: "Custom Weights",
               time: "",
-              color: AppColors.lightGrayColor,
+              color: Colours.lightGrayColor,
               onPressed: () {}),
           Spacer(),
           RoundGradientButton(title: "Save", onPressed: () {}),

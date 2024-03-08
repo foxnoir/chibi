@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:chibi/utils/app_colors.dart';
+import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/view/activity/activity_screen.dart';
 import 'package:chibi/view/camera/camera_screen.dart';
 import 'package:chibi/view/profile/user_profile.dart';
@@ -30,7 +30,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colours.whiteColor,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: InkWell(
         onTap: () {},
@@ -41,13 +41,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
             width: 65,
             height: 65,
             decoration: BoxDecoration(
-                gradient: LinearGradient(colors: AppColors.primaryG),
+                gradient: LinearGradient(colors: Colours.primaryG),
                 borderRadius: BorderRadius.circular(35),
                 boxShadow: const [
                   BoxShadow(color: Colors.black12, blurRadius: 2)
                 ]),
             child: const Icon(Icons.search_sharp,
-                color: AppColors.whiteColor, size: 32),
+                color: Colours.whiteColor, size: 32),
           ),
         ),
       ),
@@ -62,7 +62,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: Container(
           height: Platform.isIOS ? 70 : 65,
           decoration: const BoxDecoration(
-              color: AppColors.whiteColor,
+              color: Colours.whiteColor,
               boxShadow: [
                 BoxShadow(
                     color: Colors.black12, blurRadius: 2, offset: Offset(0, -2))
@@ -157,7 +157,7 @@ class TabButton extends StatelessWidget {
               width: 4,
               height: 4,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: AppColors.secondaryG),
+                  gradient: LinearGradient(colors: Colours.secondaryG),
                   borderRadius: BorderRadius.circular(2)),
             ),
           )
