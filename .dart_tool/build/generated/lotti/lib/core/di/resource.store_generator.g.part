@@ -1,0 +1,114 @@
+// **************************************************************************
+// StoreGenerator
+// **************************************************************************
+
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+
+mixin _$Resource<T> on ResourceBase<T>, Store {
+  Computed<T?>? _$dataComputed;
+
+  @override
+  T? get data => (_$dataComputed ??=
+          Computed<T?>(() => super.data, name: 'ResourceBase.data'))
+      .value;
+  Computed<Object?>? _$errorComputed;
+
+  @override
+  Object? get error => (_$errorComputed ??=
+          Computed<Object?>(() => super.error, name: 'ResourceBase.error'))
+      .value;
+  Computed<bool>? _$isLoadingComputed;
+
+  @override
+  bool get isLoading => (_$isLoadingComputed ??=
+          Computed<bool>(() => super.isLoading, name: 'ResourceBase.isLoading'))
+      .value;
+  Computed<bool>? _$hasDataComputed;
+
+  @override
+  bool get hasData => (_$hasDataComputed ??=
+          Computed<bool>(() => super.hasData, name: 'ResourceBase.hasData'))
+      .value;
+
+  late final _$_resultAtom =
+      Atom(name: 'ResourceBase._result', context: context);
+
+  @override
+  T? get _result {
+    _$_resultAtom.reportRead();
+    return super._result;
+  }
+
+  @override
+  set _result(T? value) {
+    _$_resultAtom.reportWrite(value, super._result, () {
+      super._result = value;
+    });
+  }
+
+  late final _$_isLoadingAtom =
+      Atom(name: 'ResourceBase._isLoading', context: context);
+
+  @override
+  bool get _isLoading {
+    _$_isLoadingAtom.reportRead();
+    return super._isLoading;
+  }
+
+  @override
+  set _isLoading(bool value) {
+    _$_isLoadingAtom.reportWrite(value, super._isLoading, () {
+      super._isLoading = value;
+    });
+  }
+
+  late final _$_errorAtom = Atom(name: 'ResourceBase._error', context: context);
+
+  @override
+  Object? get _error {
+    _$_errorAtom.reportRead();
+    return super._error;
+  }
+
+  @override
+  set _error(Object? value) {
+    _$_errorAtom.reportWrite(value, super._error, () {
+      super._error = value;
+    });
+  }
+
+  late final _$ResourceBaseActionController =
+      ActionController(name: 'ResourceBase', context: context);
+
+  @override
+  void _start() {
+    final _$actionInfo =
+        _$ResourceBaseActionController.startAction(name: 'ResourceBase._start');
+    try {
+      return super._start();
+    } finally {
+      _$ResourceBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void _end({Object? error, T? result}) {
+    final _$actionInfo =
+        _$ResourceBaseActionController.startAction(name: 'ResourceBase._end');
+    try {
+      return super._end(error: error, result: result);
+    } finally {
+      _$ResourceBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  String toString() {
+    return '''
+data: ${data},
+error: ${error},
+isLoading: ${isLoading},
+hasData: ${hasData}
+    ''';
+  }
+}
