@@ -10,25 +10,26 @@
 <br />
 <div align="center">
   <img src="images/logo.png" alt="Logo" width="80" height="80">
-  <h1 align="center">Basic (Really basic) Workout tracker</h1>
+  <h1 align="center">Trainee Messenger</h1>
 
 <!-- PROJECT desc -->
   <p align="left">
-      Because my gym's app sucks.
-      The code bases on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
+  :pig2:
+      This is a replica of a messenger for practice purposes and to get a better understanding of the matter. 
+      It was one of my first Flutter projects and the focus here was more on the functionality of communication between different devices and chatRooms. As a result, many of the approaches that Flutter offers were not applied here or were neglected. 
   </p>
 
   <!-- PROJECT link -->
   <p align="left">
-    <a href="https://github.com/foxnoir/chibi"><strong>Explore the project »</strong></a>
+    <a href="https://github.com/foxnoir/messenger"><strong>Explore the project »</strong></a>
     <br/>
   </p>
   </p>
     <br/>
-  </p>****
+  </p>
 
   <p align="left">
-  Chibi supports only (iOS) mobile, clone the appropriate branches mentioned below:
+  Trainnee Messenger supports only (iOS) mobile, clone the appropriate branches mentioned below:
   </p>
 
 <!-- Get started link link -->
@@ -83,13 +84,31 @@
       <ul>
         <li><a href="#folder-structure">Folder Structure</a></li>
       </ul>
+        <ul>
+        <li><a href="#default-feature-first-structure"> Default Feature-first structure</a></li>
+      </ul>
       <ul>
-        <li><a href="#general-feature-structure">General feature structure</a></li>
+        <li><a href="#Constants">Constants</a></li>
+      </ul>
+      <ul>
+        <li><a href="#Data">Data</a></li>
+      </ul>
+      <ul>
+        <li><a href="#Widgets">Widgets</a></li>
+      </ul>
+      <ul>
+        <li><a href="#Routes">Routes</a></li>
+      </ul>
+      <ul>
+        <li><a href="#Main">Main</a></li>
       </ul>
     </li>
-    <li><a href="#images">Images</a></li>
-    <li><a href="#changelog">Changelog</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
+    <li><a href="#References-to-the-images-used">References to the images used</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -114,20 +133,20 @@
 
 ### Final Layout
 
-<!-- <img src="images/finalLayout.png" alt="layout" width="100%" height="100%">
+<img src="images/finalLayout.png" alt="layout" width="100%" height="100%">
 
   <p align="left">
     <a href="#References-to-the-images-used"><strong>References to the images used »</strong></a>
     <br/>
-  </p> -->
+  </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## App Demonstration
 
-<!-- > :warning: **(german only)**
+> :warning: **(german only)**
 
-https://user-images.githubusercontent.com/95978076/200083313-cf531a3b-6c2c-4495-9085-6212818a285b.mp4 -->
+https://user-images.githubusercontent.com/95978076/200083313-cf531a3b-6c2c-4495-9085-6212818a285b.mp4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,14 +160,14 @@ https://user-images.githubusercontent.com/95978076/200083313-cf531a3b-6c2c-4495-
 
 ### Libraries And Tools
 
-<!-- - [UserModelentification](https://firebase.google.com/docs/auth)
+- [UserModelentification](https://firebase.google.com/docs/auth)
 - [Cloud FirebaseFirestore](https://firebase.google.com/docs/FirebaseFirestore)
 - [Cloud Storage Firebase](https://firebase.google.com/docs/storage)
 - [Routing](https://api.flutter.dev/flutter/widgets/RouteObserver-class.html)
 - [Theme](https://docs.flutter.dev/cookbook/design/themes) (basic)
 - [Provider](https://github.com/rrousselGit/provider) (state management)
 - [Validation](https://github.com/dart-league/validators)
-- [Dark Theme Support](https://medium.flutterdevs.com/implement-dark-mode-in-flutter-using-provider-158925112bf9) (basic) -->
+- [Dark Theme Support](https://medium.flutterdevs.com/implement-dark-mode-in-flutter-using-provider-158925112bf9) (basic)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,11 +176,11 @@ https://user-images.githubusercontent.com/95978076/200083313-cf531a3b-6c2c-4495-
 - Download or clone this repo by using the link or the SSH URL below:
 
 ```
-https://github.com/foxnoir/chibi
+https://github.com/foxnoir/messenger
 ```
 
 ```
-git@github.com:foxnoir/chibi.git
+git@github.com:foxnoir/messenger.git
 ```
 
 - Go to project root and execute the following command in console to get the required dependencies:
@@ -270,11 +289,194 @@ feature/
 
 - presentation: states, widgets, and controllers
 
+Since the project was only restructured after the fact for practice purposes to develop a better understanding of feature-first, the domain and application layers were often omitted. The existing code was simply sourced out into new folders and files. No new code was written.
+
+### Features
+
+```
+features/
+|- auth/
+|- chat/
+|- contact_managment/
+|- user/
+|- user_settings/
+```
+
+### Constants
+
+This directory contains all the application level constants. A separate file is created for each type as shown in example below:
+
+```
+constants/
+|- app_theme.dart
+|- dimens.dart
+|- endpoints.dart
+|- preferences.dart
+|- strings.dart
+```
+
+### Data
+
+All the business logic of your application will go into this directory, it represents the data layer of your application. It is sub-divided into three directories `local`, `network` and `sharedperf`, each containing the domain specific logic. Since each layer exists independently, that makes it easier to unit test. The communication between UI and data layer is handled by using central repository.
+
+```
+data/
+|- local/
+    |- constants/
+    |- datasources/
+    |- app_database.dart
+
+|- network/
+    |- constants/
+    |- exceptions/
+    |- rest_client.dart
+
+|- sharedpref
+    |- constants/
+    |- shared_preference_helper.dart
+
+|- repository.dart
+
+```
+
+### Stores
+
+The store is where all your application state lives in flutter. The Store is basically a widget that stands at the top of the widget tree and passes it's data down using special methods. In-case of multiple stores, a separate folder for each store is created as shown in the example below:
+
+```
+stores/
+|- login/
+    |- login_store.dart
+    |- form_validator.dart
+```
+
+### UI
+
+This directory contains all the ui of your application. Each screen is located in a separate folder making it easy to combine group of files related to that particular screen. All the screen specific widgets will be placed in `widgets` directory as shown in the example below:
+
+```
+ui/
+|- login
+   |- login_screen.dart
+   |- widgets
+      |- login_form.dart
+      |- login_button.dart
+```
+
+### Utils
+
+Contains the common file(s) and utilities used in a project. The folder structure is as follows:
+
+```
+utils/
+|- encryption
+   |- xxtea.dart
+|- date
+  |- date_time.dart
+```
+
+### Widgets
+
+Contains the small widgets that are shared across multiple fetures. For example buttons or alerts.
+
+```
+global_widgets/
+|- alert.dart
+|- change_theme_button.dart
+|- raised_gradient_button.dart
+```
+
+### Routes
+
+This file contains all the routes for your application.
+
+```dart
+import 'package:flutter/material.dart';
+
+import 'ui/home/home.dart';
+import 'ui/login/login.dart';
+import 'ui/splash/splash.dart';
+
+class Routes {
+  Routes._();
+
+  //static variables
+  static const String splash = '/splash';
+  static const String login = '/login';
+  static const String home = '/home';
+
+  static final routes = <String, WidgetBuilder>{
+    splash: (BuildContext context) => SplashScreen(),
+    login: (BuildContext context) => LoginScreen(),
+    home: (BuildContext context) => HomeScreen(),
+  };
+}
+```
+
+### Main
+
+This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
+
+```dart
+import 'package:boilerplate/routes.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'constants/app_theme.dart';
+import 'constants/strings.dart';
+import 'ui/splash/splash.dart';
+
+void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.landscapeRight,
+    DeviceOrientation.landscapeLeft,
+  ]).then((_) {
+    runApp(MyApp());
+  });
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: Strings.appName,
+      theme: themeData,
+      routes: Routes.routes,
+      home: SplashScreen(),
+    );
+  }
+}
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Images 
-- [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © (https://www.redbubble.com/de/people/reinbowsketch/shop)
+## Usage
 
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## References to the images used
+
+- Tinker Bell: Could not reconstruct the creator.
+- [Audrey Hepburn](https://www.gala.de/stars/starportraets/audrey-hepburn-21355190.html) -> © Getty Images
+- [Coco Channel](https://www.westwing.de/inspiration/trends/designer/die-7-stil-regeln-von-coco-chanel/)
+- [Empress Elisabeth](https://www.bunte.de/royals/royals-weltweit/oesterreichischer-adel/kaiserin-elisabeth-1898-ihre-schwester-liebte-einen-buergerlichen-und-wurde-fuer-geisteskrank.html) -> © Getty Images; IMAGO / Heinz Gebhardt
+- [Hemingway](https://dzieje.pl/kultura-i-sztuka/kwartalnik-strand-magazine-opublikuje-nieznane-opowiadanie-hemingwaya) -> © PAP/CAF
+- [Marie Antoinette 1](https://adelswelt.de/koenigin-marie-antoinette-unglaubliche-fakten/) -> © picture-alliance / akg-images | akg-images
+- [Marie Antoinette 2](https://www.welt.de/geschichte/kopf-des-tages/article231140093/Marie-Antoinette-Gier-nach-Luxus-Spielen-und-Sex.html) -> © picture alliance / Heritage Image
+- [Marie Curie](https://www.docusign.de/blog/marie-curie-die-einzige-auf-der-welt-mit-zwei-nobelpreisen-zwei-disziplinen)
+- Pola Negri: No longer traceable which photo was used.
+- [Martin Luther King](https://www.nobelprize.org/prizes/peace/1964/king/facts/)
+- Freddy Mercury: No longer traceable which photo was used.
+- turquoise background: Could not reconstruct the creator.
+- [puruple background](https://www.istockphoto.com/de/foto/universum-gef%C3%BCllt-mit-sternen-nebel-und-galaxie-gm524554638-92236169)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
