@@ -9,16 +9,16 @@ import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 import 'package:chibi/global_widgets//round_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomeScreen extends StatefulWidget {
-  static String routeName = "/HomeScreen";
+class Home extends StatefulWidget {
+  static String routeName = "/Home";
 
-  const HomeScreen({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Home> createState() => _HomeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeState extends State<Home> {
   List<int> showingTooltipOnSpots = [21];
 
   List<FlSpot> get allSpots => const [
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Welcome Back,",
+                          appLocalizations?.helloThere ?? "",
                           style: TextStyle(
                             color: theme.colorScheme.secondary,
                             fontSize: 12,

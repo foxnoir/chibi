@@ -6,6 +6,7 @@ import 'package:chibi/core/theme/theme.dart';
 import 'package:chibi/view/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {
@@ -42,6 +43,9 @@ class Chibi extends StatelessWidget with WidgetsBindingObserver {
 
     return MaterialApp(
       title: 'Chibi',
+      localizationsDelegates: const [
+        ...AppLocalizations.localizationsDelegates,
+      ],
       debugShowCheckedModeBanner: false,
       routes: routes,
       theme: getLightTheme(),
