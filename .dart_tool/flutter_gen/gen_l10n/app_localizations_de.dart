@@ -6,4 +6,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get details => 'Details';
+
+  @override
+  String get helloThere => 'Hello there!';
 }

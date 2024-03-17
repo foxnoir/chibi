@@ -96,6 +96,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Details'**
   String get details;
+
+  /// Welcome text on the home page.
+  ///
+  /// In de, this message translates to:
+  /// **'Hello there!'**
+  String get helloThere;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

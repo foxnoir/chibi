@@ -78,7 +78,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
 
   @override
   Widget build(BuildContext context) {
-    final appLocalizations = AppLocalizations.of(context);
+    final ThemeData theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(

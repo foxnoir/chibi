@@ -252,8 +252,8 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                         vertical: 15,
                                                         horizontal: 20),
                                                 decoration: BoxDecoration(
-                                                  color: theme.colorScheme
-                                                      .tertiary.surface,
+                                                  color:
+                                                      theme.colorScheme.surface,
                                                   borderRadius:
                                                       BorderRadius.circular(20),
                                                 ),
@@ -397,8 +397,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                           "${sObj["name"].toString()}, ${getStringDateToOtherFormate(sObj["start_time"].toString(), outFormatStr: "h:mm aa")}",
                                           maxLines: 1,
                                           style: TextStyle(
-                                            color: theme
-                                                .colorScheme.tertiary.surface,
+                                            color: theme.colorScheme.surface,
                                             fontSize: 12,
                                           ),
                                         ),

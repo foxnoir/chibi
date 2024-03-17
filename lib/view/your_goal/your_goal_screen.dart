@@ -73,7 +73,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                 Text(
                                   obj["title"],
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: theme.colorScheme.surface,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,

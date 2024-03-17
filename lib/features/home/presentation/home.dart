@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 import 'package:chibi/global_widgets//round_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/HomeScreen";
@@ -139,9 +140,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final Size media = MediaQuery.of(context).size;
     final ThemeData theme = Theme.of(context);
-    final ThemeData theme = Theme.of(context);
+    final AppLocalizations? appLocalizations = AppLocalizations.of(context);
 
-    final lineBarsData = [
+    final List<LineChartBarData> lineBarsData = [
       LineChartBarData(
         showingIndicators: showingTooltipOnSpots,
         spots: allSpots,

@@ -23,18 +23,18 @@ class CompleteProfileScreen extends StatelessWidget {
               children: [
                 Image.asset("assets/images/complete_profile.png",
                     width: media.width),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "Let’s complete your profile",
                   style: TextStyle(
                       color: Colours.black,
                       fontSize: 20,
                       fontWeight: FontWeight.w700),
                 ),
-                SizedBox(height: 5),
-                Text(
+                const SizedBox(height: 5),
+                const Text(
                   "It will help us to know more about you!",
                   style: TextStyle(
                     color: Colours.gray,
@@ -43,7 +43,7 @@ class CompleteProfileScreen extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Container(
                   decoration: BoxDecoration(
                       color: Colours.lightgray,
@@ -76,36 +76,36 @@ class CompleteProfileScreen extends StatelessWidget {
                               .toList(),
                           onChanged: (value) {},
                           isExpanded: true,
-                          hint: Text("Choose Gender",
-                              style: const TextStyle(
-                                  color: Colours.gray, fontSize: 12)),
+                          hint: const Text("Choose Gender",
+                              style:
+                                  TextStyle(color: Colours.gray, fontSize: 12)),
                         ),
                       )),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       )
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
-                RoundTextField(
+                const SizedBox(height: 15),
+                const RoundTextField(
                   hintText: "Date of Birth",
                   icon: "assets/icons/calendar_icon.png",
                   textInputType: TextInputType.text,
                 ),
-                SizedBox(height: 15),
-                RoundTextField(
+                const SizedBox(height: 15),
+                const RoundTextField(
                   hintText: "Your Weight",
                   icon: "assets/icons/weight_icon.png",
                   textInputType: TextInputType.text,
                 ),
-                SizedBox(height: 15),
-                RoundTextField(
+                const SizedBox(height: 15),
+                const RoundTextField(
                   hintText: "Your Height",
                   icon: "assets/icons/swap_icon.png",
                   textInputType: TextInputType.text,
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 RoundGradientButton(
                   title: "Next >",
                   onPressed: () {

@@ -199,9 +199,9 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 )))
                             .toList(),
                         onChanged: (value) {},
-                        icon: const Icon(Icons.expand_more,
+                        icon: Icon(Icons.expand_more,
                             color: theme.colorScheme.surface),
-                        hint: const Text("Weekly",
+                        hint: Text("Weekly",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: theme.colorScheme.surface,
@@ -267,7 +267,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                           children: <TextSpan>[
                             TextSpan(
                               text: (rod.toY - 1).toString(),
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color: theme.colorScheme.surface,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
