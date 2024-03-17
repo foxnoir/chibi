@@ -10,10 +10,12 @@ class TitleSubtitleCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       decoration: BoxDecoration(
-          color: Colours.white,
+          color: theme.colorScheme.surface,
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
       child: Column(
@@ -31,7 +33,7 @@ class TitleSubtitleCell extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  color: Colours.white.withOpacity(0.7),
+                  color: theme.colorScheme.surface.withOpacity(0.7),
                   fontWeight: FontWeight.w500,
                   fontSize: 14),
             ),

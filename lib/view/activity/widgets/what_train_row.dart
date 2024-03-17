@@ -1,5 +1,6 @@
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../global_widgets//round_button.dart';
 
@@ -9,18 +10,19 @@ class WhatTrainRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Container(
         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 2),
         decoration: BoxDecoration(
-          color: Colours.white,
+          color: theme.colorScheme.surface,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              Colours.primaryColor2.withOpacity(0.3),
-              Colours.primaryColor1.withOpacity(0.3)
+              Colours.lightBlue.withOpacity(0.3),
+              theme.colorScheme.tertiary.withOpacity(0.3)
             ]),
             borderRadius: BorderRadius.circular(15),
           ),
@@ -68,7 +70,7 @@ class WhatTrainRow extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      color: Colours.white.withOpacity(0.54),
+                      color: theme.colorScheme.surface.withOpacity(0.54),
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),

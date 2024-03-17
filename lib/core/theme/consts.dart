@@ -12,7 +12,6 @@ class Consts {
   static const double globalWidgetpaddingL = 12.0;
   static const double globalWidgetpaddingXL = 16.0;
   static const double materialBubblePadding = 3.0;
-
   // global BoxShadow
   static const globalBoxShadow = BoxShadow(
     spreadRadius: 1,
@@ -105,20 +104,20 @@ class Consts {
   static TextStyle iconBtnTextStyleLight = const TextStyle(
       fontSize: FontSize.small,
       fontWeight: FontWeights.light,
-      color: Colours.secondaryColor2);
+      color: Colours.lightBlue);
   static TextStyle iconBtnTextStyleBold = const TextStyle(
       fontSize: FontSize.small,
       fontWeight: FontWeights.bold,
-      color: Colours.secondaryColor2);
+      color: Colours.lightBlue);
 
   // bottom bar
   static double navIconWidth = 24;
 
   // SVG Icons colors can not be controlled directly from the theme.
   // Var to control icon and label colors at selected / not selected globally.
-  static Color bottomNavItemSelected = Colours.secondaryColor2;
+  static Color bottomNavItemSelected = Colours.lightBlue;
   static Color bottomNavItemNotSelected = Colours.gray;
-  static Color iconColor = Colours.secondaryColor2;
+  static Color iconColor = Colours.lightBlue;
 
   // global icons
   static double globalIconSizeL = 20;
@@ -127,7 +126,7 @@ class Consts {
   static double globalIconSizeXS = 10;
 
   // Spinner
-  static Color spinnerColor = Colours.secondaryColor2;
+  static Color spinnerColor = Colours.lightBlue;
   static double spinnerStrokeW = 3;
   static double spinnerHeightS = 42;
   static double spinnerHeightM = 132;

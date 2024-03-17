@@ -38,9 +38,10 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: SafeArea(
         child: Stack(
           children: [
@@ -73,7 +74,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   obj["title"],
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    color: Colours.white,
+                                    color: theme.colorScheme.surface,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -91,8 +92,8 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   overflow: TextOverflow.ellipsis,
                                   softWrap: true,
                                   maxLines: 3,
-                                  style: const TextStyle(
-                                    color: Colours.white,
+                                  style: TextStyle(
+                                    color: theme.colorScheme.surface,
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,

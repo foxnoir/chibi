@@ -43,10 +43,11 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -90,7 +91,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
           )
         ],
       ),
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),

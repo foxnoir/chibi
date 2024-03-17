@@ -44,11 +44,12 @@ class _TemplateState extends StatefulViewWithVMState<Template, TemplateVM>
 
   @override
   Widget build(BuildContext context) {
-    final appLocalizations = AppLocalizations.of(context);
+    final AppLocalizations? appLocalizations = AppLocalizations.of(context);
+    final ThemeData theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         title: const Text(

@@ -29,8 +29,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: InkWell(
         onTap: () {},
@@ -46,8 +47,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 boxShadow: const [
                   BoxShadow(color: Colors.black12, blurRadius: 2)
                 ]),
-            child:
-                const Icon(Icons.search_sharp, color: Colours.white, size: 32),
+            child: Icon(Icons.search_sharp,
+                color: theme.colorScheme.surface, size: 32),
           ),
         ),
       ),
@@ -61,10 +62,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
         padding: const EdgeInsets.all(0),
         child: Container(
           height: Platform.isIOS ? 70 : 65,
-          decoration: const BoxDecoration(color: Colours.white, boxShadow: [
-            BoxShadow(
-                color: Colors.black12, blurRadius: 2, offset: Offset(0, -2))
-          ]),
+          decoration: BoxDecoration(
+              color: theme.colorScheme.surface,
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black12, blurRadius: 2, offset: Offset(0, -2))
+              ]),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

@@ -1,6 +1,5 @@
 import 'package:dotted_dashed_line/dotted_dashed_line.dart';
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/view/activity_tracker/activity_tracker_screen.dart';
 import 'package:chibi/view/finish_workout/finish_workout_screen.dart';
 import 'package:chibi/features/home/presentation/widgets/workout_row.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -71,12 +70,12 @@ class _HomeScreenState extends State<HomeScreen> {
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
         gradient: LinearGradient(colors: [
-          Colours.primaryColor2.withOpacity(0.5),
-          Colours.primaryColor1.withOpacity(0.5),
+          Colours.lightBlue.withOpacity(0.5),
+          Colours.tertiary.withOpacity(0.5),
         ]),
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: FlDotData(show: false),
+        dotData: const FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
         spots: const [
           FlSpot(1, 35),
@@ -92,12 +91,12 @@ class _HomeScreenState extends State<HomeScreen> {
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
         isCurved: true,
         gradient: LinearGradient(colors: [
-          Colours.secondaryColor2.withOpacity(0.5),
-          Colours.secondaryColor1.withOpacity(0.5),
+          Colours.secondary.withOpacity(0.5),
+          Colours.primary.withOpacity(0.5),
         ]),
         barWidth: 2,
         isStrokeCapRound: true,
-        dotData: FlDotData(show: false),
+        dotData: const FlDotData(show: false),
         belowBarData: BarAreaData(
           show: false,
         ),
@@ -138,7 +137,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
+    final ThemeData theme = Theme.of(context);
 
     final lineBarsData = [
       LineChartBarData(
@@ -149,11 +150,11 @@ class _HomeScreenState extends State<HomeScreen> {
         belowBarData: BarAreaData(
           show: true,
           gradient: LinearGradient(colors: [
-            Colours.primaryColor2.withOpacity(0.4),
-            Colours.primaryColor1.withOpacity(0.1),
+            Colours.lightBlue.withOpacity(0.4),
+            theme.colorScheme.tertiary.withOpacity(0.1),
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
-        dotData: FlDotData(show: false),
+        dotData: const FlDotData(show: false),
         gradient: LinearGradient(
           colors: Colours.primaryG,
         ),
@@ -163,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final tooltipsOnBar = lineBarsData[0];
 
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -174,17 +175,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "Welcome Back,",
                           style: TextStyle(
-                            color: Colours.midgray,
+                            color: theme.colorScheme.secondary,
                             fontSize: 12,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Stefani Wong",
                           style: TextStyle(
                             color: Colours.black,
@@ -224,8 +225,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         fit: BoxFit.fitHeight,
                       ),
                       Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 25, horizontal: 25),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -237,14 +238,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "BMI (Body Mass Index)",
                                   style: TextStyle(
-                                      color: Colours.white,
+                                      color: theme.colorScheme.surface,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "You have a normal weight",
                                   style: TextStyle(
-                                    color: Colours.white.withOpacity(0.7),
+                                    color: theme.colorScheme.surface
+                                        .withOpacity(0.7),
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -287,39 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(height: media.width * 0.05),
-                Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(
-                      color: Colours.primaryColor1.withOpacity(0.3),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Today Target",
-                        style: TextStyle(
-                          color: Colours.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 75,
-                        height: 30,
-                        child: RoundButton(
-                          title: "check",
-                          type: RoundButtonType.primaryBG,
-                          onPressed: () {
-                            Navigator.pushNamed(
-                                context, ActivityTrackerScreen.routeName);
-                          },
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(height: media.width * 0.05),
-                Text(
+                const Text(
                   "Activity Status",
                   style: TextStyle(
                     color: Colours.black,
@@ -334,7 +304,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: media.width * 0.4,
                     width: media.width,
                     decoration: BoxDecoration(
-                        color: Colours.primaryColor2.withOpacity(0.3),
+                        color: Colours.lightBlue.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(25)),
                     child: Stack(
                       alignment: Alignment.topLeft,
@@ -346,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Heart Rate",
                                 style: TextStyle(
                                     color: Colours.black,
@@ -364,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       .createShader(Rect.fromLTRB(
                                           0, 0, bounds.width, bounds.height));
                                 },
-                                child: Text(
+                                child: const Text(
                                   "78 BPM",
                                   style: TextStyle(
                                     color: Colours.black,
@@ -426,7 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       List<int> spotIndexes) {
                                 return spotIndexes.map((index) {
                                   return TouchedSpotIndicatorData(
-                                    FlLine(
+                                    const FlLine(
                                       color: Colors.transparent,
                                     ),
                                     FlDotData(
@@ -437,14 +407,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                         radius: 3,
                                         color: Colors.white,
                                         strokeWidth: 2,
-                                        strokeColor: Colours.secondaryColor2,
+                                        strokeColor:
+                                            theme.colorScheme.secondary,
                                       ),
                                     ),
                                   );
                                 }).toList();
                               },
                               touchTooltipData: LineTouchTooltipData(
-                                tooltipBgColor: Colours.secondaryColor1,
+                                tooltipBgColor: theme.colorScheme.primary,
                                 tooltipRoundedRadius: 20,
                                 getTooltipItems:
                                     (List<LineBarSpot> lineBarsSpot) {
@@ -464,8 +435,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             lineBarsData: lineBarsData,
                             minY: 0,
                             maxY: 130,
-                            titlesData: FlTitlesData(show: false),
-                            gridData: FlGridData(show: false),
+                            titlesData: const FlTitlesData(show: false),
+                            gridData: const FlGridData(show: false),
                             borderData: FlBorderData(
                               show: true,
                               border: Border.all(
@@ -487,9 +458,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 25, horizontal: 10),
                       decoration: BoxDecoration(
-                          color: Colours.white,
+                          color: theme.colorScheme.surface,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(color: Colors.black12, blurRadius: 2)
                           ]),
                       child: Row(children: [
@@ -508,14 +479,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               begin: Alignment.bottomCenter,
                               end: Alignment.topCenter),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Water Intake",
                               style: TextStyle(
                                   color: Colours.black,
@@ -533,7 +504,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .createShader(Rect.fromLTRB(
                                         0, 0, bounds.width, bounds.height));
                               },
-                              child: Text(
+                              child: const Text(
                                 "4 Liters",
                                 style: TextStyle(
                                   color: Colours.black,
@@ -543,7 +514,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             SizedBox(height: media.width * 0.03),
-                            Text(
+                            const Text(
                               "Real time updates",
                               style: TextStyle(
                                   color: Colours.black,
@@ -564,12 +535,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Container(
-                                            margin: EdgeInsets.symmetric(
+                                            margin: const EdgeInsets.symmetric(
                                                 vertical: 6),
                                             width: 10,
                                             height: 10,
                                             decoration: BoxDecoration(
-                                                color: Colours.secondaryColor1
+                                                color: theme.colorScheme.primary
                                                     .withOpacity(0.5),
                                                 borderRadius:
                                                     BorderRadius.circular(5)),
@@ -579,11 +550,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                               width: 0,
                                               height: media.width * 0.078,
                                               axis: Axis.vertical,
-                                              dashColor: Colours.secondaryColor1
+                                              dashColor: theme
+                                                  .colorScheme.primary
                                                   .withOpacity(0.5),
                                             )
                                         ]),
-                                    SizedBox(width: 10),
+                                    const SizedBox(width: 10),
                                     Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
@@ -593,12 +565,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                         SizedBox(height: media.width * 0.01),
                                         Text(
                                           obj["title"].toString(),
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colours.black,
                                               fontSize: 11,
                                               fontWeight: FontWeight.w400),
                                         ),
-                                        SizedBox(height: 1),
+                                        const SizedBox(height: 1),
                                         ShaderMask(
                                           blendMode: BlendMode.srcIn,
                                           shaderCallback: (bounds) {
@@ -614,7 +586,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: Text(
                                             obj["subtitle"].toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colours.black,
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500,
@@ -640,18 +612,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         Container(
                           width: double.maxFinite,
                           height: media.width * 0.45,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: Colours.white,
+                              color: theme.colorScheme.surface,
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
                               ]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Sleep",
                                 style: TextStyle(
                                     color: Colours.black,
@@ -669,7 +641,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       .createShader(Rect.fromLTRB(
                                           0, 0, bounds.width, bounds.height));
                                 },
-                                child: Text(
+                                child: const Text(
                                   "8h 20m",
                                   style: TextStyle(
                                     color: Colours.black,
@@ -691,18 +663,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         Container(
                           width: double.maxFinite,
                           height: media.width * 0.45,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 25, horizontal: 20),
                           decoration: BoxDecoration(
-                              color: Colours.white,
+                              color: theme.colorScheme.surface,
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(color: Colors.black12, blurRadius: 2)
                               ]),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Calories",
                                 style: TextStyle(
                                     color: Colours.black,
@@ -720,7 +692,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       .createShader(Rect.fromLTRB(
                                           0, 0, bounds.width, bounds.height));
                                 },
-                                child: Text(
+                                child: const Text(
                                   "760 kCal",
                                   style: TextStyle(
                                     color: Colours.black,
@@ -729,7 +701,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Container(
                                 alignment: Alignment.center,
                                 child: SizedBox(
@@ -750,7 +722,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Text("230kCal\nleft",
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                              color: Colours.white,
+                                              color: theme.colorScheme.surface,
                                               fontSize: 10,
                                               fontWeight: FontWeight.w400,
                                             )),
@@ -778,7 +750,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Workout Progress",
                       style: TextStyle(
                         color: Colours.black,
@@ -788,7 +760,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Container(
                       height: 35,
-                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       decoration: BoxDecoration(
                           gradient: LinearGradient(colors: Colours.primaryG),
                           borderRadius: BorderRadius.circular(15)),
@@ -804,11 +776,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                   )))
                               .toList(),
                           onChanged: (value) {},
-                          icon: Icon(Icons.expand_more, color: Colours.white),
+                          icon: Icon(Icons.expand_more,
+                              color: theme.colorScheme.surface),
                           hint: Text("Weekly",
                               textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                  color: Colours.white, fontSize: 12)),
+                              style: TextStyle(
+                                  color: theme.colorScheme.surface,
+                                  fontSize: 12)),
                         ),
                       ),
                     )
@@ -861,7 +835,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               List<int> spotIndexes) {
                             return spotIndexes.map((index) {
                               return TouchedSpotIndicatorData(
-                                FlLine(
+                                const FlLine(
                                   color: Colors.transparent,
                                 ),
                                 FlDotData(
@@ -872,14 +846,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     radius: 3,
                                     color: Colors.white,
                                     strokeWidth: 3,
-                                    strokeColor: Colours.secondaryColor1,
+                                    strokeColor: theme.colorScheme.primary,
                                   ),
                                 ),
                               );
                             }).toList();
                           },
                           touchTooltipData: LineTouchTooltipData(
-                            tooltipBgColor: Colours.secondaryColor1,
+                            tooltipBgColor: theme.colorScheme.primary,
                             tooltipRoundedRadius: 20,
                             getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                               return lineBarsSpot.map((lineBarSpot) {
@@ -900,8 +874,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         maxY: 110,
                         titlesData: FlTitlesData(
                             show: true,
-                            leftTitles: AxisTitles(),
-                            topTitles: AxisTitles(),
+                            leftTitles: const AxisTitles(),
+                            topTitles: const AxisTitles(),
                             bottomTitles: AxisTitles(
                               sideTitles: bottomTitles,
                             ),
@@ -934,7 +908,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Latest Workout",
                       style: TextStyle(
                           color: Colours.black,
@@ -943,7 +917,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "See More",
                         style: TextStyle(
                             color: Colours.gray,
@@ -982,7 +956,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return List.generate(
       2,
       (i) {
-        const color0 = Colours.secondaryColor2;
+        const color0 = Colours.secondary;
         const color1 = Colours.white;
 
         switch (i) {
@@ -1048,7 +1022,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return Text(text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colours.gray,
           fontSize: 12,
         ),
@@ -1063,7 +1037,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
-    var style = TextStyle(
+    var style = const TextStyle(
       color: Colours.gray,
       fontSize: 12,
     );

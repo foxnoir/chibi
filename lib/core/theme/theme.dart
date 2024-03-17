@@ -65,12 +65,12 @@ ThemeData _theme(ColorScheme colorScheme) {
     iconTheme: IconThemeData(color: colorScheme.onBackground),
 
     checkboxTheme: CheckboxThemeData(
-        side: const BorderSide(color: Colours.secondaryColor2),
+        side: const BorderSide(color: Colours.secondary),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(2.0),
         ),
         checkColor: MaterialStateProperty.all<Color>(
-            createMaterialColor(Colours.secondaryColor2))),
+            createMaterialColor(Colours.secondary))),
 
     // AppBar Theme
     appBarTheme: AppBarTheme(
@@ -171,18 +171,18 @@ ThemeData _theme(ColorScheme colorScheme) {
       labelStyle: const TextStyle(
           fontWeight: FontWeights.medium,
           fontSize: FontSize.large,
-          color: Colours.secondaryColor1),
+          color: Colours.primary),
       enabledBorder: const OutlineInputBorder(
           borderSide:
               BorderSide(color: Colours.lightgray, width: Consts.borderThin),
           borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
       focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-              color: Colours.secondaryColor1, width: Consts.borderThin),
+          borderSide:
+              BorderSide(color: Colours.primary, width: Consts.borderThin),
           borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
       focusedErrorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-              color: Colours.secondaryColor1, width: Consts.borderThin),
+          borderSide:
+              BorderSide(color: Colours.primary, width: Consts.borderThin),
           borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
     ),
   );
@@ -191,8 +191,8 @@ ThemeData _theme(ColorScheme colorScheme) {
 
 ColorScheme _getColorScheme(Brightness brightness) {
   const lightColorScheme = ColorScheme.light(
-      primary: Colours.secondaryColor1,
-      secondary: Colours.midgray,
+      primary: Colours.primary,
+      secondary: Colours.secondary,
       tertiary: Colours.white,
       surface: Colours.white,
       outline: Colours.lightgray);

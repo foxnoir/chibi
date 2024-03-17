@@ -18,11 +18,11 @@ class AddScheduleView extends StatefulWidget {
 class _AddScheduleViewState extends State<AddScheduleView> {
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
-
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -71,7 +71,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           )
         ],
       ),
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

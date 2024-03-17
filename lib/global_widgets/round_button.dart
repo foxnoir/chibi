@@ -17,6 +17,8 @@ class RoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -35,12 +37,12 @@ class RoundButton extends StatelessWidget {
         height: 50,
         onPressed: onPressed,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-        textColor: Colours.primaryColor1,
+        textColor: theme.colorScheme.tertiary,
         child: Text(
           title,
           style: TextStyle(
             fontSize: 11,
-            color: Colours.white,
+            color: theme.colorScheme.surface,
             fontFamily: "Poppins",
             fontWeight: FontWeight.w400,
           ),

@@ -10,9 +10,10 @@ class FinishWorkoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),

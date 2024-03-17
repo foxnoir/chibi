@@ -30,11 +30,12 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -93,8 +94,8 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
-                    Colours.primaryColor2.withOpacity(0.3),
-                    Colours.primaryColor1.withOpacity(0.3)
+                    Colours.lightBlue.withOpacity(0.3),
+                    theme.colorScheme.tertiary.withOpacity(0.3)
                   ]),
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -126,7 +127,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 height: 30,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25)),
-                                textColor: Colours.primaryColor1,
+                                textColor: theme.colorScheme.tertiary,
                                 minWidth: double.maxFinite,
                                 elevation: 0,
                                 color: Colors.transparent,
@@ -198,12 +199,13 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                                 )))
                             .toList(),
                         onChanged: (value) {},
-                        icon:
-                            const Icon(Icons.expand_more, color: Colours.white),
+                        icon: const Icon(Icons.expand_more,
+                            color: theme.colorScheme.surface),
                         hint: const Text("Weekly",
                             textAlign: TextAlign.center,
-                            style:
-                                TextStyle(color: Colours.white, fontSize: 12)),
+                            style: TextStyle(
+                                color: theme.colorScheme.surface,
+                                fontSize: 12)),
                       ),
                     ),
                   )
@@ -217,7 +219,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 0),
                 decoration: BoxDecoration(
-                    color: Colours.white,
+                    color: theme.colorScheme.surface,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 3)
@@ -266,7 +268,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                             TextSpan(
                               text: (rod.toY - 1).toString(),
                               style: const TextStyle(
-                                color: Colours.white,
+                                color: theme.colorScheme.surface,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),

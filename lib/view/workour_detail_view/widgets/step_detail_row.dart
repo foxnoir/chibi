@@ -10,6 +10,7 @@ class StepDetailRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -17,8 +18,8 @@ class StepDetailRow extends StatelessWidget {
           width: 25,
           child: Text(
             sObj["no"].toString(),
-            style: const TextStyle(
-              color: Colours.secondaryColor1,
+            style: TextStyle(
+              color: theme.colorScheme.primary,
               fontSize: 14,
             ),
           ),
@@ -31,7 +32,7 @@ class StepDetailRow extends StatelessWidget {
               width: 20,
               height: 20,
               decoration: BoxDecoration(
-                color: Colours.secondaryColor1,
+                color: theme.colorScheme.primary,
                 borderRadius: BorderRadius.circular(10),
               ),
               alignment: Alignment.center,
@@ -39,16 +40,17 @@ class StepDetailRow extends StatelessWidget {
                 width: 18,
                 height: 18,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colours.white, width: 3),
+                  border:
+                      Border.all(color: theme.colorScheme.surface, width: 3),
                   borderRadius: BorderRadius.circular(9),
                 ),
               ),
             ),
             if (!isLast)
-              const DottedDashedLine(
+              DottedDashedLine(
                   height: 80,
                   width: 0,
-                  dashColor: Colours.secondaryColor1,
+                  dashColor: theme.colorScheme.primary,
                   axis: Axis.vertical)
           ],
         ),

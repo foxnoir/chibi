@@ -102,7 +102,8 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Container(
       decoration:
           BoxDecoration(gradient: LinearGradient(colors: Colours.primaryG)),
@@ -176,7 +177,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           decoration: BoxDecoration(
-              color: Colours.white,
+              color: theme.colorScheme.surface,
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(25), topRight: Radius.circular(25))),
           child: Scaffold(
@@ -239,7 +240,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                           icon: "assets/icons/time_icon.png",
                           title: "Schedule Workout",
                           time: "5/27, 09:00 AM",
-                          color: Colours.primaryColor2.withOpacity(0.3),
+                          color: Colours.lightBlue.withOpacity(0.3),
                           onPressed: () {
                             Navigator.pushNamed(
                                 context, WorkoutScheduleView.routeName);
@@ -251,7 +252,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                           icon: "assets/icons/difficulity_icon.png",
                           title: "Difficulity",
                           time: "Beginner",
-                          color: Colours.secondaryColor2.withOpacity(0.3),
+                          color: theme.colorScheme.secondary.withOpacity(0.3),
                           onPressed: () {}),
                       SizedBox(
                         height: media.width * 0.05,

@@ -87,11 +87,12 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         leading: InkWell(
@@ -175,7 +176,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
             locale: 'en',
 
             initialDate: DateTime.now(),
-            calendarEventColor: Colours.primaryColor2,
+            calendarEventColor: Colours.lightBlue,
             firstDate: DateTime.now().subtract(const Duration(days: 140)),
             lastDate: DateTime.now().add(const Duration(days: 60)),
 
@@ -251,7 +252,8 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                         vertical: 15,
                                                         horizontal: 20),
                                                 decoration: BoxDecoration(
-                                                  color: Colours.white,
+                                                  color: theme.colorScheme
+                                                      .tertiary.surface,
                                                   borderRadius:
                                                       BorderRadius.circular(20),
                                                 ),
@@ -395,7 +397,8 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                           "${sObj["name"].toString()}, ${getStringDateToOtherFormate(sObj["start_time"].toString(), outFormatStr: "h:mm aa")}",
                                           maxLines: 1,
                                           style: TextStyle(
-                                            color: Colours.white,
+                                            color: theme
+                                                .colorScheme.tertiary.surface,
                                             fontSize: 12,
                                           ),
                                         ),
@@ -443,7 +446,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
           child: Icon(
             Icons.add,
             size: 20,
-            color: Colours.white,
+            color: theme.colorScheme.surface,
           ),
         ),
       ),

@@ -51,7 +51,9 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
+
     return Container(
       decoration:
           BoxDecoration(gradient: LinearGradient(colors: Colours.primaryG)),
@@ -63,10 +65,10 @@ class _ActivityScreenState extends State<ActivityScreen> {
               centerTitle: true,
               elevation: 0,
               // pinned: true,
-              title: const Text(
+              title: Text(
                 "Workout Tracker",
                 style: TextStyle(
-                    color: Colours.white,
+                    color: theme.colorScheme.surface,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
@@ -132,7 +134,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           (LineChartBarData barData, List<int> spotIndexes) {
                         return spotIndexes.map((index) {
                           return TouchedSpotIndicatorData(
-                            FlLine(
+                            const FlLine(
                               color: Colors.transparent,
                             ),
                             FlDotData(
@@ -142,14 +144,14 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                 radius: 3,
                                 color: Colors.white,
                                 strokeWidth: 3,
-                                strokeColor: Colours.secondaryColor1,
+                                strokeColor: theme.colorScheme.primary,
                               ),
                             ),
                           );
                         }).toList();
                       },
                       touchTooltipData: LineTouchTooltipData(
-                        tooltipBgColor: Colours.secondaryColor1,
+                        tooltipBgColor: theme.colorScheme.primary,
                         tooltipRoundedRadius: 20,
                         getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                           return lineBarsSpot.map((lineBarSpot) {
@@ -170,8 +172,8 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     maxY: 110,
                     titlesData: FlTitlesData(
                         show: true,
-                        leftTitles: AxisTitles(),
-                        topTitles: AxisTitles(),
+                        leftTitles: const AxisTitles(),
+                        topTitles: const AxisTitles(),
                         bottomTitles: AxisTitles(
                           sideTitles: bottomTitles,
                         ),
@@ -185,7 +187,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       drawVerticalLine: false,
                       getDrawingHorizontalLine: (value) {
                         return FlLine(
-                          color: Colours.white.withOpacity(0.15),
+                          color: theme.colorScheme.surface.withOpacity(0.15),
                           strokeWidth: 2,
                         );
                       },
@@ -205,7 +207,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
         body: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
-                color: Colours.white,
+                color: theme.colorScheme.surface,
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25))),
@@ -231,13 +233,13 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 15),
                       decoration: BoxDecoration(
-                        color: Colours.primaryColor2.withOpacity(0.3),
+                        color: Colours.lightBlue.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Daily Workout Schedule",
                             style: TextStyle(
                                 color: Colours.black,
@@ -269,7 +271,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Upcoming Workout",
                           style: TextStyle(
                               color: Colours.black,
@@ -278,7 +280,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "See More",
                             style: TextStyle(
                                 color: Colours.gray,
@@ -300,7 +302,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     SizedBox(
                       height: media.width * 0.05,
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -358,7 +360,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
         color: Colours.white,
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: FlDotData(show: false),
+        dotData: const FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
         spots: const [
           FlSpot(1, 35),
@@ -376,7 +378,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
         color: Colours.white.withOpacity(0.5),
         barWidth: 2,
         isStrokeCapRound: true,
-        dotData: FlDotData(show: false),
+        dotData: const FlDotData(show: false),
         belowBarData: BarAreaData(
           show: false,
         ),
@@ -424,7 +426,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
     }
 
     return Text(text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colours.white,
           fontSize: 12,
         ),
@@ -439,7 +441,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
       );
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
-    var style = TextStyle(
+    var style = const TextStyle(
       color: Colours.white,
       fontSize: 12,
     );

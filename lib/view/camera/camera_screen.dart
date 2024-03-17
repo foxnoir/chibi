@@ -34,10 +34,11 @@ class _CameraScreenState extends State<CameraScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    final Size media = MediaQuery.of(context).size;
+    final ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colours.white,
+        backgroundColor: theme.colorScheme.surface,
         centerTitle: true,
         elevation: 0,
         leadingWidth: 0,
@@ -68,7 +69,7 @@ class _CameraScreenState extends State<CameraScreen> {
           )
         ],
       ),
-      backgroundColor: Colours.white,
+      backgroundColor: theme.colorScheme.surface,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +90,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colours.white,
+                              color: theme.colorScheme.surface,
                               borderRadius: BorderRadius.circular(30)),
                           width: 50,
                           height: 50,
@@ -146,8 +147,8 @@ class _CameraScreenState extends State<CameraScreen> {
                     height: media.width * 0.4,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
-                          Colours.primaryColor2.withOpacity(0.4),
-                          Colours.primaryColor1.withOpacity(0.4)
+                          Colours.lightBlue.withOpacity(0.4),
+                          theme.colorScheme.tertiary.withOpacity(0.4)
                         ]),
                         borderRadius: BorderRadius.circular(20)),
                     child: Row(
@@ -190,7 +191,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   decoration: BoxDecoration(
-                    color: Colours.primaryColor2.withOpacity(0.3),
+                    color: Colours.lightBlue.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Row(
@@ -328,7 +329,7 @@ class _CameraScreenState extends State<CameraScreen> {
           child: Icon(
             Icons.photo_camera,
             size: 20,
-            color: Colours.white,
+            color: theme.colorScheme.surface,
           ),
         ),
       ),

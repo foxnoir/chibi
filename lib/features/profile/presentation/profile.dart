@@ -181,7 +181,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                    color: Colours.white,
+                    color: theme.colorScheme.surface,
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 2)

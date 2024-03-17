@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Colours {
-  static const primaryColor1 = Color(0xFF92A3FD);
-  static const primaryColor2 = Color(0xFF9DCEFF);
+  static const primary = Color(0xFFC58BF2);
+  static const secondary = Color(0xFFEEA4CE);
+  static const tertiary = Color(0xFF92A3FD);
 
-  static const secondaryColor1 = Color(0xFFC58BF2);
-  static const secondaryColor2 = Color(0xFFEEA4CE);
+  static const lightBlue = Color(0xFF9DCEFF);
 
   static const white = Color(0xFFFFFFFF);
   static const black = Color(0xFF1D1617);
@@ -13,8 +13,8 @@ class Colours {
   static const lightgray = Color(0xFFF7F8F8);
   static const midgray = Color(0xFFADA4A5);
 
-  static List<Color> get primaryG => [primaryColor1, primaryColor2];
-  static List<Color> get secondaryG => [secondaryColor1, secondaryColor2];
+  static List<Color> get primaryG => [tertiary, lightBlue];
+  static List<Color> get secondaryG => [primary, secondary];
 }
 
 /// converts a Hex color into a MaterialColor

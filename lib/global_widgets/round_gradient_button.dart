@@ -30,12 +30,12 @@ class RoundGradientButton extends StatelessWidget {
           onPressed: onPressed,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-          textColor: Colours.primaryColor1,
+          textColor: theme.colorScheme.tertiary,
           child: Text(
             title,
             style: TextStyle(
               fontSize: 16,
-              color: Colours.white,
+              color: theme.colorScheme.surface,
               fontFamily: "Poppins",
               fontWeight: FontWeight.w700,
             ),

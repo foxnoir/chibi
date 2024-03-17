@@ -11,11 +11,13 @@ class TodayTargetCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+
     return Container(
       height: 70,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colours.white,
+        color: theme.colorScheme.surface,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
@@ -47,7 +49,7 @@ class TodayTargetCell extends StatelessWidget {
                 child: Text(
                   value,
                   style: TextStyle(
-                      color: Colours.white.withOpacity(0.7),
+                      color: theme.colorScheme.surface.withOpacity(0.7),
                       fontWeight: FontWeight.w700,
                       fontSize: 14),
                 ),
