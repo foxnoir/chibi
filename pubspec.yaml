@@ -60,6 +60,7 @@ dependencies:
   built_collection: ^5.1.1
   calendar_agenda:
     path: dev_lib/calendar_agenda/
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:

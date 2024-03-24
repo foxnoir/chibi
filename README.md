@@ -242,7 +242,7 @@ Project folder structure:
 
 ```
 lib/
-|- constants/
+|- Consts/
 |- features/
 |- global_widgets/
 |- routing/

@@ -13,12 +13,4 @@ class NavigationHelper {
   static void goBack(BuildContext context) {
     Navigator.pop(context);
   }
-
-  static void goToOrderHistoryDetails({
-    required BuildContext context,
-  }) {
-    context.pushNamed(
-      AppRouteNames.orderHistoryDetails,
-    );
-  }
 }
