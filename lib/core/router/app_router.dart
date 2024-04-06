@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
-import 'package:chibi/features/bottom_nav/scaffold_with_nav_bar.dart';
+import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/statistics/presentation/statistics.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class AppRouter {
           ShellRoute(
             pageBuilder: (context, state, child) => TransitionPage(
               key: state.pageKey,
-              child: ScaffoldWithNavBar(
+              child: ScaffoldWithBottomNav(
                 child: child,
               ),
             ),

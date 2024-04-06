@@ -9,9 +9,10 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:chibi/core/di/register_module.dart' as _i11;
-import 'package:chibi/features/bottom_nav/scaffold_with_nav_bar_vm.dart' as _i6;
 import 'package:chibi/features/home/presentation/home_vm.dart' as _i4;
 import 'package:chibi/features/profile/presentation/profile_vm.dart' as _i5;
+import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav_vm.dart'
+    as _i6;
 import 'package:chibi/features/statistics/presentation/statistics_vm.dart'
     as _i8;
 import 'package:chibi/features/template_statefull/presentation/template_vm.dart'
@@ -39,7 +40,8 @@ extension GetItInjectableX on _i1.GetIt {
         () => registerfModule.secureStorage);
     gh.factory<_i4.HomeVM>(() => _i4.HomeVM());
     gh.factory<_i5.ProfileVM>(() => _i5.ProfileVM());
-    gh.factory<_i6.ScaffoldWithNavBarVM>(() => _i6.ScaffoldWithNavBarVM());
+    gh.factory<_i6.ScaffoldWithBottomNavVM>(
+        () => _i6.ScaffoldWithBottomNavVM());
     await gh.lazySingletonAsync<_i7.SharedPreferences>(
       () => registerfModule.sharedPreferences,
       preResolve: true,
