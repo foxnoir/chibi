@@ -1,5 +1,7 @@
 import 'package:chibi/core/router/app_router.dart';
 import 'package:chibi/features/bottom_nav/bottom_nav_bar_tabs.dart';
+import 'package:chibi/features/home/presentation/home.dart';
+import 'package:chibi/features/statistics/presentation/statistics.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -20,9 +22,10 @@ class ScaffoldWithNavBar extends StatefulWidget {
 
 class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
   int get _currentIndex => _locationToTabIndex(appRouter.location);
+  int index = 0;
 
   int _locationToTabIndex(String location) {
-    final index = BottomNavBarTabs(context)
+    index = BottomNavBarTabs(context)
         .tabs()
         .indexWhere((t) => location == t.initialLocation);
     return index < 0 ? 0 : index;
@@ -31,9 +34,20 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
   // callback used to navigate to the desired tab
   void _onItemTapped(BuildContext context, int tabIndex) {
     if (tabIndex != _currentIndex) {
-      context.go(BottomNavBarTabs(context).tabs()[tabIndex].initialLocation);
+      print(tabIndex);
+      print(_currentIndex);
+      context.pushReplacementNamed(
+          BottomNavBarTabs(context).tabs()[tabIndex].initialLocation);
     }
   }
+
+  final screens = [
+    const Home(),
+    const Statistics(),
+    const Home(),
+    const Home(),
+    const Home(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +60,12 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
                 overflow: TextOverflow.ellipsis,
               )),
         ),
-        body: widget.child,
+        body: screens[index],
         bottomNavigationBar: CurvedNavigationBar(
-          index: _currentIndex,
-          items: BottomNavBarTabs(context).tabs(),
-          onTap: (index) => _onItemTapped(context, index),
-        ));
+            index: _currentIndex,
+            items: BottomNavBarTabs(context).tabs(),
+            onTap: (index) => setState(() {
+                  this.index = index;
+                })));
   }
 }

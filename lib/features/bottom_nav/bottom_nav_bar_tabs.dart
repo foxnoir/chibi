@@ -13,8 +13,8 @@ class BottomNavBarTabs {
         initialLocation: AppRouterPaths.home,
       ),
       BottomNavBarItem(
-        icon: Icons.home,
-        initialLocation: AppRouterPaths.home,
+        icon: Icons.offline_bolt,
+        initialLocation: AppRouterPaths.statistics,
       ),
       BottomNavBarItem(
         icon: Icons.home,

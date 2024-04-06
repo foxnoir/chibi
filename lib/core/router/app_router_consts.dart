@@ -2,6 +2,7 @@
 class AppRouterPaths {
   // main routes
   static const String initialLocation = '/';
+  static const String scaffold = '/scaffold';
   static const String home = '/home';
   static const String statistics = '/statistics';
   static const String workouts = '/workouts';
@@ -10,6 +11,7 @@ class AppRouterPaths {
 }
 
 class AppRouteNames {
+  static const String scaffold = 'scaffold';
   static const String home = 'home';
   static const String statistics = 'statistics';
   static const String workouts = 'workouts';

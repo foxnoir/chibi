@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
+import 'package:chibi/features/bottom_nav/scaffold_with_nav_bar.dart';
 import 'package:chibi/features/home/presentation/home.dart';
+import 'package:chibi/features/statistics/presentation/statistics.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,8 +23,8 @@ class AppRouter {
           ShellRoute(
             pageBuilder: (context, state, child) => TransitionPage(
               key: state.pageKey,
-              child: Scaffold(
-                body: child,
+              child: ScaffoldWithNavBar(
+                child: child,
               ),
             ),
             routes: [
@@ -32,6 +34,15 @@ class AppRouter {
                 pageBuilder: (context, state) {
                   return TransitionPage(
                       key: state.pageKey, child: const Home());
+                },
+                routes: [],
+              ),
+              GoRoute(
+                path: AppRouterPaths.statistics,
+                name: AppRouterPaths.statistics,
+                pageBuilder: (context, state) {
+                  return TransitionPage(
+                      key: state.pageKey, child: const Statistics());
                 },
                 routes: [],
               ),

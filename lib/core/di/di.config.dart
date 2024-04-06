@@ -8,10 +8,12 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:chibi/core/di/register_module.dart' as _i8;
+import 'package:chibi/core/di/register_module.dart' as _i9;
 import 'package:chibi/features/home/presentation/home_vm.dart' as _i4;
 import 'package:chibi/features/profile/presentation/profile_vm.dart' as _i5;
-import 'package:chibi/features/template/presentation/template_vm.dart' as _i7;
+import 'package:chibi/features/statistics/presentation/statistics_vm.dart'
+    as _i7;
+import 'package:chibi/features/template/presentation/template_vm.dart' as _i8;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
@@ -37,9 +39,10 @@ extension GetItInjectableX on _i1.GetIt {
       () => registerfModule.sharedPreferences,
       preResolve: true,
     );
-    gh.factory<_i7.TemplateVM>(() => _i7.TemplateVM());
+    gh.factory<_i7.StatisticsVM>(() => _i7.StatisticsVM());
+    gh.factory<_i8.TemplateVM>(() => _i8.TemplateVM());
     return this;
   }
 }
 
-class _$RegisterfModule extends _i8.RegisterfModule {}
+class _$RegisterfModule extends _i9.RegisterfModule {}
