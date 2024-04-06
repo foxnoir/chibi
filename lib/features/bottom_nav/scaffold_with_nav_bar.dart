@@ -1,5 +1,5 @@
 import 'package:chibi/core/router/app_router.dart';
-import 'package:chibi/features/bottom_nav_bar/bottom_nav_bar_tabs.dart';
+import 'package:chibi/features/bottom_nav/bottom_nav_bar_tabs.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +25,6 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
     final index = BottomNavBarTabs(context)
         .tabs()
         .indexWhere((t) => location == t.initialLocation);
-    // if index not found (-1), return 0
     return index < 0 ? 0 : index;
   }
 
