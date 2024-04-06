@@ -27,7 +27,7 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
             ClipRRect(
               borderRadius: BorderRadius.circular(30),
               child: Image.asset(
-                widget.wObj["image"].toString(),
+                widget.wObj['image'].toString(),
                 width: 50,
                 height: 50,
                 fit: BoxFit.cover,
@@ -41,15 +41,15 @@ class _UpcomingWorkoutRowState extends State<UpcomingWorkoutRow> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  widget.wObj["title"].toString(),
-                  style: TextStyle(
+                  widget.wObj['title'].toString(),
+                  style: const TextStyle(
                       color: Colours.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
-                  widget.wObj["time"].toString(),
-                  style: TextStyle(
+                  widget.wObj['time'].toString(),
+                  style: const TextStyle(
                     color: Colours.gray,
                     fontSize: 10,
                   ),

@@ -64,7 +64,7 @@ class IconTitleNextRow extends StatelessWidget {
                 height: 25,
                 alignment: Alignment.center,
                 child: Image.asset(
-                  "assets/icons/p_next.png",
+                  'assets/icons/p_next.png',
                   width: 12,
                   height: 12,
                   fit: BoxFit.contain,

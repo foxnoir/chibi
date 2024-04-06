@@ -56,7 +56,7 @@ class TodayTargetCell extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colours.black,
                   fontSize: 12,
                 ),

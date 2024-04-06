@@ -1,7 +1,6 @@
 import 'package:chibi/core/router/app_router.dart';
-import 'package:chibi/features/bottom_nav_bar/presentation/bottom_nav_bar_tabs.dart';
+import 'package:chibi/features/bottom_nav_bar/bottom_nav_bar_tabs.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
-import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,9 +19,6 @@ class ScaffoldWithNavBar extends StatefulWidget {
 }
 
 class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
-// getter that computes the current index from the current location,
-  // using the helper method below
-
   int get _currentIndex => _locationToTabIndex(appRouter.location);
 
   int _locationToTabIndex(String location) {
@@ -40,15 +36,6 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
     }
   }
 
-  final List<CurvedNavigationBarItem> items = <CurvedNavigationBarItem>[
-    const CurvedNavigationBarItem(
-        child: SizedBox(child: Icon(Icons.home, size: 30))),
-    const CurvedNavigationBarItem(
-        child: SizedBox(child: Icon(Icons.home, size: 30))),
-    const CurvedNavigationBarItem(
-        child: SizedBox(child: Icon(Icons.home, size: 30))),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +48,10 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
               )),
         ),
         body: widget.child,
-        bottomNavigationBar: CurvedNavigationBar(items: items));
+        bottomNavigationBar: CurvedNavigationBar(
+          index: _currentIndex,
+          items: BottomNavBarTabs(context).tabs(),
+          onTap: (index) => _onItemTapped(context, index),
+        ));
   }
 }

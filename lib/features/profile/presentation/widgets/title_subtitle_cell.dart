@@ -40,7 +40,7 @@ class TitleSubtitleCell extends StatelessWidget {
           ),
           Text(
             subtitle,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colours.gray,
               fontSize: 12,
             ),
