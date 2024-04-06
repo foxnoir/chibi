@@ -1,5 +1,4 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
 class ExercisesRow extends StatelessWidget {
@@ -17,7 +16,7 @@ class ExercisesRow extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
             child: Image.asset(
-              eObj["image"].toString(),
+              eObj['image'].toString(),
               width: 60,
               height: 60,
               fit: BoxFit.cover,
@@ -31,15 +30,15 @@ class ExercisesRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                eObj["title"].toString(),
-                style: TextStyle(
+                eObj['title'].toString(),
+                style: const TextStyle(
                     color: Colours.black,
                     fontSize: 14,
                     fontWeight: FontWeight.w500),
               ),
               Text(
-                eObj["value"].toString(),
-                style: TextStyle(
+                eObj['value'].toString(),
+                style: const TextStyle(
                   color: Colours.gray,
                   fontSize: 12,
                 ),
@@ -49,7 +48,7 @@ class ExercisesRow extends StatelessWidget {
           IconButton(
               onPressed: onPressed,
               icon: Image.asset(
-                "assets/icons/next_go.png",
+                'assets/icons/next_go.png',
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,

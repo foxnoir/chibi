@@ -1,15 +1,14 @@
 import 'dart:io';
 
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/profile/presentation/profile.dart';
 import 'package:chibi/view/activity/activity_screen.dart';
 import 'package:chibi/view/camera/camera_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/home/presentation/home.dart';
-
 class DashboardScreen extends StatefulWidget {
-  static String routeName = "/DashboardScreen";
+  static String routeName = '/DashboardScreen';
 
   const DashboardScreen({Key? key}) : super(key: key);
 
@@ -64,7 +63,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           height: Platform.isIOS ? 70 : 65,
           decoration: BoxDecoration(
               color: theme.colorScheme.surface,
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     color: Colors.black12, blurRadius: 2, offset: Offset(0, -2))
               ]),
@@ -72,8 +71,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TabButton(
-                  icon: "assets/icons/home_icon.png",
-                  selectIcon: "assets/icons/home_select_icon.png",
+                  icon: 'assets/icons/home_icon.png',
+                  selectIcon: 'assets/icons/home_select_icon.png',
                   isActive: selectTab == 0,
                   onTap: () {
                     if (mounted) {
@@ -83,8 +82,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     }
                   }),
               TabButton(
-                  icon: "assets/icons/activity_icon.png",
-                  selectIcon: "assets/icons/activity_select_icon.png",
+                  icon: 'assets/icons/activity_icon.png',
+                  selectIcon: 'assets/icons/activity_select_icon.png',
                   isActive: selectTab == 1,
                   onTap: () {
                     if (mounted) {
@@ -95,8 +94,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   }),
               const SizedBox(width: 30),
               TabButton(
-                  icon: "assets/icons/camera_icon.png",
-                  selectIcon: "assets/icons/camera_select_icon.png",
+                  icon: 'assets/icons/camera_icon.png',
+                  selectIcon: 'assets/icons/camera_select_icon.png',
                   isActive: selectTab == 2,
                   onTap: () {
                     if (mounted) {
@@ -106,8 +105,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     }
                   }),
               TabButton(
-                  icon: "assets/icons/user_icon.png",
-                  selectIcon: "assets/icons/user_select_icon.png",
+                  icon: 'assets/icons/user_icon.png',
+                  selectIcon: 'assets/icons/user_select_icon.png',
                   isActive: selectTab == 3,
                   onTap: () {
                     if (mounted) {

@@ -37,7 +37,8 @@ class AppRouter {
                   //     selectedTab = extraMap['selected_tab'] as int;
                   //   }
                   // }
-                  return TransitionPage(key: state.pageKey, child: Home());
+                  return TransitionPage(
+                      key: state.pageKey, child: const Home());
                 },
                 routes: [
                   // GoRoute(
@@ -158,8 +159,8 @@ extension GoRouterLocation on GoRouter {
                 route: GoRoute(
                     path: AppRouterPaths.home,
                     name: AppRouteNames.home,
-                    pageBuilder: (context, state) =>
-                        SlideTransitionPage(key: state.pageKey, child: Home())),
+                    pageBuilder: (context, state) => SlideTransitionPage(
+                        key: state.pageKey, child: const Home())),
                 pageKey: const ValueKey('routeTesting'),
                 matchedLocation: '')
             : routerDelegate.currentConfiguration.last;

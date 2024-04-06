@@ -1,10 +1,11 @@
+// ignore_for_file: avoid_bool_literals_in_conditional_expressions
+
 import 'package:calendar_agenda/calendar_agenda.dart';
+import 'package:calendar_agenda/src/fullcalendar.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-
-import 'fullcalendar.dart';
 
 class CalendarAgenda extends StatefulWidget implements PreferredSizeWidget {
   final CalendarAgendaController? controller;
@@ -89,12 +90,12 @@ class CalendarAgenda extends StatefulWidget implements PreferredSizeWidget {
   CalendarAgendaState createState() => CalendarAgendaState();
 
   @override
-  Size get preferredSize => new Size.fromHeight(250.0);
+  Size get preferredSize => Size.fromHeight(250.0);
 }
 
 class CalendarAgendaState extends State<CalendarAgenda>
     with TickerProviderStateMixin {
-  ItemScrollController _scrollController = new ItemScrollController();
+  ItemScrollController _scrollController = ItemScrollController();
 
   late Color backgroundColor;
   late double padding;
@@ -125,7 +126,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
 
     if (widget.events != null) {
       for (var element in widget.events!) {
-        _eventDates.add(element.toString().split(" ").first);
+        _eventDates.add(element.toString().split(' ').first);
       }
     }
   }
@@ -205,7 +206,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 _eventDates.contains(
-                                        date.toString().split(" ").first)
+                                        date.toString().split(' ').first)
                                     ? isSelected
                                         ? Icon(
                                             Icons.bookmark,
@@ -248,7 +249,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
                                 ),
                                 SizedBox(height: widget.titleSpaceBetween),
                                 Text(
-                                  DateFormat("dd").format(date),
+                                  DateFormat('dd').format(date),
                                   style: TextStyle(
                                       fontSize: widget.dayNumberFontSize,
                                       color: isSelected
@@ -327,7 +328,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
     );
   }
 
-  _generateDates() {
+  void _generateDates() {
     _dates.clear();
 
     DateTime first = DateTime.parse(
@@ -352,7 +353,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
     });
   }
 
-  _showFullCalendar(String locale, WeekDay weekday) {
+  void _showFullCalendar(String locale, WeekDay weekday) {
     showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -416,7 +417,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
     );
   }
 
-  _selectedDay() {
+  void _selectedDay() {
     DateTime getSelected = DateTime.parse(
         "${_selectedDate.toString().split(" ").first} 00:00:00.000");
 
@@ -425,7 +426,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
         getSelected));
   }
 
-  _goToActualDay(int index) {
+  void _goToActualDay(int index) {
     _moveToDayIndex(index);
     setState(() {
       _daySelectedIndex = index;
@@ -453,7 +454,7 @@ class CalendarAgendaState extends State<CalendarAgenda>
     _goToActualDay(_daySelectedIndex!);
   }
 
-  _initCalendar() {
+  void _initCalendar() {
     if (widget.controller != null &&
         widget.controller is CalendarAgendaController) {
       widget.controller!.bindState(this);

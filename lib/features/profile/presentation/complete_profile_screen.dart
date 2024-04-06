@@ -1,12 +1,11 @@
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/global_widgets/round_gradient_button.dart';
+import 'package:chibi/global_widgets/round_textfield.dart';
 import 'package:chibi/view/your_goal/your_goal_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../global_widgets/round_gradient_button.dart';
-import '../../../global_widgets/round_textfield.dart';
-
 class CompleteProfileScreen extends StatelessWidget {
-  static String routeName = "/CompleteProfileScreen";
+  static String routeName = '/CompleteProfileScreen';
   const CompleteProfileScreen({Key? key}) : super(key: key);
 
   @override
@@ -21,13 +20,13 @@ class CompleteProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.only(right: 15, left: 15),
             child: Column(
               children: [
-                Image.asset("assets/images/complete_profile.png",
+                Image.asset('assets/images/complete_profile.png',
                     width: media.width),
                 const SizedBox(
                   height: 15,
                 ),
                 const Text(
-                  "Let’s complete your profile",
+                  'Let’s complete your profile',
                   style: TextStyle(
                       color: Colours.black,
                       fontSize: 20,
@@ -35,11 +34,11 @@ class CompleteProfileScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 const Text(
-                  "It will help us to know more about you!",
+                  'It will help us to know more about you!',
                   style: TextStyle(
                     color: Colours.gray,
                     fontSize: 12,
-                    fontFamily: "Poppins",
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -56,7 +55,7 @@ class CompleteProfileScreen extends StatelessWidget {
                           height: 50,
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Image.asset(
-                            "assets/icons/gender_icon.png",
+                            'assets/icons/gender_icon.png',
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
@@ -65,7 +64,7 @@ class CompleteProfileScreen extends StatelessWidget {
                       Expanded(
                           child: DropdownButtonHideUnderline(
                         child: DropdownButton(
-                          items: ["Male", "Female"]
+                          items: ['Male', 'Female']
                               .map((name) => DropdownMenuItem(
                                   value: name,
                                   child: Text(
@@ -76,7 +75,7 @@ class CompleteProfileScreen extends StatelessWidget {
                               .toList(),
                           onChanged: (value) {},
                           isExpanded: true,
-                          hint: const Text("Choose Gender",
+                          hint: const Text('Choose Gender',
                               style:
                                   TextStyle(color: Colours.gray, fontSize: 12)),
                         ),
@@ -89,25 +88,25 @@ class CompleteProfileScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 15),
                 const RoundTextField(
-                  hintText: "Date of Birth",
-                  icon: "assets/icons/calendar_icon.png",
+                  hintText: 'Date of Birth',
+                  icon: 'assets/icons/calendar_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
                 const RoundTextField(
-                  hintText: "Your Weight",
-                  icon: "assets/icons/weight_icon.png",
+                  hintText: 'Your Weight',
+                  icon: 'assets/icons/weight_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
                 const RoundTextField(
-                  hintText: "Your Height",
-                  icon: "assets/icons/swap_icon.png",
+                  hintText: 'Your Height',
+                  icon: 'assets/icons/swap_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
                 RoundGradientButton(
-                  title: "Next >",
+                  title: 'Next >',
                   onPressed: () {
                     Navigator.pushNamed(context, YourGoalScreen.routeName);
                   },

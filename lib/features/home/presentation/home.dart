@@ -10,7 +10,7 @@ import 'package:chibi/global_widgets//round_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
-  static String routeName = "/Home";
+  static String routeName = '/Home';
 
   const Home({Key? key}) : super(key: key);
 
@@ -56,11 +56,11 @@ class _HomeState extends State<Home> {
       ];
 
   List waterArr = [
-    {"title": "6am - 8am", "subtitle": "600ml"},
-    {"title": "9am - 11am", "subtitle": "500ml"},
-    {"title": "11am - 2pm", "subtitle": "1000ml"},
-    {"title": "2pm - 4pm", "subtitle": "700ml"},
-    {"title": "4pm - now", "subtitle": "900ml"}
+    {'title': '6am - 8am', 'subtitle': '600ml'},
+    {'title': '9am - 11am', 'subtitle': '500ml'},
+    {'title': '11am - 2pm', 'subtitle': '1000ml'},
+    {'title': '2pm - 4pm', 'subtitle': '700ml'},
+    {'title': '4pm - now', 'subtitle': '900ml'}
   ];
 
   List<LineChartBarData> get lineBarsData1 => [
@@ -114,25 +114,25 @@ class _HomeState extends State<Home> {
 
   List lastWorkoutArr = [
     {
-      "name": "Full Body Workout",
-      "image": "assets/images/Workout1.png",
-      "kcal": "180",
-      "time": "20",
-      "progress": 0.3
+      'name': 'Full Body Workout',
+      'image': 'assets/images/Workout1.png',
+      'kcal': '180',
+      'time': '20',
+      'progress': 0.3
     },
     {
-      "name": "Lower Body Workout",
-      "image": "assets/images/Workout2.png",
-      "kcal": "200",
-      "time": "30",
-      "progress": 0.4
+      'name': 'Lower Body Workout',
+      'image': 'assets/images/Workout2.png',
+      'kcal': '200',
+      'time': '30',
+      'progress': 0.4
     },
     {
-      "name": "Ab Workout",
-      "image": "assets/images/Workout3.png",
-      "kcal": "300",
-      "time": "40",
-      "progress": 0.7
+      'name': 'Ab Workout',
+      'image': 'assets/images/Workout3.png',
+      'kcal': '300',
+      'time': '40',
+      'progress': 0.7
     },
   ];
 
@@ -180,18 +180,18 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          appLocalizations?.helloThere ?? "",
+                          appLocalizations?.helloThere ?? '',
                           style: TextStyle(
                             color: theme.colorScheme.secondary,
                             fontSize: 12,
                           ),
                         ),
                         const Text(
-                          "Stefani Wong",
+                          'Stefani Wong',
                           style: TextStyle(
                             color: Colours.black,
                             fontSize: 20,
-                            fontFamily: "Poppins",
+                            fontFamily: 'Poppins',
                             fontWeight: FontWeight.w700,
                           ),
                         )
@@ -203,7 +203,7 @@ class _HomeState extends State<Home> {
                           // context, NotificationScreen.routeName);
                         },
                         icon: Image.asset(
-                          "assets/icons/notification_icon.png",
+                          'assets/icons/notification_icon.png',
                           width: 25,
                           height: 25,
                           fit: BoxFit.fitHeight,
@@ -220,7 +220,7 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.center,
                     children: [
                       Image.asset(
-                        "assets/icons/bg_dots.png",
+                        'assets/icons/bg_dots.png',
                         height: media.width * 0.4,
                         width: double.maxFinite,
                         fit: BoxFit.fitHeight,
@@ -237,19 +237,19 @@ class _HomeState extends State<Home> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "BMI (Body Mass Index)",
+                                  'BMI (Body Mass Index)',
                                   style: TextStyle(
                                       color: theme.colorScheme.surface,
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
-                                  "You have a normal weight",
+                                  'You have a normal weight',
                                   style: TextStyle(
                                     color: theme.colorScheme.surface
                                         .withOpacity(0.7),
                                     fontSize: 12,
-                                    fontFamily: "Poppins",
+                                    fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
@@ -260,7 +260,7 @@ class _HomeState extends State<Home> {
                                     height: 35,
                                     width: 100,
                                     child: RoundButton(
-                                        title: "View More", onPressed: () {}),
+                                        title: 'View More', onPressed: () {}),
                                   ),
                                 )
                               ],
@@ -291,7 +291,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: media.width * 0.05),
                 const Text(
-                  "Activity Status",
+                  'Activity Status',
                   style: TextStyle(
                     color: Colours.black,
                     fontSize: 16,
@@ -318,7 +318,7 @@ class _HomeState extends State<Home> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "Heart Rate",
+                                'Heart Rate',
                                 style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 12,
@@ -336,7 +336,7 @@ class _HomeState extends State<Home> {
                                           0, 0, bounds.width, bounds.height));
                                 },
                                 child: const Text(
-                                  "78 BPM",
+                                  '78 BPM',
                                   style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 18,
@@ -423,7 +423,7 @@ class _HomeState extends State<Home> {
                                   return lineBarsSpot.map((lineBarSpot) {
                                     return LineTooltipItem(
                                       //lineBarSpot.y.toString(),
-                                      "${lineBarSpot.x.toInt()} mins ago",
+                                      '${lineBarSpot.x.toInt()} mins ago',
                                       const TextStyle(
                                           color: Colors.white,
                                           fontSize: 10,
@@ -488,7 +488,7 @@ class _HomeState extends State<Home> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              "Water Intake",
+                              'Water Intake',
                               style: TextStyle(
                                   color: Colours.black,
                                   fontSize: 12,
@@ -506,7 +506,7 @@ class _HomeState extends State<Home> {
                                         0, 0, bounds.width, bounds.height));
                               },
                               child: const Text(
-                                "4 Liters",
+                                '4 Liters',
                                 style: TextStyle(
                                   color: Colours.black,
                                   fontSize: 14,
@@ -516,7 +516,7 @@ class _HomeState extends State<Home> {
                             ),
                             SizedBox(height: media.width * 0.03),
                             const Text(
-                              "Real time updates",
+                              'Real time updates',
                               style: TextStyle(
                                   color: Colours.black,
                                   fontSize: 10,
@@ -565,7 +565,7 @@ class _HomeState extends State<Home> {
                                       children: [
                                         SizedBox(height: media.width * 0.01),
                                         Text(
-                                          obj["title"].toString(),
+                                          obj['title'].toString(),
                                           style: const TextStyle(
                                               color: Colours.black,
                                               fontSize: 11,
@@ -586,7 +586,7 @@ class _HomeState extends State<Home> {
                                                     bounds.height));
                                           },
                                           child: Text(
-                                            obj["subtitle"].toString(),
+                                            obj['subtitle'].toString(),
                                             style: const TextStyle(
                                               color: Colours.black,
                                               fontSize: 12,
@@ -625,7 +625,7 @@ class _HomeState extends State<Home> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "Sleep",
+                                'Sleep',
                                 style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 12,
@@ -643,7 +643,7 @@ class _HomeState extends State<Home> {
                                           0, 0, bounds.width, bounds.height));
                                 },
                                 child: const Text(
-                                  "8h 20m",
+                                  '8h 20m',
                                   style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 14,
@@ -653,7 +653,7 @@ class _HomeState extends State<Home> {
                               ),
                               Expanded(
                                   child: Image.asset(
-                                "assets/images/sleep_graph.png",
+                                'assets/images/sleep_graph.png',
                                 width: double.maxFinite,
                                 fit: BoxFit.fitWidth,
                               ))
@@ -676,7 +676,7 @@ class _HomeState extends State<Home> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "Calories",
+                                'Calories',
                                 style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 12,
@@ -694,7 +694,7 @@ class _HomeState extends State<Home> {
                                           0, 0, bounds.width, bounds.height));
                                 },
                                 child: const Text(
-                                  "760 kCal",
+                                  '760 kCal',
                                   style: TextStyle(
                                     color: Colours.black,
                                     fontSize: 14,
@@ -720,7 +720,7 @@ class _HomeState extends State<Home> {
                                                 colors: Colours.primaryG),
                                             borderRadius: BorderRadius.circular(
                                                 media.width * 0.075)),
-                                        child: Text("230kCal\nleft",
+                                        child: Text('230kCal\nleft',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                               color: theme.colorScheme.surface,
@@ -752,7 +752,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Workout Progress",
+                      'Workout Progress',
                       style: TextStyle(
                         color: Colours.black,
                         fontSize: 16,
@@ -767,7 +767,7 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.circular(15)),
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton(
-                          items: ["Weekly", "Monthly"]
+                          items: ['Weekly', 'Monthly']
                               .map((name) => DropdownMenuItem(
                                   value: name,
                                   child: Text(
@@ -779,7 +779,7 @@ class _HomeState extends State<Home> {
                           onChanged: (value) {},
                           icon: Icon(Icons.expand_more,
                               color: theme.colorScheme.surface),
-                          hint: Text("Weekly",
+                          hint: Text('Weekly',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: theme.colorScheme.surface,
@@ -859,7 +859,7 @@ class _HomeState extends State<Home> {
                             getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                               return lineBarsSpot.map((lineBarSpot) {
                                 return LineTooltipItem(
-                                  "${lineBarSpot.x.toInt()} mins ago",
+                                  '${lineBarSpot.x.toInt()} mins ago',
                                   const TextStyle(
                                     color: Colors.white,
                                     fontSize: 10,
@@ -910,7 +910,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Latest Workout",
+                      'Latest Workout',
                       style: TextStyle(
                           color: Colours.black,
                           fontSize: 16,
@@ -919,7 +919,7 @@ class _HomeState extends State<Home> {
                     TextButton(
                       onPressed: () {},
                       child: const Text(
-                        "See More",
+                        'See More',
                         style: TextStyle(
                             color: Colours.gray,
                             fontSize: 14,
@@ -969,7 +969,7 @@ class _HomeState extends State<Home> {
                 radius: 55,
                 titlePositionPercentageOffset: 0.55,
                 badgeWidget: Text(
-                  "20.1",
+                  '20.1',
                   style: TextStyle(
                       color: Colours.white,
                       fontWeight: FontWeight.w700,

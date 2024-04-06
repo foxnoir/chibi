@@ -1,5 +1,4 @@
 import 'package:chibi/global_widgets//round_button.dart';
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
@@ -13,21 +12,21 @@ class CameraScreen extends StatefulWidget {
 class _CameraScreenState extends State<CameraScreen> {
   List photoArr = [
     {
-      "time": "2 June",
-      "photo": [
-        "assets/images/pp_1.png",
-        "assets/images/pp_2.png",
-        "assets/images/pp_3.png",
-        "assets/images/pp_4.png",
+      'time': '2 June',
+      'photo': [
+        'assets/images/pp_1.png',
+        'assets/images/pp_2.png',
+        'assets/images/pp_3.png',
+        'assets/images/pp_4.png',
       ]
     },
     {
-      "time": "5 May",
-      "photo": [
-        "assets/images/pp_5.png",
-        "assets/images/pp_6.png",
-        "assets/images/pp_7.png",
-        "assets/images/pp_8.png",
+      'time': '5 May',
+      'photo': [
+        'assets/images/pp_5.png',
+        'assets/images/pp_6.png',
+        'assets/images/pp_7.png',
+        'assets/images/pp_8.png',
       ]
     }
   ];
@@ -43,8 +42,8 @@ class _CameraScreenState extends State<CameraScreen> {
         elevation: 0,
         leadingWidth: 0,
         leading: const SizedBox(),
-        title: Text(
-          "Progress Photo",
+        title: const Text(
+          'Progress Photo',
           style: TextStyle(
               color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
@@ -60,7 +59,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                "assets/icons/more_icon.png",
+                'assets/icons/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -96,7 +95,7 @@ class _CameraScreenState extends State<CameraScreen> {
                           height: 50,
                           alignment: Alignment.center,
                           child: Image.asset(
-                            "assets/icons/date_notifi.png",
+                            'assets/icons/date_notifi.png',
                             width: 30,
                             height: 30,
                           ),
@@ -104,19 +103,19 @@ class _CameraScreenState extends State<CameraScreen> {
                         const SizedBox(
                           width: 8,
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  "Reminder!",
+                                Text(
+                                  'Reminder!',
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500),
                                 ),
                                 Text(
-                                  "Next Photos Fall On July 08",
+                                  'Next Photos Fall On July 08',
                                   style: TextStyle(
                                       color: Colours.black,
                                       fontSize: 14,
@@ -129,7 +128,7 @@ class _CameraScreenState extends State<CameraScreen> {
                             alignment: Alignment.topRight,
                             child: IconButton(
                                 onPressed: () {},
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.close,
                                   color: Colours.gray,
                                   size: 15,
@@ -160,8 +159,8 @@ class _CameraScreenState extends State<CameraScreen> {
                               const SizedBox(
                                 height: 15,
                               ),
-                              Text(
-                                "Track Your Progress Each\nMonth With Photo",
+                              const Text(
+                                'Track Your Progress Each\nMonth With Photo',
                                 style: TextStyle(
                                   color: Colours.black,
                                   fontSize: 12,
@@ -172,11 +171,11 @@ class _CameraScreenState extends State<CameraScreen> {
                                 width: 110,
                                 height: 35,
                                 child: RoundButton(
-                                    title: "Learn More", onPressed: () {}),
+                                    title: 'Learn More', onPressed: () {}),
                               )
                             ]),
                         Image.asset(
-                          "assets/images/progress_each_photo.png",
+                          'assets/images/progress_each_photo.png',
                           width: media.width * 0.35,
                         )
                       ],
@@ -197,8 +196,8 @@ class _CameraScreenState extends State<CameraScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Compare my Photo",
+                      const Text(
+                        'Compare my Photo',
                         style: TextStyle(
                             color: Colours.black,
                             fontSize: 14,
@@ -208,7 +207,7 @@ class _CameraScreenState extends State<CameraScreen> {
                         width: 100,
                         height: 25,
                         child: RoundButton(
-                          title: "Compare",
+                          title: 'Compare',
                           onPressed: () {
                             // Navigator.push(
                             //   context,
@@ -229,8 +228,8 @@ class _CameraScreenState extends State<CameraScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Gallery",
+                      const Text(
+                        'Gallery',
                         style: TextStyle(
                             color: Colours.black,
                             fontSize: 16,
@@ -238,8 +237,8 @@ class _CameraScreenState extends State<CameraScreen> {
                       ),
                       TextButton(
                           onPressed: () {},
-                          child: Text(
-                            "See more",
+                          child: const Text(
+                            'See more',
                             style: TextStyle(color: Colours.gray, fontSize: 12),
                           ))
                     ],
@@ -252,7 +251,7 @@ class _CameraScreenState extends State<CameraScreen> {
                     itemCount: photoArr.length,
                     itemBuilder: ((context, index) {
                       var pObj = photoArr[index] as Map? ?? {};
-                      var imaArr = pObj["photo"] as List? ?? [];
+                      var imaArr = pObj['photo'] as List? ?? [];
 
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -260,9 +259,9 @@ class _CameraScreenState extends State<CameraScreen> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              pObj["time"].toString(),
-                              style:
-                                  TextStyle(color: Colours.gray, fontSize: 12),
+                              pObj['time'].toString(),
+                              style: const TextStyle(
+                                  color: Colours.gray, fontSize: 12),
                             ),
                           ),
                           SizedBox(
@@ -283,7 +282,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10),
                                     child: Image.asset(
-                                      imaArr[indexRow] as String? ?? "",
+                                      imaArr[indexRow] as String? ?? '',
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,

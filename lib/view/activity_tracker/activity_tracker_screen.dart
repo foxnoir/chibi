@@ -5,7 +5,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class ActivityTrackerScreen extends StatefulWidget {
-  static String routeName = "/ActivityTrackerScreen";
+  static String routeName = '/ActivityTrackerScreen';
   const ActivityTrackerScreen({Key? key}) : super(key: key);
 
   @override
@@ -17,14 +17,14 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
 
   List latestArr = [
     {
-      "image": "assets/images/pic_4.png",
-      "title": "Drinking 300ml Water",
-      "time": "About 1 minutes ago"
+      'image': 'assets/images/pic_4.png',
+      'title': 'Drinking 300ml Water',
+      'time': 'About 1 minutes ago'
     },
     {
-      "image": "assets/images/pic_5.png",
-      "title": "Eat Snack (Fitbar)",
-      "time": "About 3 hours ago"
+      'image': 'assets/images/pic_5.png',
+      'title': 'Eat Snack (Fitbar)',
+      'time': 'About 3 hours ago'
     },
   ];
 
@@ -51,7 +51,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              "assets/icons/back_icon.png",
+              'assets/icons/back_icon.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -59,7 +59,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
           ),
         ),
         title: const Text(
-          "Activity Tracker",
+          'Activity Tracker',
           style: TextStyle(
               color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
@@ -75,7 +75,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                "assets/icons/more_icon.png",
+                'assets/icons/more_icon.png',
                 width: 12,
                 height: 12,
                 fit: BoxFit.contain,
@@ -105,7 +105,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
-                          "Today Target",
+                          'Today Target',
                           style: TextStyle(
                               color: Colours.black,
                               fontSize: 14,
@@ -147,9 +147,9 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                       children: [
                         Expanded(
                           child: TodayTargetCell(
-                            icon: "assets/icons/water_icon.png",
-                            value: "8L",
-                            title: "Water Intake",
+                            icon: 'assets/icons/water_icon.png',
+                            value: '8L',
+                            title: 'Water Intake',
                           ),
                         ),
                         SizedBox(
@@ -157,9 +157,9 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         ),
                         Expanded(
                           child: TodayTargetCell(
-                            icon: "assets/icons/foot_icon.png",
-                            value: "2400",
-                            title: "Foot Steps",
+                            icon: 'assets/icons/foot_icon.png',
+                            value: '2400',
+                            title: 'Foot Steps',
                           ),
                         ),
                       ],
@@ -174,7 +174,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    "Activity Progress",
+                    'Activity Progress',
                     style: TextStyle(
                       color: Colours.black,
                       fontSize: 16,
@@ -189,7 +189,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         borderRadius: BorderRadius.circular(15)),
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton(
-                        items: ["Weekly", "Monthly"]
+                        items: ['Weekly', 'Monthly']
                             .map((name) => DropdownMenuItem(
                                 value: name,
                                 child: Text(
@@ -201,7 +201,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         onChanged: (value) {},
                         icon: Icon(Icons.expand_more,
                             color: theme.colorScheme.surface),
-                        hint: Text("Weekly",
+                        hint: Text('Weekly',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: theme.colorScheme.surface,
@@ -292,10 +292,10 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   ),
                   titlesData: FlTitlesData(
                     show: true,
-                    rightTitles: AxisTitles(
+                    rightTitles: const AxisTitles(
                       sideTitles: SideTitles(showTitles: false),
                     ),
-                    topTitles: AxisTitles(
+                    topTitles: const AxisTitles(
                       sideTitles: SideTitles(showTitles: false),
                     ),
                     bottomTitles: AxisTitles(
@@ -305,7 +305,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         reservedSize: 38,
                       ),
                     ),
-                    leftTitles: AxisTitles(
+                    leftTitles: const AxisTitles(
                       sideTitles: SideTitles(
                         showTitles: false,
                       ),
@@ -315,7 +315,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                     show: false,
                   ),
                   barGroups: showingGroups(),
-                  gridData: FlGridData(show: false),
+                  gridData: const FlGridData(show: false),
                 )),
               ),
               SizedBox(
@@ -325,7 +325,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    "Latest Workout",
+                    'Latest Workout',
                     style: TextStyle(
                         color: Colours.black,
                         fontSize: 16,
@@ -334,7 +334,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   TextButton(
                     onPressed: () {},
                     child: const Text(
-                      "See More",
+                      'See More',
                       style: TextStyle(
                           color: Colours.gray,
                           fontSize: 14,

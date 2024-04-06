@@ -23,7 +23,7 @@ class WorkoutRow extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(30),
               child: Image.asset(
-                wObj["image"].toString(),
+                wObj['image'].toString(),
                 width: 60,
                 height: 60,
                 fit: BoxFit.cover,
@@ -37,11 +37,11 @@ class WorkoutRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  wObj["name"].toString(),
+                  wObj['name'].toString(),
                   style: TextStyle(color: Colours.black, fontSize: 12),
                 ),
                 Text(
-                  "${wObj["kcal"].toString()} Calories Burn | ${wObj["time"].toString()}minutes",
+                  '${wObj['kcal'].toString()} Calories Burn | ${wObj['time'].toString()}minutes',
                   style: TextStyle(
                     color: Colours.gray,
                     fontSize: 10,
@@ -55,7 +55,7 @@ class WorkoutRow extends StatelessWidget {
                   width: media.width * 0.5,
                   backgroundColor: Colors.grey.shade100,
                   foregrondColor: Colors.purple,
-                  ratio: wObj["progress"] as double? ?? 0.0,
+                  ratio: wObj['progress'] as double? ?? 0.0,
                   direction: Axis.horizontal,
                   curve: Curves.fastLinearToSlowEaseIn,
                   duration: const Duration(seconds: 3),
@@ -70,7 +70,7 @@ class WorkoutRow extends StatelessWidget {
             IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/icons/next_icon.png",
+                  'assets/icons/next_icon.png',
                   width: 30,
                   height: 30,
                   fit: BoxFit.contain,

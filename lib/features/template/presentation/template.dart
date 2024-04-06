@@ -53,7 +53,7 @@ class _TemplateState extends StatefulViewWithVMState<Template, TemplateVM>
         centerTitle: true,
         elevation: 0,
         title: const Text(
-          "Profile",
+          'Profile',
           style: TextStyle(
               color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),

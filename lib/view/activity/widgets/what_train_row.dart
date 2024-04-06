@@ -1,8 +1,6 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:flutter/material.dart';
-
-import '../../../global_widgets//round_button.dart';
 
 class WhatTrainRow extends StatelessWidget {
   final Map wObj;
@@ -33,8 +31,8 @@ class WhatTrainRow extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      wObj["title"].toString(),
-                      style: TextStyle(
+                      wObj['title'].toString(),
+                      style: const TextStyle(
                           color: Colours.black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
@@ -44,7 +42,7 @@ class WhatTrainRow extends StatelessWidget {
                     ),
                     Text(
                       "${wObj["exercises"].toString()} | ${wObj["time"].toString()}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colours.gray,
                         fontSize: 12,
                       ),
@@ -55,7 +53,7 @@ class WhatTrainRow extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       height: 30,
-                      child: RoundButton(title: "View More", onPressed: () {}),
+                      child: RoundButton(title: 'View More', onPressed: () {}),
                     )
                   ],
                 ),
@@ -77,7 +75,7 @@ class WhatTrainRow extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image.asset(
-                      wObj["image"].toString(),
+                      wObj['image'].toString(),
                       width: 90,
                       height: 90,
                       fit: BoxFit.contain,

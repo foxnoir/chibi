@@ -49,31 +49,31 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
 
   List accountArr = [
     {
-      "image": "assets/icons/p_personal.png",
-      "name": "Personal Data",
-      "tag": "1"
+      'image': 'assets/icons/p_personal.png',
+      'name': 'Personal Data',
+      'tag': '1'
     },
-    {"image": "assets/icons/p_achi.png", "name": "Achievement", "tag": "2"},
+    {'image': 'assets/icons/p_achi.png', 'name': 'Achievement', 'tag': '2'},
     {
-      "image": "assets/icons/p_activity.png",
-      "name": "Activity History",
-      "tag": "3"
+      'image': 'assets/icons/p_activity.png',
+      'name': 'Activity History',
+      'tag': '3'
     },
     {
-      "image": "assets/icons/p_workout.png",
-      "name": "Workout Progress",
-      "tag": "4"
+      'image': 'assets/icons/p_workout.png',
+      'name': 'Workout Progress',
+      'tag': '4'
     }
   ];
 
   List otherArr = [
-    {"image": "assets/icons/p_contact.png", "name": "Contact Us", "tag": "5"},
+    {'image': 'assets/icons/p_contact.png', 'name': 'Contact Us', 'tag': '5'},
     {
-      "image": "assets/icons/p_privacy.png",
-      "name": "Privacy Policy",
-      "tag": "6"
+      'image': 'assets/icons/p_privacy.png',
+      'name': 'Privacy Policy',
+      'tag': '6'
     },
-    {"image": "assets/icons/p_setting.png", "name": "Setting", "tag": "7"},
+    {'image': 'assets/icons/p_setting.png', 'name': 'Setting', 'tag': '7'},
   ];
 
   @override
@@ -85,7 +85,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
         centerTitle: true,
         elevation: 0,
         title: const Text(
-          "Profile",
+          'Profile',
           // style: TextStyle(
           //     color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
@@ -101,7 +101,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image.asset(
-                      "assets/images/user.png",
+                      'assets/images/user.png',
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
@@ -115,7 +115,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Stefani Wong",
+                          'Stefani Wong',
                           style: TextStyle(
                             color: Colours.black,
                             fontSize: 14,
@@ -123,7 +123,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                           ),
                         ),
                         Text(
-                          "Lose a Fat Program",
+                          'Lose a Fat Program',
                           style: TextStyle(
                             color: Colours.gray,
                             fontSize: 12,
@@ -136,7 +136,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                     width: 70,
                     height: 25,
                     child: RoundButton(
-                      title: "Edit",
+                      title: 'Edit',
                       type: RoundButtonType.primaryBG,
                       onPressed: () {},
                     ),
@@ -150,8 +150,8 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 children: [
                   Expanded(
                     child: TitleSubtitleCell(
-                      title: "180cm",
-                      subtitle: "Height",
+                      title: '180cm',
+                      subtitle: 'Height',
                     ),
                   ),
                   SizedBox(
@@ -159,8 +159,8 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   ),
                   Expanded(
                     child: TitleSubtitleCell(
-                      title: "65kg",
-                      subtitle: "Weight",
+                      title: '65kg',
+                      subtitle: 'Weight',
                     ),
                   ),
                   SizedBox(
@@ -168,8 +168,8 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   ),
                   Expanded(
                     child: TitleSubtitleCell(
-                      title: "22yo",
-                      subtitle: "Age",
+                      title: '22yo',
+                      subtitle: 'Age',
                     ),
                   ),
                 ],
@@ -190,7 +190,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Account",
+                      'Account',
                       style: TextStyle(
                         color: Colours.black,
                         fontSize: 16,
@@ -207,8 +207,8 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                       itemBuilder: (context, index) {
                         var iObj = accountArr[index] as Map? ?? {};
                         return SettingRow(
-                          icon: iObj["image"].toString(),
-                          title: iObj["name"].toString(),
+                          icon: iObj['image'].toString(),
+                          title: iObj['name'].toString(),
                           onPressed: () {},
                         );
                       },

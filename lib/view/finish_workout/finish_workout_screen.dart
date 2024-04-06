@@ -2,10 +2,8 @@ import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_widgets//round_button.dart';
-
 class FinishWorkoutScreen extends StatelessWidget {
-  static String routeName = "/FinishWorkoutScreen";
+  static String routeName = '/FinishWorkoutScreen';
   const FinishWorkoutScreen({Key? key}) : super(key: key);
 
   @override
@@ -24,15 +22,15 @@ class FinishWorkoutScreen extends StatelessWidget {
                 height: 20,
               ),
               Image.asset(
-                "assets/images/complete_workout.png",
+                'assets/images/complete_workout.png',
                 height: media.width * 0.8,
                 fit: BoxFit.fitHeight,
               ),
               const SizedBox(
                 height: 20,
               ),
-              Text(
-                "Congratulations, You Have Finished Your Workout",
+              const Text(
+                'Congratulations, You Have Finished Your Workout',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colours.black,
@@ -43,8 +41,8 @@ class FinishWorkoutScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Text(
-                "Exercises is king and nutrition is queen. Combine the two and you will have a kingdom",
+              const Text(
+                'Exercises is king and nutrition is queen. Combine the two and you will have a kingdom',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colours.gray,
@@ -54,8 +52,8 @@ class FinishWorkoutScreen extends StatelessWidget {
               const SizedBox(
                 height: 8,
               ),
-              Text(
-                "-Jack Lalanne",
+              const Text(
+                '-Jack Lalanne',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colours.gray,
@@ -64,7 +62,7 @@ class FinishWorkoutScreen extends StatelessWidget {
               ),
               const Spacer(),
               RoundGradientButton(
-                  title: "Back To Home",
+                  title: 'Back To Home',
                   onPressed: () {
                     Navigator.pop(context);
                   }),

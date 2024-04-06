@@ -14,7 +14,7 @@ class LatestActivityRow extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(30),
               child: Image.asset(
-                wObj["image"].toString(),
+                wObj['image'].toString(),
                 width: 50,
                 height: 50,
                 fit: BoxFit.cover,
@@ -28,15 +28,15 @@ class LatestActivityRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  wObj["title"].toString(),
-                  style: TextStyle(
+                  wObj['title'].toString(),
+                  style: const TextStyle(
                       color: Colours.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
-                  wObj["time"].toString(),
-                  style: TextStyle(
+                  wObj['time'].toString(),
+                  style: const TextStyle(
                     color: Colours.gray,
                     fontSize: 10,
                   ),
@@ -46,7 +46,7 @@ class LatestActivityRow extends StatelessWidget {
             IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/icons/sub_menu_icon.png",
+                  'assets/icons/sub_menu_icon.png',
                   width: 12,
                   height: 12,
                   fit: BoxFit.contain,

@@ -1,11 +1,9 @@
+import 'package:chibi/core/common.dart';
 import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/view/workour_detail_view/widgets/icon_title_next_row.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../global_widgets//round_button.dart';
-import '../../core/common.dart';
-import '../workour_detail_view/widgets/icon_title_next_row.dart';
 
 class AddScheduleView extends StatefulWidget {
   final DateTime date;
@@ -38,15 +36,15 @@ class _AddScheduleViewState extends State<AddScheduleView> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              "assets/icons/closed_btn.png",
+              'assets/icons/closed_btn.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
             ),
           ),
         ),
-        title: Text(
-          "Add Schedule",
+        title: const Text(
+          'Add Schedule',
           style: TextStyle(
               color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
@@ -62,7 +60,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                "assets/icons/more_icon.png",
+                'assets/icons/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -78,7 +76,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Row(
             children: [
               Image.asset(
-                "assets/icons/date.png",
+                'assets/icons/date.png',
                 width: 20,
                 height: 20,
               ),
@@ -86,16 +84,16 @@ class _AddScheduleViewState extends State<AddScheduleView> {
                 width: 8,
               ),
               Text(
-                dateToString(widget.date, formatStr: "E, dd MMMM yyyy"),
-                style: TextStyle(color: Colours.gray, fontSize: 14),
+                dateToString(widget.date, formatStr: 'E, dd MMMM yyyy'),
+                style: const TextStyle(color: Colours.gray, fontSize: 14),
               ),
             ],
           ),
           const SizedBox(
             height: 20,
           ),
-          Text(
-            "Time",
+          const Text(
+            'Time',
             style: TextStyle(
                 color: Colours.black,
                 fontSize: 14,
@@ -114,8 +112,8 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           const SizedBox(
             height: 20,
           ),
-          Text(
-            "Details Workout",
+          const Text(
+            'Details Workout',
             style: TextStyle(
                 color: Colours.black,
                 fontSize: 14,
@@ -125,40 +123,40 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             height: 8,
           ),
           IconTitleNextRow(
-              icon: "assets/icons/choose_workout.png",
-              title: "Choose Workout",
-              time: "Upperbody",
+              icon: 'assets/icons/choose_workout.png',
+              title: 'Choose Workout',
+              time: 'Upperbody',
               color: Colours.lightgray,
               onPressed: () {}),
           const SizedBox(
             height: 10,
           ),
           IconTitleNextRow(
-              icon: "assets/icons/difficulity_icon.png",
-              title: "Difficulity",
-              time: "Beginner",
+              icon: 'assets/icons/difficulity_icon.png',
+              title: 'Difficulity',
+              time: 'Beginner',
               color: Colours.lightgray,
               onPressed: () {}),
           const SizedBox(
             height: 10,
           ),
           IconTitleNextRow(
-              icon: "assets/icons/repetitions.png",
-              title: "Custom Repetitions",
-              time: "",
+              icon: 'assets/icons/repetitions.png',
+              title: 'Custom Repetitions',
+              time: '',
               color: Colours.lightgray,
               onPressed: () {}),
           const SizedBox(
             height: 10,
           ),
           IconTitleNextRow(
-              icon: "assets/icons/repetitions.png",
-              title: "Custom Weights",
-              time: "",
+              icon: 'assets/icons/repetitions.png',
+              title: 'Custom Weights',
+              time: '',
               color: Colours.lightgray,
               onPressed: () {}),
-          Spacer(),
-          RoundGradientButton(title: "Save", onPressed: () {}),
+          const Spacer(),
+          RoundGradientButton(title: 'Save', onPressed: () {}),
           const SizedBox(
             height: 20,
           ),

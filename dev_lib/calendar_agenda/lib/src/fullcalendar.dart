@@ -1,8 +1,9 @@
+// ignore_for_file: avoid_positional_boolean_parameters
+
+import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-
-import 'typedata.dart';
 
 class FullCalendar extends StatefulWidget {
   final DateTime startDate;
@@ -49,6 +50,7 @@ class _FullCalendarState extends State<FullCalendar> {
 
   late PageController _horizontalScroll;
 
+  @override
   void initState() {
     setState(() {
       startDate = DateTime.parse(
@@ -65,12 +67,12 @@ class _FullCalendarState extends State<FullCalendar> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> partsStart = startDate.toString().split(" ").first.split("-");
+    List<String> partsStart = startDate.toString().split(' ').first.split('-');
 
     DateTime firstDate = DateTime.parse(
         "${partsStart.first}-${partsStart[1].padLeft(2, '0')}-01 00:00:00.000");
 
-    List<String> partsEnd = endDate.toString().split(" ").first.split("-");
+    List<String> partsEnd = endDate.toString().split(' ').first.split('-');
 
     DateTime lastDate = DateTime.parse(
             "${partsEnd.first}-${(int.parse(partsEnd[1]) + 1).toString().padLeft(2, '0')}-01 23:00:00.000")
@@ -83,8 +85,8 @@ class _FullCalendarState extends State<FullCalendar> {
     DateTime referenceDate = firstDate;
 
     while (referenceDate.isBefore(lastDate)) {
-      List<String> referenceParts = referenceDate.toString().split(" ");
-      DateTime newDate = DateTime.parse("${referenceParts.first} 12:00:00.000");
+      List<String> referenceParts = referenceDate.toString().split(' ');
+      DateTime newDate = DateTime.parse('${referenceParts.first} 12:00:00.000');
       dates.add(newDate);
 
       referenceDate = newDate.add(Duration(days: 1));
@@ -255,8 +257,8 @@ class _FullCalendarState extends State<FullCalendar> {
 
   Widget dateInCalendar(
       DateTime date, bool outOfRange, double width, bool event) {
-    bool isSelectedDate = date.toString().split(" ").first ==
-        widget.selectedDate.toString().split(" ").first;
+    bool isSelectedDate = date.toString().split(' ').first ==
+        widget.selectedDate.toString().split(' ').first;
     return Container(
       child: GestureDetector(
         onTap: () => outOfRange ? null : widget.onDateChange(date),
@@ -277,7 +279,7 @@ class _FullCalendarState extends State<FullCalendar> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4.0),
                 child: Text(
-                  DateFormat("dd").format(date),
+                  DateFormat('dd').format(date),
                   style: TextStyle(
                       color: outOfRange
                           ? isSelectedDate
@@ -306,7 +308,7 @@ class _FullCalendarState extends State<FullCalendar> {
 
   Widget month(List dates, double width, String? locale, WeekDay? weekday) {
     DateTime first = dates.first;
-    while (DateFormat("E").format(dates.first) != "Mon") {
+    while (DateFormat('E').format(dates.first) != 'Mon') {
       dates.add(dates.first.subtract(Duration(days: 1)));
 
       dates.sort();
@@ -325,7 +327,8 @@ class _FullCalendarState extends State<FullCalendar> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 30.0),
-            child: daysOfWeek(width - 30, widget.locale, widget.fullCalendarDay),
+            child:
+                daysOfWeek(width - 30, widget.locale, widget.fullCalendarDay),
           ),
           Container(
             padding: const EdgeInsets.only(top: 10.0),
@@ -357,7 +360,7 @@ class _FullCalendarState extends State<FullCalendar> {
                     date,
                     outOfRange,
                     width,
-                    _events!.contains(date.toString().split(" ").first) &&
+                    _events!.contains(date.toString().split(' ').first) &&
                         !outOfRange,
                   );
                 }

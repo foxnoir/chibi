@@ -11,14 +11,14 @@ class ExercisesSetSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var exercisesArr = sObj["set"] as List? ?? [];
+    var exercisesArr = sObj['set'] as List? ?? [];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          sObj["name"].toString(),
+          sObj['name'].toString(),
           style: const TextStyle(
               color: Colours.black, fontSize: 12, fontWeight: FontWeight.w500),
         ),

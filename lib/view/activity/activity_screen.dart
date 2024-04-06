@@ -1,11 +1,10 @@
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:chibi/view/activity/widgets/upcoming_workout_row.dart';
 import 'package:chibi/view/activity/widgets/what_train_row.dart';
+import 'package:chibi/view/workour_detail_view/workour_detail_view.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-
-import '../../global_widgets//round_button.dart';
-import '../workour_detail_view/workour_detail_view.dart';
 
 class ActivityScreen extends StatefulWidget {
   const ActivityScreen({Key? key}) : super(key: key);
@@ -17,35 +16,35 @@ class ActivityScreen extends StatefulWidget {
 class _ActivityScreenState extends State<ActivityScreen> {
   List latestArr = [
     {
-      "image": "assets/images/Workout1.png",
-      "title": "Fullbody Workout",
-      "time": "Today, 03:00pm"
+      'image': 'assets/images/Workout1.png',
+      'title': 'Fullbody Workout',
+      'time': 'Today, 03:00pm'
     },
     {
-      "image": "assets/images/Workout2.png",
-      "title": "Upperbody Workout",
-      "time": "June 05, 02:00pm"
+      'image': 'assets/images/Workout2.png',
+      'title': 'Upperbody Workout',
+      'time': 'June 05, 02:00pm'
     },
   ];
 
   List whatArr = [
     {
-      "image": "assets/images/what_1.png",
-      "title": "Fullbody Workout",
-      "exercises": "11 Exercises",
-      "time": "32mins"
+      'image': 'assets/images/what_1.png',
+      'title': 'Fullbody Workout',
+      'exercises': '11 Exercises',
+      'time': '32mins'
     },
     {
-      "image": "assets/images/what_2.png",
-      "title": "Lowebody Workout",
-      "exercises": "12 Exercises",
-      "time": "40mins"
+      'image': 'assets/images/what_2.png',
+      'title': 'Lowebody Workout',
+      'exercises': '12 Exercises',
+      'time': '40mins'
     },
     {
-      "image": "assets/images/what_3.png",
-      "title": "AB Workout",
-      "exercises": "14 Exercises",
-      "time": "20mins"
+      'image': 'assets/images/what_3.png',
+      'title': 'AB Workout',
+      'exercises': '14 Exercises',
+      'time': '20mins'
     }
   ];
 
@@ -66,7 +65,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
               elevation: 0,
               // pinned: true,
               title: Text(
-                "Workout Tracker",
+                'Workout Tracker',
                 style: TextStyle(
                     color: theme.colorScheme.surface,
                     fontSize: 16,
@@ -84,7 +83,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         color: Colours.lightgray,
                         borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
-                      "assets/icons/more_icon.png",
+                      'assets/icons/more_icon.png',
                       width: 15,
                       height: 15,
                       fit: BoxFit.contain,
@@ -156,7 +155,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                           return lineBarsSpot.map((lineBarSpot) {
                             return LineTooltipItem(
-                              "${lineBarSpot.x.toInt()} mins ago",
+                              '${lineBarSpot.x.toInt()} mins ago',
                               const TextStyle(
                                 color: Colors.white,
                                 fontSize: 10,
@@ -240,7 +239,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            "Daily Workout Schedule",
+                            'Daily Workout Schedule',
                             style: TextStyle(
                                 color: Colours.black,
                                 fontSize: 14,
@@ -250,7 +249,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             width: 70,
                             height: 25,
                             child: RoundButton(
-                              title: "Check",
+                              title: 'Check',
                               onPressed: () {
                                 // Navigator.push(
                                 //   context,
@@ -272,7 +271,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
-                          "Upcoming Workout",
+                          'Upcoming Workout',
                           style: TextStyle(
                               color: Colours.black,
                               fontSize: 16,
@@ -281,7 +280,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         TextButton(
                           onPressed: () {},
                           child: const Text(
-                            "See More",
+                            'See More',
                             style: TextStyle(
                                 color: Colours.gray,
                                 fontSize: 14,
@@ -306,7 +305,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "What Do You Want to Train",
+                          'What Do You Want to Train',
                           style: TextStyle(
                               color: Colours.black,
                               fontSize: 16,

@@ -16,28 +16,28 @@ class ExercisesStepDetails extends StatefulWidget {
 class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
   List stepArr = [
     {
-      "no": "01",
-      "title": "Spread Your Arms",
-      "detail":
-          "To make the gestures feel more relaxed, stretch your arms as you start this movement. No bending of hands."
+      'no': '01',
+      'title': 'Spread Your Arms',
+      'detail':
+          'To make the gestures feel more relaxed, stretch your arms as you start this movement. No bending of hands.'
     },
     {
-      "no": "02",
-      "title": "Rest at The Toe",
-      "detail":
-          "The basis of this movement is jumping. Now, what needs to be considered is that you have to use the tips of your feet"
+      'no': '02',
+      'title': 'Rest at The Toe',
+      'detail':
+          'The basis of this movement is jumping. Now, what needs to be considered is that you have to use the tips of your feet'
     },
     {
-      "no": "03",
-      "title": "Adjust Foot Movement",
-      "detail":
-          "Jumping Jack is not just an ordinary jump. But, you also have to pay close attention to leg movements."
+      'no': '03',
+      'title': 'Adjust Foot Movement',
+      'detail':
+          'Jumping Jack is not just an ordinary jump. But, you also have to pay close attention to leg movements.'
     },
     {
-      "no": "04",
-      "title": "Clapping Both Hands",
-      "detail":
-          "This cannot be taken lightly. You see, without realizing it, the clapping of your hands helps you to keep your rhythm while doing the Jumping Jack"
+      'no': '04',
+      'title': 'Clapping Both Hands',
+      'detail':
+          'This cannot be taken lightly. You see, without realizing it, the clapping of your hands helps you to keep your rhythm while doing the Jumping Jack'
     },
   ];
 
@@ -63,7 +63,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              "assets/icons/closed_btn.png",
+              'assets/icons/closed_btn.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -82,7 +82,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                "assets/icons/more_icon.png",
+                'assets/icons/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -108,7 +108,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                         gradient: LinearGradient(colors: Colours.primaryG),
                         borderRadius: BorderRadius.circular(20)),
                     child: Image.asset(
-                      "assets/images/video_temp.png",
+                      'assets/images/video_temp.png',
                       width: media.width,
                       height: media.width * 0.43,
                       fit: BoxFit.contain,
@@ -124,7 +124,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   IconButton(
                     onPressed: () {},
                     icon: Image.asset(
-                      "assets/icons/play_icon.png",
+                      'assets/icons/play_icon.png',
                       width: 30,
                       height: 30,
                     ),
@@ -135,8 +135,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                 height: 15,
               ),
               Text(
-                widget.eObj["title"].toString(),
-                style: TextStyle(
+                widget.eObj['title'].toString(),
+                style: const TextStyle(
                     color: Colours.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
@@ -144,8 +144,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               const SizedBox(
                 height: 4,
               ),
-              Text(
-                "Easy | 390 Calories Burn",
+              const Text(
+                'Easy | 390 Calories Burn',
                 style: TextStyle(
                   color: Colours.gray,
                   fontSize: 12,
@@ -154,8 +154,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               const SizedBox(
                 height: 15,
               ),
-              Text(
-                "Descriptions",
+              const Text(
+                'Descriptions',
                 style: TextStyle(
                     color: Colours.black,
                     fontSize: 16,
@@ -164,7 +164,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               const SizedBox(
                 height: 4,
               ),
-              ReadMoreText(
+              const ReadMoreText(
                 'A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide',
                 trimLines: 4,
                 colorClickableText: Colours.black,
@@ -175,8 +175,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   color: Colours.gray,
                   fontSize: 12,
                 ),
-                moreStyle:
-                    const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+                moreStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
               ),
               const SizedBox(
                 height: 15,
@@ -184,8 +183,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "How To Do It",
+                  const Text(
+                    'How To Do It',
                     style: TextStyle(
                         color: Colours.black,
                         fontSize: 16,
@@ -194,8 +193,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      "${stepArr.length} Sets",
-                      style: TextStyle(color: Colours.gray, fontSize: 12),
+                      '${stepArr.length} Sets',
+                      style: const TextStyle(color: Colours.gray, fontSize: 12),
                     ),
                   )
                 ],
@@ -213,8 +212,8 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   );
                 }),
               ),
-              Text(
-                "Custom Repetitions",
+              const Text(
+                'Custom Repetitions',
                 style: TextStyle(
                     color: Colours.black,
                     fontSize: 16,
@@ -243,24 +242,25 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/icons/burn_icon.png",
+                          'assets/icons/burn_icon.png',
                           width: 15,
                           height: 15,
                           fit: BoxFit.contain,
                         ),
                         Text(
-                          " ${(index + 1) * 15} Calories Burn",
-                          style: TextStyle(color: Colours.gray, fontSize: 10),
+                          ' ${(index + 1) * 15} Calories Burn',
+                          style: const TextStyle(
+                              color: Colours.gray, fontSize: 10),
                         ),
                         Text(
-                          " ${index + 1} ",
-                          style: TextStyle(
+                          ' ${index + 1} ',
+                          style: const TextStyle(
                               color: Colours.gray,
                               fontSize: 24,
                               fontWeight: FontWeight.w500),
                         ),
-                        Text(
-                          " times",
+                        const Text(
+                          ' times',
                           style: TextStyle(color: Colours.gray, fontSize: 16),
                         )
                       ],
@@ -268,7 +268,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   },
                 ),
               ),
-              RoundGradientButton(title: "Save", onPressed: () {}),
+              RoundGradientButton(title: 'Save', onPressed: () {}),
               const SizedBox(
                 height: 15,
               ),

@@ -2,10 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_widgets//round_gradient_button.dart';
-
 class YourGoalScreen extends StatefulWidget {
-  static String routeName = "/YourGoalScreen";
+  static String routeName = '/YourGoalScreen';
 
   const YourGoalScreen({Key? key}) : super(key: key);
 
@@ -16,22 +14,22 @@ class YourGoalScreen extends StatefulWidget {
 class _YourGoalScreenState extends State<YourGoalScreen> {
   List pageList = [
     {
-      "title": "Improve Shape",
-      "subtitle":
-          "I have a low amount of body fat\nand need / want to build more\nmuscle",
-      "image": "assets/images/goal_1.png"
+      'title': 'Improve Shape',
+      'subtitle':
+          'I have a low amount of body fat\nand need / want to build more\nmuscle',
+      'image': 'assets/images/goal_1.png'
     },
     {
-      "title": "Lean & Tone",
-      "subtitle":
-          "I’m “skinny fat”. look thin but have\nno shape. I want to add learn\nmuscle in the right way",
-      "image": "assets/images/goal_2.png"
+      'title': 'Lean & Tone',
+      'subtitle':
+          'I’m “skinny fat”. look thin but have\nno shape. I want to add learn\nmuscle in the right way',
+      'image': 'assets/images/goal_2.png'
     },
     {
-      "title": "Lose a Fat",
-      "subtitle":
-          "I have over 20 lbs to lose. I want to\ndrop all this fat and gain muscle\nmass",
-      "image": "assets/images/goal_3.png"
+      'title': 'Lose a Fat',
+      'subtitle':
+          'I have over 20 lbs to lose. I want to\ndrop all this fat and gain muscle\nmass',
+      'image': 'assets/images/goal_3.png'
     }
   ];
   CarouselController carouselController = CarouselController();
@@ -65,13 +63,13 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
-                                  obj["image"],
+                                  obj['image'],
                                   width: media.width * 0.5,
                                   fit: BoxFit.fitWidth,
                                 ),
                                 SizedBox(height: media.width * 0.02),
                                 Text(
-                                  obj["title"],
+                                  obj['title'],
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: theme.colorScheme.surface,
@@ -87,7 +85,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                 ),
                                 SizedBox(height: media.width * 0.02),
                                 Text(
-                                  obj["subtitle"],
+                                  obj['subtitle'],
                                   textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
                                   softWrap: true,
@@ -95,7 +93,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                                   style: TextStyle(
                                     color: theme.colorScheme.surface,
                                     fontSize: 12,
-                                    fontFamily: "Poppins",
+                                    fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
@@ -125,7 +123,7 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                       height: 15,
                     ),
                     const Text(
-                      "What is your goal ?",
+                      'What is your goal ?',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colours.black,
@@ -135,12 +133,12 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
                     ),
                     const SizedBox(height: 5),
                     const Text(
-                      "It will help us to choose a best\nprogram for you",
+                      'It will help us to choose a best\nprogram for you',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colours.gray,
                         fontSize: 12,
-                        fontFamily: "Poppins",
+                        fontFamily: 'Poppins',
                       ),
                     ),
                     const Spacer(),

@@ -1,6 +1,5 @@
-import 'calendar.dart';
+import 'package:calendar_agenda/calendar_agenda.dart';
 
-// CalendarController
 class CalendarAgendaController {
   CalendarAgendaState? state;
 

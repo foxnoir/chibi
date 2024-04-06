@@ -1,13 +1,12 @@
 import 'package:calendar_agenda/calendar_agenda.dart';
+import 'package:chibi/core/common.dart';
 import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/view/workout_schedule_view/add_schedule_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/common.dart';
-import 'add_schedule_view.dart';
-
 class WorkoutScheduleView extends StatefulWidget {
-  static String routeName = "/WorkoutScheduleView";
+  static String routeName = '/WorkoutScheduleView';
   const WorkoutScheduleView({Key? key}) : super(key: key);
 
   @override
@@ -15,46 +14,46 @@ class WorkoutScheduleView extends StatefulWidget {
 }
 
 class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
-  CalendarAgendaController _calendarAgendaControllerAppBar =
+  final CalendarAgendaController _calendarAgendaControllerAppBar =
       CalendarAgendaController();
   late DateTime _selectedDateAppBBar;
 
   List eventArr = [
     {
-      "name": "Ab Workout",
-      "start_time": "22/06/2023 07:30 AM",
+      'name': 'Ab Workout',
+      'start_time': '22/06/2023 07:30 AM',
     },
     {
-      "name": "Upperbody Workout",
-      "start_time": "07/06/2023 09:00 AM",
+      'name': 'Upperbody Workout',
+      'start_time': '07/06/2023 09:00 AM',
     },
     {
-      "name": "Lowerbody Workout",
-      "start_time": "07/06/2023 03:00 PM",
+      'name': 'Lowerbody Workout',
+      'start_time': '07/06/2023 03:00 PM',
     },
     {
-      "name": "Ab Workout",
-      "start_time": "08/06/2023 10:30 AM",
+      'name': 'Ab Workout',
+      'start_time': '08/06/2023 10:30 AM',
     },
     {
-      "name": "Upperbody Workout",
-      "start_time": "08/06/2023 09:00 AM",
+      'name': 'Upperbody Workout',
+      'start_time': '08/06/2023 09:00 AM',
     },
     {
-      "name": "Lowerbody Workout",
-      "start_time": "08/06/2023 03:00 PM",
+      'name': 'Lowerbody Workout',
+      'start_time': '08/06/2023 03:00 PM',
     },
     {
-      "name": "Ab Workout",
-      "start_time": "09/06/2023 07:30 AM",
+      'name': 'Ab Workout',
+      'start_time': '09/06/2023 07:30 AM',
     },
     {
-      "name": "Upperbody Workout",
-      "start_time": "09/06/2023 09:00 AM",
+      'name': 'Upperbody Workout',
+      'start_time': '09/06/2023 09:00 AM',
     },
     {
-      "name": "Lowerbody Workout",
-      "start_time": "09/06/2023 03:00 PM",
+      'name': 'Lowerbody Workout',
+      'start_time': '09/06/2023 03:00 PM',
     }
   ];
 
@@ -71,13 +70,13 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
     var date = dateToStartDate(_selectedDateAppBBar);
     selectDayEventArr = eventArr.map((wObj) {
       return {
-        "name": wObj["name"],
-        "start_time": wObj["start_time"],
-        "date": stringToDate(wObj["start_time"].toString(),
-            formatStr: "dd/MM/yyyy hh:mm aa")
+        'name': wObj['name'],
+        'start_time': wObj['start_time'],
+        'date': stringToDate(wObj['start_time'].toString(),
+            formatStr: 'dd/MM/yyyy hh:mm aa')
       };
     }).where((wObj) {
-      return dateToStartDate(wObj["date"] as DateTime) == date;
+      return dateToStartDate(wObj['date'] as DateTime) == date;
     }).toList();
 
     if (mounted) {
@@ -108,15 +107,15 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              "assets/icons/back_icon.png",
+              'assets/icons/back_icon.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
             ),
           ),
         ),
-        title: Text(
-          "Workout Schedule",
+        title: const Text(
+          'Workout Schedule',
           style: TextStyle(
               color: Colours.black, fontSize: 16, fontWeight: FontWeight.w700),
         ),
@@ -132,7 +131,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                "assets/icons/more_icon.png",
+                'assets/icons/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -151,14 +150,14 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
             leading: IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/icons/ArrowLeft.png",
+                  'assets/icons/ArrowLeft.png',
                   width: 15,
                   height: 15,
                 )),
             training: IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/icons/ArrowRight.png",
+                  'assets/icons/ArrowRight.png',
                   width: 15,
                   height: 15,
                 )),
@@ -204,10 +203,9 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                 child: ListView.separated(
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      var timelineDataWidth = (media.width * 1.5) - (80 + 40);
                       var availWidth = (media.width * 1.2) - (80 + 40);
                       var slotArr = selectDayEventArr.where((wObj) {
-                        return (wObj["date"] as DateTime).hour == index;
+                        return (wObj['date'] as DateTime).hour == index;
                       }).toList();
 
                       return Container(
@@ -220,7 +218,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                               width: 80,
                               child: Text(
                                 getTime(index * 60),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colours.black,
                                   fontSize: 12,
                                 ),
@@ -231,7 +229,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                   child: Stack(
                                 alignment: Alignment.centerLeft,
                                 children: slotArr.map((sObj) {
-                                  var min = (sObj["date"] as DateTime).minute;
+                                  var min = (sObj['date'] as DateTime).minute;
                                   //(0 to 2)
                                   var pos = (min / 60) * 2 - 1;
 
@@ -289,7 +287,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                                         .circular(
                                                                             10)),
                                                             child: Image.asset(
-                                                              "assets/icons/closed_btn.png",
+                                                              'assets/icons/closed_btn.png',
                                                               width: 15,
                                                               height: 15,
                                                               fit: BoxFit
@@ -297,8 +295,8 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                             ),
                                                           ),
                                                         ),
-                                                        Text(
-                                                          "Workout Schedule",
+                                                        const Text(
+                                                          'Workout Schedule',
                                                           style: TextStyle(
                                                               color:
                                                                   Colours.black,
@@ -325,7 +323,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                                         .circular(
                                                                             10)),
                                                             child: Image.asset(
-                                                              "assets/icons/more_icon.png",
+                                                              'assets/icons/more_icon.png',
                                                               width: 15,
                                                               height: 15,
                                                               fit: BoxFit
@@ -339,8 +337,8 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                       height: 15,
                                                     ),
                                                     Text(
-                                                      sObj["name"].toString(),
-                                                      style: TextStyle(
+                                                      sObj['name'].toString(),
+                                                      style: const TextStyle(
                                                           color: Colours.black,
                                                           fontSize: 14,
                                                           fontWeight:
@@ -351,7 +349,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                     ),
                                                     Row(children: [
                                                       Image.asset(
-                                                        "assets/icons/time_workout.png",
+                                                        'assets/icons/time_workout.png',
                                                         height: 20,
                                                         width: 20,
                                                       ),
@@ -360,7 +358,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                       ),
                                                       Text(
                                                         "${getDayTitle(sObj["start_time"].toString())}|${getStringDateToOtherFormate(sObj["start_time"].toString(), outFormatStr: "h:mm aa")}",
-                                                        style: TextStyle(
+                                                        style: const TextStyle(
                                                             color: Colours.gray,
                                                             fontSize: 12),
                                                       )
@@ -369,7 +367,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                       height: 15,
                                                     ),
                                                     RoundGradientButton(
-                                                        title: "Mark Done",
+                                                        title: 'Mark Done',
                                                         onPressed: () {
                                                           Navigator.pop(
                                                               context);

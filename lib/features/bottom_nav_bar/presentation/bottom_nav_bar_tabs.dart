@@ -1,7 +1,5 @@
-import 'package:chibi/core/router/app_routes.dart';
 import 'package:chibi/features/bottom_nav_bar/presentation/bottom_nav_bar_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BottomNavBarTabs {
