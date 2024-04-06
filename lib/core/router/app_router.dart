@@ -35,7 +35,6 @@ class AppRouter {
                   return TransitionPage(
                       key: state.pageKey, child: const Home());
                 },
-                routes: [],
               ),
               GoRoute(
                 path: AppRouterPaths.statistics,
@@ -44,7 +43,6 @@ class AppRouter {
                   return TransitionPage(
                       key: state.pageKey, child: const Statistics());
                 },
-                routes: [],
               ),
             ],
           ),

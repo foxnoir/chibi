@@ -1,1 +1,0 @@
-{"valid_import":true,"imports":[{"uri":"package:chibi/core/di/stateful_view_with_wm.dart","transitive":false},{"uri":"package:chibi/core/theme/colours.dart","transitive":false},{"uri":"package:chibi/features/template/presentation/template_vm.dart","transitive":false},{"uri":"package:flutter/material.dart","transitive":false}],"elements":[]}
