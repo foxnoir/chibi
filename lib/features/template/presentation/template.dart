@@ -2,7 +2,6 @@ import 'package:chibi/core/di/stateful_view_with_wm.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/features/template/presentation/template_vm.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Template extends StatefulViewWithVM {
   // final int selectedTab;
@@ -30,21 +29,8 @@ class Template extends StatefulViewWithVM {
 class _TemplateState extends StatefulViewWithVMState<Template, TemplateVM>
     with TickerProviderStateMixin, WidgetsBindingObserver {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {}
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final AppLocalizations? appLocalizations = AppLocalizations.of(context);
+    // final AppLocalizations? appLocalizations = AppLocalizations.of(context);
     final ThemeData theme = Theme.of(context);
 
     return Scaffold(

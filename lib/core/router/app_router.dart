@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:chibi/core/router/app_routes.dart';
+import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:flutter/material.dart';
@@ -30,61 +30,10 @@ class AppRouter {
                 path: AppRouterPaths.home,
                 name: AppRouterPaths.home,
                 pageBuilder: (context, state) {
-                  // int selectedTab = 1;
-                  // if (state.extra != null) {
-                  //   final extraMap = state.extra as Map<String, int>;
-                  //   if (extraMap['selected_tab'] != null) {
-                  //     selectedTab = extraMap['selected_tab'] as int;
-                  //   }
-                  // }
                   return TransitionPage(
                       key: state.pageKey, child: const Home());
                 },
-                routes: [
-                  // GoRoute(
-                  //     path: AppRouterPaths.biddingLivestreamFullscreen,
-                  //     name: AppRouteNames.biddingLivestreamFullscreen,
-                  //     pageBuilder: (context, state) {
-                  //       String orderContext = '';
-                  //       String? orderContextId;
-                  //       AppProductDTO? dto;
-                  //       VideoPlayerController? videoController;
-
-                  //       if (state.extra != null) {
-                  //         videoController =
-                  //             (state.extra as Map)['videoController']
-                  //                 as VideoPlayerController;
-                  //         dto = (state.extra as Map)['dto'] as AppProductDTO;
-                  //       }
-
-                  //       if (state.uri.queryParameters['be_context'] != null) {
-                  //         orderContext =
-                  //             state.uri.queryParameters['be_context']!;
-                  //       }
-                  //       if (state.uri.queryParameters['be_context_id'] !=
-                  //           null) {
-                  //         orderContextId =
-                  //             state.uri.queryParameters['be_context_id']!;
-                  //       }
-                  //       logger.d('!! set orderContext 1: $orderContext');
-
-                  //       return isTesting
-                  //           ? TransitionPage(
-                  //               key: state.pageKey,
-                  //               child: LiveLivestreamFullscreen(
-                  //                 isTesting: isTesting,
-                  //                 orderContext: '',
-                  //                 productDTO: AppProductDTO(),
-                  //               ))
-                  //           : TransitionPage(
-                  //               key: state.pageKey,
-                  //               child: LiveLivestreamFullscreen(
-                  //                   videoPlayerController: videoController!,
-                  //                   productDTO: dto ?? AppProductDTO(),
-                  //                   orderContext: orderContext,
-                  //                   orderContextId: orderContextId));
-                  //     }),
-                ],
+                routes: [],
               ),
             ],
           ),

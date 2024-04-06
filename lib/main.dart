@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:chibi/core/di/di.dart';
 import 'package:chibi/core/log/logger.dart';
+import 'package:chibi/core/router/app_router.dart';
 import 'package:chibi/core/routes.dart';
 import 'package:chibi/core/theme/theme.dart';
 import 'package:chibi/view/dashboard/dashboard_screen.dart';
@@ -41,15 +42,16 @@ class Chibi extends StatelessWidget with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addObserver(this);
 
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Chibi',
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         ...AppLocalizations.localizationsDelegates,
       ],
-      debugShowCheckedModeBanner: false,
-      routes: routes,
+      routeInformationParser: appRouter.routeInformationParser,
+      routeInformationProvider: appRouter.routeInformationProvider,
+      routerDelegate: appRouter.routerDelegate,
       theme: getLightTheme(),
-      home: const DashboardScreen(),
     );
   }
 }

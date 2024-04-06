@@ -1,4 +1,3 @@
-import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:chibi/core/di/stateful_view_with_wm.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/features/profile/presentation/profile_vm.dart';
@@ -6,7 +5,6 @@ import 'package:chibi/features/profile/presentation/widgets/setting_row.dart';
 import 'package:chibi/features/profile/presentation/widgets/title_subtitle_cell.dart';
 import 'package:chibi/global_widgets/round_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Profile extends StatefulViewWithVM {
   // final int selectedTab;
@@ -32,19 +30,6 @@ class Profile extends StatefulViewWithVM {
 
 class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
     with TickerProviderStateMixin, WidgetsBindingObserver {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {}
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   bool positive = false;
 
   List accountArr = [
@@ -110,7 +95,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   const SizedBox(
                     width: 15,
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -189,7 +174,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Account',
                       style: TextStyle(
                         color: Colours.black,

@@ -1,13 +1,13 @@
 import 'package:chibi/features/bottom_nav_bar/presentation/bottom_nav_bar_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BottomNavBarTabs {
   final BuildContext context;
   BottomNavBarTabs(this.context);
 
   List<BottomNavBarItem> tabs() {
-    final appLocalizations = AppLocalizations.of(context);
+    // final appLocalizations = AppLocalizations.of(context);
 
     return [
       // BottomNavBarItem(

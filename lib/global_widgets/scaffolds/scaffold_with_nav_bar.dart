@@ -1,8 +1,8 @@
 import 'package:chibi/core/router/app_router.dart';
-import 'package:chibi/core/theme/consts.dart';
 import 'package:chibi/features/bottom_nav_bar/presentation/bottom_nav_bar_tabs.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:go_router/go_router.dart';
 
 class ScaffoldWithNavBar extends StatefulWidget {
@@ -40,10 +40,18 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
     }
   }
 
+  final List<CurvedNavigationBarItem> items = <CurvedNavigationBarItem>[
+    const CurvedNavigationBarItem(
+        child: SizedBox(child: Icon(Icons.home, size: 30))),
+    const CurvedNavigationBarItem(
+        child: SizedBox(child: Icon(Icons.home, size: 30))),
+    const CurvedNavigationBarItem(
+        child: SizedBox(child: Icon(Icons.home, size: 30))),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Observer(builder: (context) {
-      return Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Align(
               alignment: Alignment.centerLeft,
@@ -53,21 +61,6 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
               )),
         ),
         body: widget.child,
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surface,
-            boxShadow: Consts.bottomNavBoxShadow,
-          ),
-          child: BottomNavigationBar(
-            backgroundColor: Theme.of(context).colorScheme.surface,
-            showUnselectedLabels: true,
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _currentIndex,
-            items: BottomNavBarTabs(context).tabs(),
-            onTap: (index) => _onItemTapped(context, index),
-          ),
-        ),
-      );
-    });
+        bottomNavigationBar: CurvedNavigationBar(items: items));
   }
 }

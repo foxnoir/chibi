@@ -5,14 +5,12 @@ import 'package:flutter/material.dart';
 abstract class StatelessViewWithVM<T extends ViewModel> extends StatefulWidget {
   final Object? param1;
   final Object? param2;
-  final String? logScreen;
   final T? mockVM;
 
   const StatelessViewWithVM({
     Key? key,
     this.param1,
     this.param2,
-    this.logScreen,
     this.mockVM,
   }) : super(key: key);
 

@@ -1,4 +1,4 @@
-import 'package:chibi/core/router/app_routes.dart';
+import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -8,14 +8,12 @@ import 'package:flutter/material.dart';
 abstract class StatefulViewWithVM extends StatefulWidget {
   final Object? param1;
   final Object? param2;
-  final String? logScreen;
   final dynamic mockVM;
 
   const StatefulViewWithVM({
     Key? key,
     this.param1,
     this.param2,
-    this.logScreen,
     this.mockVM,
   }) : super(key: key);
 
