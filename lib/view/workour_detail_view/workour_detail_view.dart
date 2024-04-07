@@ -29,9 +29,9 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
   ];
 
   List youArr = [
-    {'image': 'assets/icons/barbell.png', 'title': 'Barbell'},
-    {'image': 'assets/icons/skipping_rope.png', 'title': 'Skipping Rope'},
-    {'image': 'assets/icons/bottle.png', 'title': 'Bottle 1 Liters'},
+    {'image': 'assets/icon/barbell.png', 'title': 'Barbell'},
+    {'image': 'assets/icon/skipping_rope.png', 'title': 'Skipping Rope'},
+    {'image': 'assets/icon/bottle.png', 'title': 'Bottle 1 Liters'},
   ];
 
   List exercisesArr = [
@@ -126,7 +126,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                       color: Colours.lightgray,
                       borderRadius: BorderRadius.circular(10)),
                   child: Image.asset(
-                    'assets/icons/back_icon.png',
+                    'assets/icon/back_icon.png',
                     width: 15,
                     height: 15,
                     fit: BoxFit.contain,
@@ -145,7 +145,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                         color: Colours.lightgray,
                         borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
-                      'assets/icons/more_icon.png',
+                      'assets/icon/more_icon.png',
                       width: 15,
                       height: 15,
                       fit: BoxFit.contain,
@@ -224,7 +224,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                           TextButton(
                             onPressed: () {},
                             child: Image.asset(
-                              'assets/icons/fav_icon.png',
+                              'assets/icon/fav_icon.png',
                               width: 15,
                               height: 15,
                               fit: BoxFit.contain,
@@ -236,7 +236,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                         height: media.width * 0.05,
                       ),
                       IconTitleNextRow(
-                          icon: 'assets/icons/time_icon.png',
+                          icon: 'assets/icon/time_icon.png',
                           title: 'Schedule Workout',
                           time: '5/27, 09:00 AM',
                           color: Colours.lightBlue.withOpacity(0.3),
@@ -248,7 +248,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                         height: media.width * 0.02,
                       ),
                       IconTitleNextRow(
-                          icon: 'assets/icons/difficulity_icon.png',
+                          icon: 'assets/icon/difficulity_icon.png',
                           title: 'Difficulity',
                           time: 'Beginner',
                           color: theme.colorScheme.secondary.withOpacity(0.3),

@@ -34,31 +34,31 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
 
   List accountArr = [
     {
-      'image': 'assets/icons/p_personal.png',
+      'image': 'assets/icon/p_personal.png',
       'name': 'Personal Data',
       'tag': '1'
     },
-    {'image': 'assets/icons/p_achi.png', 'name': 'Achievement', 'tag': '2'},
+    {'image': 'assets/icon/p_achi.png', 'name': 'Achievement', 'tag': '2'},
     {
-      'image': 'assets/icons/p_activity.png',
+      'image': 'assets/icon/p_activity.png',
       'name': 'Activity History',
       'tag': '3'
     },
     {
-      'image': 'assets/icons/p_workout.png',
+      'image': 'assets/icon/p_workout.png',
       'name': 'Workout Progress',
       'tag': '4'
     }
   ];
 
   List otherArr = [
-    {'image': 'assets/icons/p_contact.png', 'name': 'Contact Us', 'tag': '5'},
+    {'image': 'assets/icon/p_contact.png', 'name': 'Contact Us', 'tag': '5'},
     {
-      'image': 'assets/icons/p_privacy.png',
+      'image': 'assets/icon/p_privacy.png',
       'name': 'Privacy Policy',
       'tag': '6'
     },
-    {'image': 'assets/icons/p_setting.png', 'name': 'Setting', 'tag': '7'},
+    {'image': 'assets/icon/p_setting.png', 'name': 'Setting', 'tag': '7'},
   ];
 
   @override

@@ -274,7 +274,19 @@ feature/
 
 ## Images 
 - [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © [reinbowsketch](https://www.redbubble.com/de/people/reinbowsketch/shop) 
-- [Chibiusa Profile](https://fuckyeahsailorchibimoon.tumblr.com/post/122936579729)  -> ©Naoko Takeuchi
+- [Chibiusa Profile](https://fuckyeahsailorchibimoon.tumblr.com/post/122936579729)  
+- [Statistics nav icon](https://www.freepik.com/icon/statistics_3350134)  
+- [Dumbbell nav icon](https://en.silhouette-ac.com/silhouette/142364/dumbbell)  
+- [Video nav icon](https://www.pngegg.com/en/png-njobs)  
+
+
+
+
+
+
+
+
+
 
 
 

@@ -59,7 +59,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                'assets/icons/more_icon.png',
+                'assets/icon/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -95,7 +95,7 @@ class _CameraScreenState extends State<CameraScreen> {
                           height: 50,
                           alignment: Alignment.center,
                           child: Image.asset(
-                            'assets/icons/date_notifi.png',
+                            'assets/icon/date_notifi.png',
                             width: 30,
                             height: 30,
                           ),

@@ -83,7 +83,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         color: Colours.lightgray,
                         borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
-                      'assets/icons/more_icon.png',
+                      'assets/icon/more_icon.png',
                       width: 15,
                       height: 15,
                       fit: BoxFit.contain,

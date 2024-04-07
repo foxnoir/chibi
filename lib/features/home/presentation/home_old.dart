@@ -203,7 +203,7 @@ class _HomeState extends State<Home> {
                           // context, NotificationScreen.routeName);
                         },
                         icon: Image.asset(
-                          'assets/icons/notification_icon.png',
+                          'assets/icon/notification_icon.png',
                           width: 25,
                           height: 25,
                           fit: BoxFit.fitHeight,
@@ -220,7 +220,7 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.center,
                     children: [
                       Image.asset(
-                        'assets/icons/bg_dots.png',
+                        'assets/icon/bg_dots.png',
                         height: media.width * 0.4,
                         width: double.maxFinite,
                         fit: BoxFit.fitHeight,

@@ -48,7 +48,7 @@ class ExercisesRow extends StatelessWidget {
           IconButton(
               onPressed: onPressed,
               icon: Image.asset(
-                'assets/icons/next_go.png',
+                'assets/icon/next_go.png',
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,

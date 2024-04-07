@@ -193,8 +193,9 @@ ColorScheme _getColorScheme(Brightness brightness) {
   const lightColorScheme = ColorScheme.light(
       primary: Colours.primary,
       secondary: Colours.secondary,
-      tertiary: Colours.white,
+      tertiary: Colours.tertiary,
       surface: Colours.white,
+      background: Colours.white,
       outline: Colours.lightgray);
   return lightColorScheme;
 }

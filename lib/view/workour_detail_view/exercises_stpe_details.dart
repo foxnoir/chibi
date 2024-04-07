@@ -63,7 +63,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              'assets/icons/closed_btn.png',
+              'assets/icon/closed_btn.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -82,7 +82,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                'assets/icons/more_icon.png',
+                'assets/icon/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -124,7 +124,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   IconButton(
                     onPressed: () {},
                     icon: Image.asset(
-                      'assets/icons/play_icon.png',
+                      'assets/icon/play_icon.png',
                       width: 30,
                       height: 30,
                     ),
@@ -242,7 +242,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/icons/burn_icon.png',
+                          'assets/icon/burn_icon.png',
                           width: 15,
                           height: 15,
                           fit: BoxFit.contain,

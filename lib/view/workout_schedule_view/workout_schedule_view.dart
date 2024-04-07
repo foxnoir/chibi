@@ -107,7 +107,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              'assets/icons/back_icon.png',
+              'assets/icon/back_icon.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -131,7 +131,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                'assets/icons/more_icon.png',
+                'assets/icon/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -150,14 +150,14 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
             leading: IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  'assets/icons/ArrowLeft.png',
+                  'assets/icon/ArrowLeft.png',
                   width: 15,
                   height: 15,
                 )),
             training: IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  'assets/icons/ArrowRight.png',
+                  'assets/icon/ArrowRight.png',
                   width: 15,
                   height: 15,
                 )),
@@ -287,7 +287,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                                         .circular(
                                                                             10)),
                                                             child: Image.asset(
-                                                              'assets/icons/closed_btn.png',
+                                                              'assets/icon/closed_btn.png',
                                                               width: 15,
                                                               height: 15,
                                                               fit: BoxFit
@@ -323,7 +323,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                                         .circular(
                                                                             10)),
                                                             child: Image.asset(
-                                                              'assets/icons/more_icon.png',
+                                                              'assets/icon/more_icon.png',
                                                               width: 15,
                                                               height: 15,
                                                               fit: BoxFit
@@ -349,7 +349,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                     ),
                                                     Row(children: [
                                                       Image.asset(
-                                                        'assets/icons/time_workout.png',
+                                                        'assets/icon/time_workout.png',
                                                         height: 20,
                                                         width: 20,
                                                       ),

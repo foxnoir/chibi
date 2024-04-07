@@ -36,7 +36,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              'assets/icons/closed_btn.png',
+              'assets/icon/closed_btn.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -60,7 +60,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                'assets/icons/more_icon.png',
+                'assets/icon/more_icon.png',
                 width: 15,
                 height: 15,
                 fit: BoxFit.contain,
@@ -76,7 +76,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Row(
             children: [
               Image.asset(
-                'assets/icons/date.png',
+                'assets/icon/date.png',
                 width: 20,
                 height: 20,
               ),
@@ -123,7 +123,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             height: 8,
           ),
           IconTitleNextRow(
-              icon: 'assets/icons/choose_workout.png',
+              icon: 'assets/icon/choose_workout.png',
               title: 'Choose Workout',
               time: 'Upperbody',
               color: Colours.lightgray,
@@ -132,7 +132,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             height: 10,
           ),
           IconTitleNextRow(
-              icon: 'assets/icons/difficulity_icon.png',
+              icon: 'assets/icon/difficulity_icon.png',
               title: 'Difficulity',
               time: 'Beginner',
               color: Colours.lightgray,
@@ -141,7 +141,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             height: 10,
           ),
           IconTitleNextRow(
-              icon: 'assets/icons/repetitions.png',
+              icon: 'assets/icon/repetitions.png',
               title: 'Custom Repetitions',
               time: '',
               color: Colours.lightgray,
@@ -150,7 +150,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
             height: 10,
           ),
           IconTitleNextRow(
-              icon: 'assets/icons/repetitions.png',
+              icon: 'assets/icon/repetitions.png',
               title: 'Custom Weights',
               time: '',
               color: Colours.lightgray,

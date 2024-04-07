@@ -51,7 +51,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                 color: Colours.lightgray,
                 borderRadius: BorderRadius.circular(10)),
             child: Image.asset(
-              'assets/icons/back_icon.png',
+              'assets/icon/back_icon.png',
               width: 15,
               height: 15,
               fit: BoxFit.contain,
@@ -75,7 +75,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                   color: Colours.lightgray,
                   borderRadius: BorderRadius.circular(10)),
               child: Image.asset(
-                'assets/icons/more_icon.png',
+                'assets/icon/more_icon.png',
                 width: 12,
                 height: 12,
                 fit: BoxFit.contain,
@@ -147,7 +147,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                       children: [
                         Expanded(
                           child: TodayTargetCell(
-                            icon: 'assets/icons/water_icon.png',
+                            icon: 'assets/icon/water_icon.png',
                             value: '8L',
                             title: 'Water Intake',
                           ),
@@ -157,7 +157,7 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
                         ),
                         Expanded(
                           child: TodayTargetCell(
-                            icon: 'assets/icons/foot_icon.png',
+                            icon: 'assets/icon/foot_icon.png',
                             value: '2400',
                             title: 'Foot Steps',
                           ),

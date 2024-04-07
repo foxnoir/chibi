@@ -17,20 +17,19 @@ class ScaffoldWithBottomNav
 
   @override
   Widget build(BuildContext context, ScaffoldWithBottomNavVM viewModel) {
+    final ThemeData theme = Theme.of(context);
+
     return Observer(builder: (context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                title ?? '',
-                overflow: TextOverflow.ellipsis,
-              )),
-        ),
-        body: BottomNavBarTabs(context).tabs()[viewModel.index].initialLocation,
+        body: BottomNavBarTabs(context)
+            .tabs(index: viewModel.index)[viewModel.index]
+            .initialLocation,
         bottomNavigationBar: CurvedNavigationBar(
-            index: viewModel.index,
-            items: BottomNavBarTabs(context).tabs(),
+            color: theme.colorScheme.primary.withOpacity(0.2),
+            buttonBackgroundColor: theme.colorScheme.secondary.withOpacity(0.1),
+            backgroundColor: theme.colorScheme.background,
+            index: DefaultIntex.index,
+            items: BottomNavBarTabs(context).tabs(index: viewModel.index),
             onTap: (index) => viewModel.index = index),
       );
     });

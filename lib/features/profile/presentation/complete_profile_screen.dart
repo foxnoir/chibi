@@ -55,7 +55,7 @@ class CompleteProfileScreen extends StatelessWidget {
                           height: 50,
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Image.asset(
-                            'assets/icons/gender_icon.png',
+                            'assets/icon/gender_icon.png',
                             width: 20,
                             height: 20,
                             fit: BoxFit.contain,
@@ -89,19 +89,19 @@ class CompleteProfileScreen extends StatelessWidget {
                 const SizedBox(height: 15),
                 const RoundTextField(
                   hintText: 'Date of Birth',
-                  icon: 'assets/icons/calendar_icon.png',
+                  icon: 'assets/icon/calendar_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
                 const RoundTextField(
                   hintText: 'Your Weight',
-                  icon: 'assets/icons/weight_icon.png',
+                  icon: 'assets/icon/weight_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
                 const RoundTextField(
                   hintText: 'Your Height',
-                  icon: 'assets/icons/swap_icon.png',
+                  icon: 'assets/icon/swap_icon.png',
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
