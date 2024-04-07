@@ -26,16 +26,12 @@ class ScaffoldWithBackButton extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  // keys for widget tests
-  static const ValueKey scaffoldBackBtnKey = ValueKey('scaffoldBackBtnKey');
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           centerTitle: false,
           leading: IconButton(
-            key: scaffoldBackBtnKey,
             onPressed: () =>
                 onPressedBack != null ? onPressedBack!() : context.pop(),
             icon: SvgPicture.asset(

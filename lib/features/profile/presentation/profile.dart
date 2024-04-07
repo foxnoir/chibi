@@ -116,7 +116,6 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                     title: 'Edit',
                     type: RoundButtonType.primaryBG,
                     onPressed: () {
-                      print('duckl');
                       context.pushNamed(AppRouteNames.profileEditor);
                     },
                   ),

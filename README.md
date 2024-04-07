@@ -15,7 +15,7 @@
 <!-- PROJECT desc -->
   <p align="left">
       Because my gym's app sucks.
-      The code is based on   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
+      The code was inspired by   <a href="https://github.com/HypeTeqSoftware/FitnessApp"><strong>FitnessApp »</strong></a> 
   </p>
 
   <!-- PROJECT link -->
@@ -87,7 +87,13 @@
         <li><a href="#general-feature-structure">General feature structure</a></li>
       </ul>
     </li>
-    <li><a href="#images">Images</a></li>
+    <li><a href="#references">References</a></li>
+      <ul>
+        <li><a href="#images">Images</a></li>
+      </ul>
+      <ul>
+        <li><a href="#code">Code</a></li>
+      </ul>
     <li><a href="#changelog">Changelog</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -272,7 +278,9 @@ feature/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Images 
+## References
+
+### Images 
 - [Chibiusa with gun](https://www.redbubble.com/de/i/sticker/Waffe-Chibi-USA-von-reinbowsketch/144161640.EJUG5) -> © [reinbowsketch](https://www.redbubble.com/de/people/reinbowsketch/shop) 
 - [Chibiusa Profile](https://fuckyeahsailorchibimoon.tumblr.com/post/122936579729)  
 - [Progress nav icon](https://www.freepik.com/icon/progress_3350134)  
@@ -291,6 +299,27 @@ feature/
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Code 
+
+- [waves in corners](https://www.tldevtech.com/snippet/stack-page-with-clippath-wave-at-top-and-bottom/)  
+- [3 top bar waves](https://stackoverflow.com/questions/67822624/clippath-flutter)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Changelog
 

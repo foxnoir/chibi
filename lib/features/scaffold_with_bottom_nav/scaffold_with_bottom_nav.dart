@@ -33,6 +33,8 @@ class ScaffoldWithBottomNav
             color: theme.colorScheme.primary.withOpacity(0.2),
             buttonBackgroundColor: theme.colorScheme.secondary.withOpacity(0.1),
             backgroundColor: theme.colorScheme.background,
+            animationCurve: Curves.easeInOut,
+            animationDuration: const Duration(milliseconds: 300),
             index: DefaultIntex.index,
             items: BottomNavBarTabs(context).tabs(index: viewModel.index),
             onTap: (index) => viewModel.index = index),
