@@ -17,7 +17,5 @@ class FontSize {
   static const double medium = 14.0;
   static const double large = 16.0;
   static const double xLarge = 20;
-
-  // use it xcode TextSize: 20
   static const double xxLarge = 22.0;
 }

@@ -4,7 +4,7 @@ class AppRouterPaths {
   static const String initialLocation = '/';
   static const String scaffold = '/scaffold';
   static const String home = '/home';
-  static const String statistics = '/statistics';
+  static const String progress = '/progress';
   static const String workouts = '/workouts';
   static const String exercices = '/exercices';
   static const String profile = '/profile';
@@ -13,7 +13,7 @@ class AppRouterPaths {
 class AppRouteNames {
   static const String scaffold = 'scaffold';
   static const String home = 'home';
-  static const String statistics = 'statistics';
+  static const String progress = 'progress';
   static const String workouts = 'workouts';
   static const String exercices = 'exercices';
   static const String profile = 'profile';

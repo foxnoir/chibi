@@ -2,15 +2,15 @@ import 'package:mobx/mobx.dart';
 import 'package:chibi/core/di/stateless_view_with_vm.dart';
 import 'package:injectable/injectable.dart';
 
-part 'statistics_vm.g.dart';
+part 'progress_vm.g.dart';
 
 @injectable
-class StatisticsVM extends StatisticsVMBase with _$StatisticsVM {
-  StatisticsVM() : super();
+class ProgressVM extends ProgressVMBase with _$ProgressVM {
+  ProgressVM() : super();
 }
 
-abstract class StatisticsVMBase extends ViewModel with Store {
-  StatisticsVMBase();
+abstract class ProgressVMBase extends ViewModel with Store {
+  ProgressVMBase();
 
   // final WebsocketRepository _websocketRepository =
   //     DI.getIt<WebsocketRepository>();

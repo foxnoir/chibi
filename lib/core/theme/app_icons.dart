@@ -1,9 +1,8 @@
 class AppIcons {
   static const String home = 'assets/icons/icn_home.png';
   static const String homeActive = 'assets/icons/icn_home_active.png';
-  static const String statistics = 'assets/icons/icn_statistics.png';
-  static const String statisticsActive =
-      'assets/icons/icn_statistics_active.png';
+  static const String progress = 'assets/icons/icn_progress.png';
+  static const String progressActive = 'assets/icons/icn_progress_active.png';
   static const String workout = 'assets/icons/icn_workout.png';
   static const String workoutActive = 'assets/icons/icn_workout_active.png';
   static const String video = 'assets/icons/icn_video.png';

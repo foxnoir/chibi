@@ -19,7 +19,7 @@ ThemeData _theme(ColorScheme colorScheme) {
     primaryColor: colorScheme.primary,
     secondaryHeaderColor: colorScheme.secondary,
     disabledColor: Colours.midgray,
-    scaffoldBackgroundColor: colorScheme.tertiary,
+    scaffoldBackgroundColor: colorScheme.background,
     colorScheme: colorScheme,
     brightness: colorScheme.brightness,
 
@@ -75,20 +75,20 @@ ThemeData _theme(ColorScheme colorScheme) {
     // AppBar Theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
-      color: colorScheme.tertiary,
+      color: colorScheme.background,
       surfaceTintColor: colorScheme.tertiary,
       elevation: 0,
       iconTheme: const IconThemeData(
         color: Colours.midgray,
       ),
-      shadowColor: colorScheme.tertiary,
+      shadowColor: colorScheme.shadow,
       titleTextStyle: TextStyle(
           fontSize: FontSize.large,
           fontWeight: FontWeights.bold,
-          color: colorScheme.secondary),
+          color: colorScheme.primary),
       shape: Border(
           bottom: BorderSide(
-        color: Colours.lightgray.withOpacity(0.5),
+        color: colorScheme.primary.withOpacity(0.2),
         width: Consts.borderThick,
       )),
     ),
@@ -196,6 +196,7 @@ ColorScheme _getColorScheme(Brightness brightness) {
       tertiary: Colours.tertiary,
       surface: Colours.white,
       background: Colours.white,
+      shadow: Colours.gray,
       outline: Colours.lightgray);
   return lightColorScheme;
 }

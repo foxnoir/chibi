@@ -67,7 +67,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
 
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        // centerTitle: true,
         elevation: 0,
         title: const Text(
           'Profile',

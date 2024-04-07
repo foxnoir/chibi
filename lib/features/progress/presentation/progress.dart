@@ -1,12 +1,12 @@
 import 'package:chibi/core/di/stateless_view_with_vm.dart';
-import 'package:chibi/features/statistics/presentation/statistics_vm.dart';
+import 'package:chibi/features/progress/presentation/progress_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
-class Statistics extends StatelessViewWithVM<StatisticsVM> {
+class Progress extends StatelessViewWithVM<ProgressVM> {
   final dynamic mockViewModel;
   final bool isTesting;
-  const Statistics({
+  const Progress({
     Key? key,
     this.mockViewModel,
     this.isTesting = false,
@@ -16,12 +16,12 @@ class Statistics extends StatelessViewWithVM<StatisticsVM> {
         );
 
   @override
-  Widget build(BuildContext context, StatisticsVM viewModel) {
+  Widget build(BuildContext context, ProgressVM viewModel) {
     return Observer(builder: (context) {
       return Container(
           color: Colors.pink,
           child: const Center(
-            child: Text('Statistics'),
+            child: Text('Progress'),
           ));
     });
   }

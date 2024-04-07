@@ -5,7 +5,7 @@ import 'package:chibi/core/router/transitons.dart';
 import 'package:chibi/features/profile/presentation/profile.dart';
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
-import 'package:chibi/features/statistics/presentation/statistics.dart';
+import 'package:chibi/features/progress/presentation/progress.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,11 +38,11 @@ class AppRouter {
                 },
               ),
               GoRoute(
-                path: AppRouterPaths.statistics,
-                name: AppRouterPaths.statistics,
+                path: AppRouterPaths.progress,
+                name: AppRouterPaths.progress,
                 pageBuilder: (context, state) {
                   return TransitionPage(
-                      key: state.pageKey, child: const Statistics());
+                      key: state.pageKey, child: const Progress());
                 },
               ),
               GoRoute(
