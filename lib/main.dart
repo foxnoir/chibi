@@ -40,6 +40,8 @@ class Chibi extends StatelessWidget with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addObserver(this);
 
+    final appRouter = AppRouter(isTesting: false, context: context).router();
+
     return MaterialApp.router(
       title: 'Chibi',
       debugShowCheckedModeBanner: false,

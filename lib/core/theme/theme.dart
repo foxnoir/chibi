@@ -88,7 +88,7 @@ ThemeData _theme(ColorScheme colorScheme) {
           color: colorScheme.primary),
       shape: Border(
           bottom: BorderSide(
-        color: colorScheme.primary.withOpacity(0.2),
+        color: colorScheme.outline,
         width: Consts.borderThick,
       )),
     ),

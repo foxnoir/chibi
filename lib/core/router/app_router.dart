@@ -3,63 +3,82 @@ import 'dart:io';
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
 import 'package:chibi/features/profile/presentation/profile.dart';
+import 'package:chibi/features/profile_editor/presentation/profile_editor.dart';
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/progress/presentation/progress.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 class AppRouter {
   final bool isTesting;
+  final BuildContext context;
 
-  AppRouter({required this.isTesting});
+  AppRouter({required this.isTesting, required this.context});
 
-  GoRouter router() => GoRouter(
-        initialLocation: AppRouterPaths.home,
+  GoRouter router([String? initialLocation]) => GoRouter(
+        initialLocation: initialLocation ?? AppRouterPaths.profile,
         navigatorKey: navigatorKey,
         debugLogDiagnostics: false,
         routes: [
           ShellRoute(
             pageBuilder: (context, state, child) => TransitionPage(
               key: state.pageKey,
-              child: ScaffoldWithBottomNav(
-                child: child,
+              child: Scaffold(
+                body: child,
               ),
             ),
             routes: [
               GoRoute(
                 path: AppRouterPaths.home,
-                name: AppRouterPaths.home,
+                name: AppRouteNames.home,
                 pageBuilder: (context, state) {
-                  return TransitionPage(
-                      key: state.pageKey, child: const Home());
+                  return NoTransitionPage(
+                      key: state.pageKey,
+                      child: ScaffoldWithBottomNav(
+                          title: AppLocalizations.of(context)?.profile ?? 'fff',
+                          child: const Home()));
                 },
               ),
               GoRoute(
                 path: AppRouterPaths.progress,
-                name: AppRouterPaths.progress,
+                name: AppRouteNames.progress,
                 pageBuilder: (context, state) {
-                  return TransitionPage(
-                      key: state.pageKey, child: const Progress());
+                  return NoTransitionPage(
+                      child: ScaffoldWithBottomNav(
+                          title: AppLocalizations.of(context)?.profile ?? '',
+                          child: const Progress()));
                 },
               ),
               GoRoute(
-                path: AppRouterPaths.profile,
-                name: AppRouterPaths.profile,
-                pageBuilder: (context, state) {
-                  return TransitionPage(
-                      key: state.pageKey, child: const Profile());
-                },
-              ),
+                  path: AppRouterPaths.profile,
+                  name: AppRouteNames.profile,
+                  pageBuilder: (context, state) {
+                    return NoTransitionPage(
+                      key: state.pageKey,
+                      child: ScaffoldWithBottomNav(
+                          title: AppLocalizations.of(context)?.profile ?? '',
+                          child: const Profile()),
+                    );
+                  },
+                  routes: [
+                    GoRoute(
+                      path: AppRouterPaths.profileEditor,
+                      name: AppRouteNames.profileEditor,
+                      pageBuilder: (context, state) {
+                        return NoTransitionPage(
+                            key: state.pageKey, child: const ProfileEditor());
+                      },
+                    ),
+                  ]),
             ],
           ),
         ],
       );
 }
-
-final appRouter = AppRouter(isTesting: false).router();
 
 // class DetailsRoute extends GoRoute {
 //   final bool isTesting;

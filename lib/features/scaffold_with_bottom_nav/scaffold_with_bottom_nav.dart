@@ -8,11 +8,11 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 class ScaffoldWithBottomNav
     extends StatelessViewWithVM<ScaffoldWithBottomNavVM> {
   final Widget child;
-  final String? title;
+  final String title;
   const ScaffoldWithBottomNav({
     Key? key,
     required this.child,
-    this.title,
+    required this.title,
   }) : super(key: key);
 
   @override
@@ -21,6 +21,11 @@ class ScaffoldWithBottomNav
 
     return Observer(builder: (context) {
       return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          title: Text(title),
+        ),
         body: BottomNavBarTabs(context)
             .tabs(index: viewModel.index)[viewModel.index]
             .initialLocation,

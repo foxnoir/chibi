@@ -9,4 +9,19 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get helloThere => 'Hello there!';
+
+  @override
+  String get home => 'home';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get progress => 'progress';
+
+  @override
+  String get workout => 'workout';
+
+  @override
+  String get exercices => 'exercices';
 }

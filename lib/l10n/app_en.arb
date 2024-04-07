@@ -1,4 +1,9 @@
 {
   "details": "Details",
-  "helloThere": "Hello there!"
+  "helloThere": "Hello there!",
+  "home": "home",
+  "profile": "Profile",
+  "progress": "progress",
+  "workout": "workout",
+  "exercices": "exercices"
 }

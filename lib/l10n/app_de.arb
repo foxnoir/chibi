@@ -1,10 +1,9 @@
 {
   "details": "Details",
-  "@details": {
-    "description": "Labeling of the buttons that lead to the detail view."
-  },
   "helloThere": "Hello there!",
-  "@helloThere": {
-    "description": "Welcome text on the home page."
-  }
+  "home": "home",
+  "profile": "Profile",
+  "progress": "progress",
+  "workout": "workout",
+  "exercices": "exercices"
 }

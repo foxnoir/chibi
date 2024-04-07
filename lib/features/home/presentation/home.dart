@@ -164,637 +164,187 @@ class _HomeState extends State<Home> {
 
     final tooltipsOnBar = lineBarsData[0];
 
-    return Scaffold(
-      backgroundColor: theme.colorScheme.surface,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          appLocalizations?.helloThere ?? '',
-                          style: TextStyle(
-                            color: theme.colorScheme.secondary,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const Text(
-                          'Stefani Wong',
-                          style: TextStyle(
-                            color: Colours.black,
-                            fontSize: 20,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                          ),
-                        )
-                      ],
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          // Navigator.pushNamed(
-                          // context, NotificationScreen.routeName);
-                        },
-                        icon: Image.asset(
-                          'assets/icon/notification_icon.png',
-                          width: 25,
-                          height: 25,
-                          fit: BoxFit.fitHeight,
-                        ))
-                  ],
-                ),
-                SizedBox(height: media.width * 0.05),
-                Container(
-                  height: media.width * 0.4,
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: Colours.primaryG),
-                      borderRadius: BorderRadius.circular(media.width * 0.065)),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/icon/bg_dots.png',
-                        height: media.width * 0.4,
-                        width: double.maxFinite,
-                        fit: BoxFit.fitHeight,
+                    Text(
+                      appLocalizations?.helloThere ?? '',
+                      style: TextStyle(
+                        color: theme.colorScheme.secondary,
+                        fontSize: 12,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 25, horizontal: 25),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'BMI (Body Mass Index)',
-                                  style: TextStyle(
-                                      color: theme.colorScheme.surface,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text(
-                                  'You have a normal weight',
-                                  style: TextStyle(
-                                    color: theme.colorScheme.surface
-                                        .withOpacity(0.7),
-                                    fontSize: 12,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                SizedBox(height: media.width * 0.05),
-                                Padding(
-                                  padding: const EdgeInsets.all(0),
-                                  child: SizedBox(
-                                    height: 35,
-                                    width: 100,
-                                    child: RoundButton(
-                                        title: 'View More', onPressed: () {}),
-                                  ),
-                                )
-                              ],
-                            ),
-                            AspectRatio(
-                              aspectRatio: 1,
-                              child: PieChart(
-                                PieChartData(
-                                  pieTouchData: PieTouchData(
-                                    touchCallback: (FlTouchEvent event,
-                                        pieTouchResponse) {},
-                                  ),
-                                  startDegreeOffset: 250,
-                                  borderData: FlBorderData(
-                                    show: false,
-                                  ),
-                                  sectionsSpace: 1,
-                                  centerSpaceRadius: 0,
-                                  sections: showingSections(),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(height: media.width * 0.05),
-                const Text(
-                  'Activity Status',
-                  style: TextStyle(
-                    color: Colours.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                SizedBox(height: media.width * 0.02),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
-                  child: Container(
-                    height: media.width * 0.4,
-                    width: media.width,
-                    decoration: BoxDecoration(
-                        color: Colours.lightBlue.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(25)),
-                    child: Stack(
-                      alignment: Alignment.topLeft,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 20),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Heart Rate',
-                                style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(height: media.width * 0.01),
-                              ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (bounds) {
-                                  return LinearGradient(
-                                          colors: Colours.primaryG,
-                                          begin: Alignment.centerLeft,
-                                          end: Alignment.centerRight)
-                                      .createShader(Rect.fromLTRB(
-                                          0, 0, bounds.width, bounds.height));
-                                },
-                                child: const Text(
-                                  '78 BPM',
-                                  style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        LineChart(
-                          LineChartData(
-                            showingTooltipIndicators:
-                                showingTooltipOnSpots.map((index) {
-                              return ShowingTooltipIndicators([
-                                LineBarSpot(
-                                  tooltipsOnBar,
-                                  lineBarsData.indexOf(tooltipsOnBar),
-                                  tooltipsOnBar.spots[index],
-                                ),
-                              ]);
-                            }).toList(),
-                            lineTouchData: LineTouchData(
-                              enabled: true,
-                              handleBuiltInTouches: false,
-                              touchCallback: (FlTouchEvent event,
-                                  LineTouchResponse? response) {
-                                if (response == null ||
-                                    response.lineBarSpots == null) {
-                                  return;
-                                }
-                                if (event is FlTapUpEvent) {
-                                  final spotIndex =
-                                      response.lineBarSpots!.first.spotIndex;
-                                  showingTooltipOnSpots.clear();
-                                  setState(() {
-                                    showingTooltipOnSpots.add(spotIndex);
-
-                                    // if (showingTooltipOnSpots
-                                    //     .contains(spotIndex)) {
-                                    //   showingTooltipOnSpots.remove(spotIndex);
-                                    // } else {
-                                    //   showingTooltipOnSpots.add(spotIndex);
-                                    // }
-                                  });
-                                }
-                              },
-                              mouseCursorResolver: (FlTouchEvent event,
-                                  LineTouchResponse? response) {
-                                if (response == null ||
-                                    response.lineBarSpots == null) {
-                                  return SystemMouseCursors.basic;
-                                }
-                                return SystemMouseCursors.click;
-                              },
-                              getTouchedSpotIndicator:
-                                  (LineChartBarData barData,
-                                      List<int> spotIndexes) {
-                                return spotIndexes.map((index) {
-                                  return TouchedSpotIndicatorData(
-                                    const FlLine(
-                                      color: Colors.transparent,
-                                    ),
-                                    FlDotData(
-                                      show: true,
-                                      getDotPainter:
-                                          (spot, percent, barData, index) =>
-                                              FlDotCirclePainter(
-                                        radius: 3,
-                                        color: Colors.white,
-                                        strokeWidth: 2,
-                                        strokeColor:
-                                            theme.colorScheme.secondary,
-                                      ),
-                                    ),
-                                  );
-                                }).toList();
-                              },
-                              touchTooltipData: LineTouchTooltipData(
-                                tooltipBgColor: theme.colorScheme.primary,
-                                tooltipRoundedRadius: 20,
-                                getTooltipItems:
-                                    (List<LineBarSpot> lineBarsSpot) {
-                                  return lineBarsSpot.map((lineBarSpot) {
-                                    return LineTooltipItem(
-                                      //lineBarSpot.y.toString(),
-                                      '${lineBarSpot.x.toInt()} mins ago',
-                                      const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w400),
-                                    );
-                                  }).toList();
-                                },
-                              ),
-                            ),
-                            lineBarsData: lineBarsData,
-                            minY: 0,
-                            maxY: 130,
-                            titlesData: const FlTitlesData(show: false),
-                            gridData: const FlGridData(show: false),
-                            borderData: FlBorderData(
-                              show: true,
-                              border: Border.all(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
                     ),
-                  ),
-                ),
-                SizedBox(height: media.width * 0.05),
-                Row(
-                  children: [
-                    Expanded(
-                        child: Container(
-                      height: media.width * 0.95,
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 25, horizontal: 10),
-                      decoration: BoxDecoration(
-                          color: theme.colorScheme.surface,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(color: Colors.black12, blurRadius: 2)
-                          ]),
-                      child: Row(children: [
-                        SimpleAnimationProgressBar(
-                          height: media.width * 0.9,
-                          width: media.width * 0.07,
-                          backgroundColor: Colors.grey.shade100,
-                          foregrondColor: Colors.purple,
-                          ratio: 0.5,
-                          direction: Axis.vertical,
-                          curve: Curves.fastLinearToSlowEaseIn,
-                          duration: const Duration(seconds: 3),
-                          borderRadius: BorderRadius.circular(30),
-                          gradientColor: LinearGradient(
-                              colors: Colours.primaryG,
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Expanded(
-                            child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Water Intake',
-                              style: TextStyle(
-                                  color: Colours.black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(height: media.width * 0.01),
-                            ShaderMask(
-                              blendMode: BlendMode.srcIn,
-                              shaderCallback: (bounds) {
-                                return LinearGradient(
-                                        colors: Colours.primaryG,
-                                        begin: Alignment.centerLeft,
-                                        end: Alignment.centerRight)
-                                    .createShader(Rect.fromLTRB(
-                                        0, 0, bounds.width, bounds.height));
-                              },
-                              child: const Text(
-                                '4 Liters',
-                                style: TextStyle(
-                                  color: Colours.black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: media.width * 0.03),
-                            const Text(
-                              'Real time updates',
-                              style: TextStyle(
-                                  color: Colours.black,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            SizedBox(height: media.width * 0.01),
-                            Column(
-                              children: waterArr.map((obj) {
-                                var isLast = obj == waterArr.last;
-                                return Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            margin: const EdgeInsets.symmetric(
-                                                vertical: 6),
-                                            width: 10,
-                                            height: 10,
-                                            decoration: BoxDecoration(
-                                                color: theme.colorScheme.primary
-                                                    .withOpacity(0.5),
-                                                borderRadius:
-                                                    BorderRadius.circular(5)),
-                                          ),
-                                          if (!isLast)
-                                            DottedDashedLine(
-                                              width: 0,
-                                              height: media.width * 0.078,
-                                              axis: Axis.vertical,
-                                              dashColor: theme
-                                                  .colorScheme.primary
-                                                  .withOpacity(0.5),
-                                            )
-                                        ]),
-                                    const SizedBox(width: 10),
-                                    Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        SizedBox(height: media.width * 0.01),
-                                        Text(
-                                          obj['title'].toString(),
-                                          style: const TextStyle(
-                                              color: Colours.black,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w400),
-                                        ),
-                                        const SizedBox(height: 1),
-                                        ShaderMask(
-                                          blendMode: BlendMode.srcIn,
-                                          shaderCallback: (bounds) {
-                                            return LinearGradient(
-                                                    colors: Colours.secondaryG,
-                                                    begin: Alignment.centerLeft,
-                                                    end: Alignment.centerRight)
-                                                .createShader(Rect.fromLTRB(
-                                                    0,
-                                                    0,
-                                                    bounds.width,
-                                                    bounds.height));
-                                          },
-                                          child: Text(
-                                            obj['subtitle'].toString(),
-                                            style: const TextStyle(
-                                              color: Colours.black,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                );
-                              }).toList(),
-                            )
-                          ],
-                        ))
-                      ]),
-                    )),
-                    SizedBox(width: media.width * 0.05),
-                    Expanded(
-                        child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          width: double.maxFinite,
-                          height: media.width * 0.45,
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 25, horizontal: 20),
-                          decoration: BoxDecoration(
-                              color: theme.colorScheme.surface,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(color: Colors.black12, blurRadius: 2)
-                              ]),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Sleep',
-                                style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: media.width * 0.01),
-                              ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (bounds) {
-                                  return LinearGradient(
-                                          colors: Colours.primaryG,
-                                          begin: Alignment.centerLeft,
-                                          end: Alignment.centerRight)
-                                      .createShader(Rect.fromLTRB(
-                                          0, 0, bounds.width, bounds.height));
-                                },
-                                child: const Text(
-                                  '8h 20m',
-                                  style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                  child: Image.asset(
-                                'assets/images/sleep_graph.png',
-                                width: double.maxFinite,
-                                fit: BoxFit.fitWidth,
-                              ))
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: media.width * 0.05),
-                        Container(
-                          width: double.maxFinite,
-                          height: media.width * 0.45,
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 25, horizontal: 20),
-                          decoration: BoxDecoration(
-                              color: theme.colorScheme.surface,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: const [
-                                BoxShadow(color: Colors.black12, blurRadius: 2)
-                              ]),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Calories',
-                                style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: media.width * 0.01),
-                              ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (bounds) {
-                                  return LinearGradient(
-                                          colors: Colours.primaryG,
-                                          begin: Alignment.centerLeft,
-                                          end: Alignment.centerRight)
-                                      .createShader(Rect.fromLTRB(
-                                          0, 0, bounds.width, bounds.height));
-                                },
-                                child: const Text(
-                                  '760 kCal',
-                                  style: TextStyle(
-                                    color: Colours.black,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                              const Spacer(),
-                              Container(
-                                alignment: Alignment.center,
-                                child: SizedBox(
-                                  width: media.width * 0.2,
-                                  height: media.width * 0.2,
-                                  child: Stack(
-                                    alignment: Alignment.center,
-                                    children: [
-                                      Container(
-                                        width: media.width * 0.16,
-                                        height: media.width * 0.16,
-                                        alignment: Alignment.center,
-                                        decoration: BoxDecoration(
-                                            gradient: LinearGradient(
-                                                colors: Colours.primaryG),
-                                            borderRadius: BorderRadius.circular(
-                                                media.width * 0.075)),
-                                        child: Text('230kCal\nleft',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: theme.colorScheme.surface,
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
-                                            )),
-                                      ),
-                                      SimpleCircularProgressBar(
-                                        startAngle: -180,
-                                        progressStrokeWidth: 10,
-                                        backStrokeWidth: 10,
-                                        progressColors: Colours.primaryG,
-                                        backColor: Colors.grey.shade100,
-                                        valueNotifier: ValueNotifier(60),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ))
-                  ],
-                ),
-                SizedBox(height: media.width * 0.1),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
                     const Text(
-                      'Workout Progress',
+                      'Stefani Wong',
                       style: TextStyle(
                         color: Colours.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Container(
-                      height: 35,
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: Colours.primaryG),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton(
-                          items: ['Weekly', 'Monthly']
-                              .map((name) => DropdownMenuItem(
-                                  value: name,
-                                  child: Text(
-                                    name,
-                                    style: const TextStyle(
-                                        color: Colours.black, fontSize: 14),
-                                  )))
-                              .toList(),
-                          onChanged: (value) {},
-                          icon: Icon(Icons.expand_more,
-                              color: theme.colorScheme.surface),
-                          hint: Text('Weekly',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: theme.colorScheme.surface,
-                                  fontSize: 12)),
-                        ),
+                        fontSize: 20,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
                       ),
                     )
                   ],
                 ),
-                SizedBox(height: media.width * 0.05),
-                Container(
-                    padding: const EdgeInsets.only(left: 15),
-                    height: media.width * 0.5,
+                IconButton(
+                    onPressed: () {
+                      // Navigator.pushNamed(
+                      // context, NotificationScreen.routeName);
+                    },
+                    icon: Image.asset(
+                      'assets/icon/notification_icon.png',
+                      width: 25,
+                      height: 25,
+                      fit: BoxFit.fitHeight,
+                    ))
+              ],
+            ),
+            SizedBox(height: media.width * 0.05),
+            Container(
+              height: media.width * 0.4,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: Colours.primaryG),
+                  borderRadius: BorderRadius.circular(media.width * 0.065)),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(
+                    'assets/icon/bg_dots.png',
+                    height: media.width * 0.4,
                     width: double.maxFinite,
-                    child: LineChart(
+                    fit: BoxFit.fitHeight,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 25, horizontal: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'BMI (Body Mass Index)',
+                              style: TextStyle(
+                                  color: theme.colorScheme.surface,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              'You have a normal weight',
+                              style: TextStyle(
+                                color:
+                                    theme.colorScheme.surface.withOpacity(0.7),
+                                fontSize: 12,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            SizedBox(height: media.width * 0.05),
+                            Padding(
+                              padding: const EdgeInsets.all(0),
+                              child: SizedBox(
+                                height: 35,
+                                width: 100,
+                                child: RoundButton(
+                                    title: 'View More', onPressed: () {}),
+                              ),
+                            )
+                          ],
+                        ),
+                        AspectRatio(
+                          aspectRatio: 1,
+                          child: PieChart(
+                            PieChartData(
+                              pieTouchData: PieTouchData(
+                                touchCallback:
+                                    (FlTouchEvent event, pieTouchResponse) {},
+                              ),
+                              startDegreeOffset: 250,
+                              borderData: FlBorderData(
+                                show: false,
+                              ),
+                              sectionsSpace: 1,
+                              centerSpaceRadius: 0,
+                              sections: showingSections(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: media.width * 0.05),
+            const Text(
+              'Activity Status',
+              style: TextStyle(
+                color: Colours.black,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(height: media.width * 0.02),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: Container(
+                height: media.width * 0.4,
+                width: media.width,
+                decoration: BoxDecoration(
+                    color: Colours.lightBlue.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(25)),
+                child: Stack(
+                  alignment: Alignment.topLeft,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Heart Rate',
+                            style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          SizedBox(height: media.width * 0.01),
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (bounds) {
+                              return LinearGradient(
+                                      colors: Colours.primaryG,
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight)
+                                  .createShader(Rect.fromLTRB(
+                                      0, 0, bounds.width, bounds.height));
+                            },
+                            child: const Text(
+                              '78 BPM',
+                              style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    LineChart(
                       LineChartData(
                         showingTooltipIndicators:
                             showingTooltipOnSpots.map((index) {
@@ -821,6 +371,13 @@ class _HomeState extends State<Home> {
                               showingTooltipOnSpots.clear();
                               setState(() {
                                 showingTooltipOnSpots.add(spotIndex);
+
+                                // if (showingTooltipOnSpots
+                                //     .contains(spotIndex)) {
+                                //   showingTooltipOnSpots.remove(spotIndex);
+                                // } else {
+                                //   showingTooltipOnSpots.add(spotIndex);
+                                // }
                               });
                             }
                           },
@@ -846,8 +403,8 @@ class _HomeState extends State<Home> {
                                           FlDotCirclePainter(
                                     radius: 3,
                                     color: Colors.white,
-                                    strokeWidth: 3,
-                                    strokeColor: theme.colorScheme.primary,
+                                    strokeWidth: 2,
+                                    strokeColor: theme.colorScheme.secondary,
                                   ),
                                 ),
                               );
@@ -859,42 +416,22 @@ class _HomeState extends State<Home> {
                             getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                               return lineBarsSpot.map((lineBarSpot) {
                                 return LineTooltipItem(
+                                  //lineBarSpot.y.toString(),
                                   '${lineBarSpot.x.toInt()} mins ago',
                                   const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
                                 );
                               }).toList();
                             },
                           ),
                         ),
-                        lineBarsData: lineBarsData1,
-                        minY: -0.5,
-                        maxY: 110,
-                        titlesData: FlTitlesData(
-                            show: true,
-                            leftTitles: const AxisTitles(),
-                            topTitles: const AxisTitles(),
-                            bottomTitles: AxisTitles(
-                              sideTitles: bottomTitles,
-                            ),
-                            rightTitles: AxisTitles(
-                              sideTitles: rightTitles,
-                            )),
-                        gridData: FlGridData(
-                          show: true,
-                          drawHorizontalLine: true,
-                          horizontalInterval: 25,
-                          drawVerticalLine: false,
-                          getDrawingHorizontalLine: (value) {
-                            return FlLine(
-                              color: Colours.gray.withOpacity(0.15),
-                              strokeWidth: 2,
-                            );
-                          },
-                        ),
+                        lineBarsData: lineBarsData,
+                        minY: 0,
+                        maxY: 130,
+                        titlesData: const FlTitlesData(show: false),
+                        gridData: const FlGridData(show: false),
                         borderData: FlBorderData(
                           show: true,
                           border: Border.all(
@@ -902,52 +439,496 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                    )),
-                SizedBox(
-                  height: media.width * 0.05,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'Latest Workout',
-                      style: TextStyle(
-                          color: Colours.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'See More',
-                        style: TextStyle(
-                            color: Colours.gray,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400),
-                      ),
                     )
                   ],
                 ),
-                ListView.builder(
-                    padding: EdgeInsets.zero,
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: lastWorkoutArr.length,
-                    itemBuilder: (context, index) {
-                      var wObj = lastWorkoutArr[index] as Map? ?? {};
-                      return InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                                context, FinishWorkoutScreen.routeName);
+              ),
+            ),
+            SizedBox(height: media.width * 0.05),
+            Row(
+              children: [
+                Expanded(
+                    child: Container(
+                  height: media.width * 0.95,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
+                  decoration: BoxDecoration(
+                      color: theme.colorScheme.surface,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.black12, blurRadius: 2)
+                      ]),
+                  child: Row(children: [
+                    SimpleAnimationProgressBar(
+                      height: media.width * 0.9,
+                      width: media.width * 0.07,
+                      backgroundColor: Colors.grey.shade100,
+                      foregrondColor: Colors.purple,
+                      ratio: 0.5,
+                      direction: Axis.vertical,
+                      curve: Curves.fastLinearToSlowEaseIn,
+                      duration: const Duration(seconds: 3),
+                      borderRadius: BorderRadius.circular(30),
+                      gradientColor: LinearGradient(
+                          colors: Colours.primaryG,
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Water Intake',
+                          style: TextStyle(
+                              color: Colours.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: media.width * 0.01),
+                        ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (bounds) {
+                            return LinearGradient(
+                                    colors: Colours.primaryG,
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight)
+                                .createShader(Rect.fromLTRB(
+                                    0, 0, bounds.width, bounds.height));
                           },
-                          child: WorkoutRow(wObj: wObj));
-                    }),
-                SizedBox(
-                  height: media.width * 0.1,
-                ),
+                          child: const Text(
+                            '4 Liters',
+                            style: TextStyle(
+                              color: Colours.black,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: media.width * 0.03),
+                        const Text(
+                          'Real time updates',
+                          style: TextStyle(
+                              color: Colours.black,
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400),
+                        ),
+                        SizedBox(height: media.width * 0.01),
+                        Column(
+                          children: waterArr.map((obj) {
+                            var isLast = obj == waterArr.last;
+                            return Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                            vertical: 6),
+                                        width: 10,
+                                        height: 10,
+                                        decoration: BoxDecoration(
+                                            color: theme.colorScheme.primary
+                                                .withOpacity(0.5),
+                                            borderRadius:
+                                                BorderRadius.circular(5)),
+                                      ),
+                                      if (!isLast)
+                                        DottedDashedLine(
+                                          width: 0,
+                                          height: media.width * 0.078,
+                                          axis: Axis.vertical,
+                                          dashColor: theme.colorScheme.primary
+                                              .withOpacity(0.5),
+                                        )
+                                    ]),
+                                const SizedBox(width: 10),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(height: media.width * 0.01),
+                                    Text(
+                                      obj['title'].toString(),
+                                      style: const TextStyle(
+                                          color: Colours.black,
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const SizedBox(height: 1),
+                                    ShaderMask(
+                                      blendMode: BlendMode.srcIn,
+                                      shaderCallback: (bounds) {
+                                        return LinearGradient(
+                                                colors: Colours.secondaryG,
+                                                begin: Alignment.centerLeft,
+                                                end: Alignment.centerRight)
+                                            .createShader(Rect.fromLTRB(0, 0,
+                                                bounds.width, bounds.height));
+                                      },
+                                      child: Text(
+                                        obj['subtitle'].toString(),
+                                        style: const TextStyle(
+                                          color: Colours.black,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            );
+                          }).toList(),
+                        )
+                      ],
+                    ))
+                  ]),
+                )),
+                SizedBox(width: media.width * 0.05),
+                Expanded(
+                    child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: double.maxFinite,
+                      height: media.width * 0.45,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 25, horizontal: 20),
+                      decoration: BoxDecoration(
+                          color: theme.colorScheme.surface,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(color: Colors.black12, blurRadius: 2)
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Sleep',
+                            style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: media.width * 0.01),
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (bounds) {
+                              return LinearGradient(
+                                      colors: Colours.primaryG,
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight)
+                                  .createShader(Rect.fromLTRB(
+                                      0, 0, bounds.width, bounds.height));
+                            },
+                            child: const Text(
+                              '8h 20m',
+                              style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                              child: Image.asset(
+                            'assets/images/sleep_graph.png',
+                            width: double.maxFinite,
+                            fit: BoxFit.fitWidth,
+                          ))
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: media.width * 0.05),
+                    Container(
+                      width: double.maxFinite,
+                      height: media.width * 0.45,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 25, horizontal: 20),
+                      decoration: BoxDecoration(
+                          color: theme.colorScheme.surface,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(color: Colors.black12, blurRadius: 2)
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Calories',
+                            style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: media.width * 0.01),
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (bounds) {
+                              return LinearGradient(
+                                      colors: Colours.primaryG,
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight)
+                                  .createShader(Rect.fromLTRB(
+                                      0, 0, bounds.width, bounds.height));
+                            },
+                            child: const Text(
+                              '760 kCal',
+                              style: TextStyle(
+                                color: Colours.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Container(
+                            alignment: Alignment.center,
+                            child: SizedBox(
+                              width: media.width * 0.2,
+                              height: media.width * 0.2,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Container(
+                                    width: media.width * 0.16,
+                                    height: media.width * 0.16,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                            colors: Colours.primaryG),
+                                        borderRadius: BorderRadius.circular(
+                                            media.width * 0.075)),
+                                    child: Text('230kCal\nleft',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: theme.colorScheme.surface,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                                  ),
+                                  SimpleCircularProgressBar(
+                                    startAngle: -180,
+                                    progressStrokeWidth: 10,
+                                    backStrokeWidth: 10,
+                                    progressColors: Colours.primaryG,
+                                    backColor: Colors.grey.shade100,
+                                    valueNotifier: ValueNotifier(60),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ))
               ],
             ),
-          ),
+            SizedBox(height: media.width * 0.1),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Workout Progress',
+                  style: TextStyle(
+                    color: Colours.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Container(
+                  height: 35,
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: Colours.primaryG),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton(
+                      items: ['Weekly', 'Monthly']
+                          .map((name) => DropdownMenuItem(
+                              value: name,
+                              child: Text(
+                                name,
+                                style: const TextStyle(
+                                    color: Colours.black, fontSize: 14),
+                              )))
+                          .toList(),
+                      onChanged: (value) {},
+                      icon: Icon(Icons.expand_more,
+                          color: theme.colorScheme.surface),
+                      hint: Text('Weekly',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: theme.colorScheme.surface, fontSize: 12)),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: media.width * 0.05),
+            Container(
+                padding: const EdgeInsets.only(left: 15),
+                height: media.width * 0.5,
+                width: double.maxFinite,
+                child: LineChart(
+                  LineChartData(
+                    showingTooltipIndicators:
+                        showingTooltipOnSpots.map((index) {
+                      return ShowingTooltipIndicators([
+                        LineBarSpot(
+                          tooltipsOnBar,
+                          lineBarsData.indexOf(tooltipsOnBar),
+                          tooltipsOnBar.spots[index],
+                        ),
+                      ]);
+                    }).toList(),
+                    lineTouchData: LineTouchData(
+                      enabled: true,
+                      handleBuiltInTouches: false,
+                      touchCallback:
+                          (FlTouchEvent event, LineTouchResponse? response) {
+                        if (response == null || response.lineBarSpots == null) {
+                          return;
+                        }
+                        if (event is FlTapUpEvent) {
+                          final spotIndex =
+                              response.lineBarSpots!.first.spotIndex;
+                          showingTooltipOnSpots.clear();
+                          setState(() {
+                            showingTooltipOnSpots.add(spotIndex);
+                          });
+                        }
+                      },
+                      mouseCursorResolver:
+                          (FlTouchEvent event, LineTouchResponse? response) {
+                        if (response == null || response.lineBarSpots == null) {
+                          return SystemMouseCursors.basic;
+                        }
+                        return SystemMouseCursors.click;
+                      },
+                      getTouchedSpotIndicator:
+                          (LineChartBarData barData, List<int> spotIndexes) {
+                        return spotIndexes.map((index) {
+                          return TouchedSpotIndicatorData(
+                            const FlLine(
+                              color: Colors.transparent,
+                            ),
+                            FlDotData(
+                              show: true,
+                              getDotPainter: (spot, percent, barData, index) =>
+                                  FlDotCirclePainter(
+                                radius: 3,
+                                color: Colors.white,
+                                strokeWidth: 3,
+                                strokeColor: theme.colorScheme.primary,
+                              ),
+                            ),
+                          );
+                        }).toList();
+                      },
+                      touchTooltipData: LineTouchTooltipData(
+                        tooltipBgColor: theme.colorScheme.primary,
+                        tooltipRoundedRadius: 20,
+                        getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
+                          return lineBarsSpot.map((lineBarSpot) {
+                            return LineTooltipItem(
+                              '${lineBarSpot.x.toInt()} mins ago',
+                              const TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            );
+                          }).toList();
+                        },
+                      ),
+                    ),
+                    lineBarsData: lineBarsData1,
+                    minY: -0.5,
+                    maxY: 110,
+                    titlesData: FlTitlesData(
+                        show: true,
+                        leftTitles: const AxisTitles(),
+                        topTitles: const AxisTitles(),
+                        bottomTitles: AxisTitles(
+                          sideTitles: bottomTitles,
+                        ),
+                        rightTitles: AxisTitles(
+                          sideTitles: rightTitles,
+                        )),
+                    gridData: FlGridData(
+                      show: true,
+                      drawHorizontalLine: true,
+                      horizontalInterval: 25,
+                      drawVerticalLine: false,
+                      getDrawingHorizontalLine: (value) {
+                        return FlLine(
+                          color: Colours.gray.withOpacity(0.15),
+                          strokeWidth: 2,
+                        );
+                      },
+                    ),
+                    borderData: FlBorderData(
+                      show: true,
+                      border: Border.all(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                )),
+            SizedBox(
+              height: media.width * 0.05,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Latest Workout',
+                  style: TextStyle(
+                      color: Colours.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'See More',
+                    style: TextStyle(
+                        color: Colours.gray,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400),
+                  ),
+                )
+              ],
+            ),
+            ListView.builder(
+                padding: EdgeInsets.zero,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: lastWorkoutArr.length,
+                itemBuilder: (context, index) {
+                  var wObj = lastWorkoutArr[index] as Map? ?? {};
+                  return InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, FinishWorkoutScreen.routeName);
+                      },
+                      child: WorkoutRow(wObj: wObj));
+                }),
+            SizedBox(
+              height: media.width * 0.1,
+            ),
+          ],
         ),
       ),
     );

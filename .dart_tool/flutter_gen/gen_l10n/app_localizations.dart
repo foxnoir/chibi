@@ -93,17 +93,47 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
-  /// Labeling of the buttons that lead to the detail view.
+  /// No description provided for @details.
   ///
   /// In de, this message translates to:
   /// **'Details'**
   String get details;
 
-  /// Welcome text on the home page.
+  /// No description provided for @helloThere.
   ///
   /// In de, this message translates to:
   /// **'Hello there!'**
   String get helloThere;
+
+  /// No description provided for @home.
+  ///
+  /// In de, this message translates to:
+  /// **'home'**
+  String get home;
+
+  /// No description provided for @profile.
+  ///
+  /// In de, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @progress.
+  ///
+  /// In de, this message translates to:
+  /// **'progress'**
+  String get progress;
+
+  /// No description provided for @workout.
+  ///
+  /// In de, this message translates to:
+  /// **'workout'**
+  String get workout;
+
+  /// No description provided for @exercices.
+  ///
+  /// In de, this message translates to:
+  /// **'exercices'**
+  String get exercices;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
