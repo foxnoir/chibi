@@ -1,5 +1,6 @@
 import 'package:chibi/core/theme/app_icons.dart';
 import 'package:chibi/features/home/presentation/home.dart';
+import 'package:chibi/features/profile/presentation/profile.dart';
 import 'package:chibi/features/statistics/presentation/statistics.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class BottomNavBarTabs {
       BottomNavBarItem(
         icon: AppIcons.profile,
         activeIcon: AppIcons.profileActive,
-        initialLocation: const Home(),
+        initialLocation: const Profile(),
         isActive: index == 4,
       ),
     ];

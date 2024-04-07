@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
+import 'package:chibi/features/profile/presentation/profile.dart';
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/statistics/presentation/statistics.dart';
@@ -42,6 +43,14 @@ class AppRouter {
                 pageBuilder: (context, state) {
                   return TransitionPage(
                       key: state.pageKey, child: const Statistics());
+                },
+              ),
+              GoRoute(
+                path: AppRouterPaths.profile,
+                name: AppRouterPaths.profile,
+                pageBuilder: (context, state) {
+                  return TransitionPage(
+                      key: state.pageKey, child: const Profile());
                 },
               ),
             ],
