@@ -1,6 +1,6 @@
 import 'package:chibi/core/theme/app_icons.dart';
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/core/theme/consts.dart';
+import 'package:chibi/core/theme/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -40,8 +40,8 @@ class ScaffoldWithBackButton extends StatelessWidget {
         bgImg != null
             ? Image.asset(
                 bgImg!,
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
+                height: getHeight(context),
+                width: getWidth(context),
                 fit: BoxFit.cover,
               )
             : Container(),
@@ -54,7 +54,7 @@ class ScaffoldWithBackButton extends StatelessWidget {
                 onPressed: () =>
                     onPressedBack != null ? onPressedBack!() : context.pop(),
                 icon: SvgPicture.asset(
-                  height: Consts.globalIconSizeM * 1.2,
+                  height: 22,
                   AppIcons.arrowLeft,
                 ),
               ),

@@ -112,9 +112,9 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 SizedBox(
                   width: 70,
                   height: 25,
-                  child: RoundButton(
+                  child: GradientBtn(
                     title: 'Edit',
-                    type: RoundButtonType.primaryBG,
+                    type: GradientBtnType.primaryBG,
                     onPressed: () {
                       context.pushNamed(AppRouteNames.profileEditor);
                     },

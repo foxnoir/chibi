@@ -1,7 +1,7 @@
 import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:chibi/core/common.dart';
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:chibi/view/workout_schedule_view/add_schedule_view.dart';
 import 'package:flutter/material.dart';
 
@@ -366,7 +366,7 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                                                     const SizedBox(
                                                       height: 15,
                                                     ),
-                                                    RoundGradientButton(
+                                                    GradientBtn(
                                                         title: 'Mark Done',
                                                         onPressed: () {
                                                           Navigator.pop(

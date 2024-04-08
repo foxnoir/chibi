@@ -1,6 +1,6 @@
 import 'package:chibi/core/common.dart';
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:chibi/view/workour_detail_view/widgets/icon_title_next_row.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -156,7 +156,7 @@ class _AddScheduleViewState extends State<AddScheduleView> {
               color: Colours.lightgray,
               onPressed: () {}),
           const Spacer(),
-          RoundGradientButton(title: 'Save', onPressed: () {}),
+          GradientBtn(title: 'Save', onPressed: () {}),
           const SizedBox(
             height: 20,
           ),

@@ -170,7 +170,7 @@ class _CameraScreenState extends State<CameraScreen> {
                               SizedBox(
                                 width: 110,
                                 height: 35,
-                                child: RoundButton(
+                                child: GradientBtn(
                                     title: 'Learn More', onPressed: () {}),
                               )
                             ]),
@@ -206,7 +206,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       SizedBox(
                         width: 100,
                         height: 25,
-                        child: RoundButton(
+                        child: GradientBtn(
                           title: 'Compare',
                           onPressed: () {
                             // Navigator.push(

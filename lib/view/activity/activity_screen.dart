@@ -248,7 +248,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           SizedBox(
                             width: 70,
                             height: 25,
-                            child: RoundButton(
+                            child: GradientBtn(
                               title: 'Check',
                               onPressed: () {
                                 // Navigator.push(

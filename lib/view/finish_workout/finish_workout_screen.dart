@@ -1,5 +1,5 @@
-import 'package:chibi/global_widgets//round_gradient_button.dart';
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:flutter/material.dart';
 
 class FinishWorkoutScreen extends StatelessWidget {
@@ -61,7 +61,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              RoundGradientButton(
+              GradientBtn(
                   title: 'Back To Home',
                   onPressed: () {
                     Navigator.pop(context);

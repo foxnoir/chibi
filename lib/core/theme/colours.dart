@@ -9,10 +9,9 @@ class Colours {
 
   static const white = Color(0xFFFFFFFF);
   static const black = Color(0xFF1D1617);
-
+  static const gray = Color(0xFF7B6F72);
   static const lightgray = Color(0xFFF7F8F8);
   static const midgray = Color(0xFFADA4A5);
-  static const gray = Color(0xFF7B6F72);
 
   static List<Color> get primaryG => [tertiary, lightBlue];
   static List<Color> get secondaryG => [primary, secondary];

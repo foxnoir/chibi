@@ -8,12 +8,6 @@ ThemeData getLightTheme() {
 }
 
 ThemeData _theme(ColorScheme colorScheme) {
-  final btnSize = MaterialStateProperty.all(
-      Size(Consts.primaryBtnWidthS, Consts.btnHeightL));
-
-  final btnRadius = MaterialStateProperty.all(RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(Consts.radius)));
-
   final themeData = ThemeData(
     fontFamily: Font.fontFamily,
     primaryColor: colorScheme.primary,
@@ -43,7 +37,7 @@ ThemeData _theme(ColorScheme colorScheme) {
           fontWeight: FontWeights.medium,
           color: colorScheme.secondary),
       titleSmall: TextStyle(
-          color: colorScheme.tertiary,
+          color: colorScheme.surface,
           fontSize: FontSize.tiny,
           fontWeight: FontWeights.medium),
       bodyLarge: const TextStyle(
@@ -93,49 +87,21 @@ ThemeData _theme(ColorScheme colorScheme) {
       )),
     ),
 
-    // BottomNavigationBar Theme
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      elevation: Consts.bottomNavBarElevation,
-      selectedLabelStyle:
-          TextStyle(fontSize: FontSize.tiny, fontWeight: FontWeights.bold),
-      unselectedLabelStyle:
-          TextStyle(fontSize: FontSize.tiny, fontWeight: FontWeights.medium),
-    ),
-
     // TextButton Theme
-    textButtonTheme: TextButtonThemeData(
-      style: ButtonStyle(
-        backgroundColor:
-            MaterialStateProperty.all(createMaterialColor(colorScheme.primary)),
-        minimumSize: btnSize,
-        maximumSize: btnSize,
-        shape: btnRadius,
-        foregroundColor: MaterialStateProperty.all(
-            createMaterialColor(colorScheme.tertiary)),
-        overlayColor: MaterialStateProperty.all(
-            createMaterialColor(colorScheme.tertiary).withOpacity(0.1)),
-        textStyle: Consts.btnTextStyle,
-      ),
-    ),
-
-    // OutlinedButton Theme
-    outlinedButtonTheme: OutlinedButtonThemeData(
-      style: ButtonStyle(
-          side: MaterialStateProperty.all(BorderSide(
-              color: createMaterialColor(colorScheme.primary),
-              width: Consts.borderThin,
-              style: BorderStyle.solid)),
-          backgroundColor: MaterialStateProperty.all(
-              createMaterialColor(colorScheme.tertiary)),
-          minimumSize: btnSize,
-          maximumSize: btnSize,
-          shape: btnRadius,
-          foregroundColor: MaterialStateProperty.all(
-              createMaterialColor(colorScheme.primary)),
-          overlayColor: MaterialStateProperty.all(
-              createMaterialColor(colorScheme.primary).withOpacity(0.1)),
-          textStyle: Consts.btnTextStyle),
-    ),
+    // textButtonTheme: TextButtonThemeData(
+    //   style: ButtonStyle(
+    //     backgroundColor:
+    //         MaterialStateProperty.all(createMaterialColor(colorScheme.primary)),
+    //     minimumSize: btnSize,
+    //     maximumSize: btnSize,
+    //     shape: btnRadius,
+    //     foregroundColor: MaterialStateProperty.all(
+    //         createMaterialColor(colorScheme.tertiary)),
+    //     overlayColor: MaterialStateProperty.all(
+    //         createMaterialColor(colorScheme.tertiary).withOpacity(0.1)),
+    //     textStyle: Consts.btnTextStyle,
+    //   ),
+    // ),
 
     // Divider Theme
     dividerTheme: const DividerThemeData(
@@ -151,7 +117,7 @@ ThemeData _theme(ColorScheme colorScheme) {
           Colours.lightgray), // Customize the thumb color
       trackColor:
           MaterialStateProperty.all(Colours.gray), // Customize the track color
-      radius: const Radius.circular(Consts.radius),
+      radius: const Radius.circular(Consts.radiusS),
     ),
 
     cardTheme: const CardTheme(
@@ -175,15 +141,15 @@ ThemeData _theme(ColorScheme colorScheme) {
       enabledBorder: const OutlineInputBorder(
           borderSide:
               BorderSide(color: Colours.lightgray, width: Consts.borderThin),
-          borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
+          borderRadius: BorderRadius.all(Radius.circular(Consts.radiusS))),
       focusedBorder: const OutlineInputBorder(
           borderSide:
               BorderSide(color: Colours.primary, width: Consts.borderThin),
-          borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
+          borderRadius: BorderRadius.all(Radius.circular(Consts.radiusS))),
       focusedErrorBorder: const OutlineInputBorder(
           borderSide:
               BorderSide(color: Colours.primary, width: Consts.borderThin),
-          borderRadius: BorderRadius.all(Radius.circular(Consts.radius))),
+          borderRadius: BorderRadius.all(Radius.circular(Consts.radiusS))),
     ),
   );
   return themeData;

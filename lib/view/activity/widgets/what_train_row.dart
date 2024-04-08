@@ -53,7 +53,7 @@ class WhatTrainRow extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       height: 30,
-                      child: RoundButton(title: 'View More', onPressed: () {}),
+                      child: GradientBtn(title: 'View More', onPressed: () {}),
                     )
                   ],
                 ),

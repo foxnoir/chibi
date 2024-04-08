@@ -1,4 +1,5 @@
 import 'package:chibi/core/theme/app_icons.dart';
+import 'package:chibi/core/theme/consts.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/profile/presentation/profile.dart';
 import 'package:chibi/features/profile_editor/presentation/profile_editor.dart';
@@ -60,8 +61,8 @@ class BottomNavBarItem extends CurvedNavigationBarItem {
   }) : super(
           child: Image.asset(
             isActive ? activeIcon : icon,
-            width: 25,
-            height: 25,
+            width: Consts.navIconSize,
+            height: Consts.navIconSize,
             fit: BoxFit.fitWidth,
           ),
         );

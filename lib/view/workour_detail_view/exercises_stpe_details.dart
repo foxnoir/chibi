@@ -1,5 +1,5 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/global_widgets/round_gradient_button.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:chibi/view/workour_detail_view/widgets/step_detail_row.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -268,7 +268,7 @@ class _ExercisesStepDetailsState extends State<ExercisesStepDetails> {
                   },
                 ),
               ),
-              RoundGradientButton(title: 'Save', onPressed: () {}),
+              GradientBtn(title: 'Save', onPressed: () {}),
               const SizedBox(
                 height: 15,
               ),

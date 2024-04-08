@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:chibi/core/theme/colours.dart';
 
-enum RoundButtonType { primaryBG, secondaryBG }
+enum GradientBtnType { primaryBG, secondaryBG }
 
-class RoundButton extends StatelessWidget {
+class GradientBtn extends StatelessWidget {
   final String title;
-  final RoundButtonType type;
+  final GradientBtnType type;
   final Function() onPressed;
 
-  const RoundButton(
-      {Key? key,
-      required this.title,
-      required this.onPressed,
-      this.type = RoundButtonType.secondaryBG})
-      : super(key: key);
+  const GradientBtn({
+    required this.title,
+    required this.onPressed,
+    this.type = GradientBtnType.secondaryBG,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +22,17 @@ class RoundButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: type == RoundButtonType.secondaryBG
+              colors: type == GradientBtnType.secondaryBG
                   ? Colours.secondaryG
                   : Colours.primaryG,
               begin: Alignment.centerLeft,
               end: Alignment.centerRight),
           borderRadius: BorderRadius.circular(25),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
-                color: Colors.black26, blurRadius: 2, offset: Offset(0, 2))
+                color: Colours.black.withOpacity(0.3),
+                blurRadius: 2,
+                offset: const Offset(0, 2))
           ]),
       child: MaterialButton(
         minWidth: double.maxFinite,
@@ -38,15 +40,7 @@ class RoundButton extends StatelessWidget {
         onPressed: onPressed,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         textColor: theme.colorScheme.tertiary,
-        child: Text(
-          title,
-          style: TextStyle(
-            fontSize: 11,
-            color: theme.colorScheme.surface,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w400,
-          ),
-        ),
+        child: Text(title, style: theme.textTheme.titleSmall),
       ),
     );
   }

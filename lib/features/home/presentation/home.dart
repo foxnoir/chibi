@@ -256,7 +256,7 @@ class _HomeState extends State<Home> {
                               child: SizedBox(
                                 height: 35,
                                 width: 100,
-                                child: RoundButton(
+                                child: GradientBtn(
                                     title: 'View More', onPressed: () {}),
                               ),
                             )

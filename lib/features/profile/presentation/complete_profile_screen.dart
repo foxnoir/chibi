@@ -1,5 +1,5 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/global_widgets/round_gradient_button.dart';
+import 'package:chibi/global_widgets/round_button.dart';
 import 'package:chibi/global_widgets/round_textfield.dart';
 import 'package:chibi/view/your_goal/your_goal_screen.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +105,7 @@ class CompleteProfileScreen extends StatelessWidget {
                   textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 15),
-                RoundGradientButton(
+                GradientBtn(
                   title: 'Next >',
                   onPressed: () {
                     Navigator.pushNamed(context, YourGoalScreen.routeName);
