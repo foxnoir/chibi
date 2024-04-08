@@ -78,7 +78,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Image.asset(
-                    'assets/images/user.png',
+                    'assets/image/user.png',
                     width: 50,
                     height: 50,
                     fit: BoxFit.cover,

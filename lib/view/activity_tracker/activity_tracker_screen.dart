@@ -17,12 +17,12 @@ class _ActivityTrackerScreenState extends State<ActivityTrackerScreen> {
 
   List latestArr = [
     {
-      'image': 'assets/images/pic_4.png',
+      'image': 'assets/image/pic_4.png',
       'title': 'Drinking 300ml Water',
       'time': 'About 1 minutes ago'
     },
     {
-      'image': 'assets/images/pic_5.png',
+      'image': 'assets/image/pic_5.png',
       'title': 'Eat Snack (Fitbar)',
       'time': 'About 3 hours ago'
     },

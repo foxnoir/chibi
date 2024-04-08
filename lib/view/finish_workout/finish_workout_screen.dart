@@ -22,7 +22,7 @@ class FinishWorkoutScreen extends StatelessWidget {
                 height: 20,
               ),
               Image.asset(
-                'assets/images/complete_workout.png',
+                'assets/image/complete_workout.png',
                 height: media.width * 0.8,
                 fit: BoxFit.fitHeight,
               ),

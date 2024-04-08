@@ -17,12 +17,12 @@ class WorkoutDetailView extends StatefulWidget {
 class _WorkoutDetailViewState extends State<WorkoutDetailView> {
   List latestArr = [
     {
-      'image': 'assets/images/Workout1.png',
+      'image': 'assets/image/Workout1.png',
       'title': 'Fullbody Workout',
       'time': 'Today, 03:00pm'
     },
     {
-      'image': 'assets/images/Workout2.png',
+      'image': 'assets/image/Workout2.png',
       'title': 'Upperbody Workout',
       'time': 'June 05, 02:00pm'
     },
@@ -39,28 +39,28 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
       'name': 'Set 1',
       'set': [
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Warm Up',
           'value': '05:00'
         },
         {
-          'image': 'assets/images/img_2.png',
+          'image': 'assets/image/img_2.png',
           'title': 'Jumping Jack',
           'value': '12x'
         },
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Skipping',
           'value': '15x'
         },
-        {'image': 'assets/images/img_2.png', 'title': 'Squats', 'value': '20x'},
+        {'image': 'assets/image/img_2.png', 'title': 'Squats', 'value': '20x'},
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Arm Raises',
           'value': '00:53'
         },
         {
-          'image': 'assets/images/img_2.png',
+          'image': 'assets/image/img_2.png',
           'title': 'Rest and Drink',
           'value': '02:00'
         },
@@ -70,28 +70,28 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
       'name': 'Set 2',
       'set': [
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Warm Up',
           'value': '05:00'
         },
         {
-          'image': 'assets/images/img_2.png',
+          'image': 'assets/image/img_2.png',
           'title': 'Jumping Jack',
           'value': '12x'
         },
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Skipping',
           'value': '15x'
         },
-        {'image': 'assets/images/img_2.png', 'title': 'Squats', 'value': '20x'},
+        {'image': 'assets/image/img_2.png', 'title': 'Squats', 'value': '20x'},
         {
-          'image': 'assets/images/img_1.png',
+          'image': 'assets/image/img_1.png',
           'title': 'Arm Raises',
           'value': '00:53'
         },
         {
-          'image': 'assets/images/img_2.png',
+          'image': 'assets/image/img_2.png',
           'title': 'Rest and Drink',
           'value': '02:00'
         },
@@ -164,7 +164,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
               flexibleSpace: Align(
                 alignment: Alignment.center,
                 child: Image.asset(
-                  'assets/images/detail_top.png',
+                  'assets/image/detail_top.png',
                   width: media.width * 0.75,
                   height: media.width * 0.8,
                   fit: BoxFit.contain,

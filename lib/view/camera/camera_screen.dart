@@ -14,19 +14,19 @@ class _CameraScreenState extends State<CameraScreen> {
     {
       'time': '2 June',
       'photo': [
-        'assets/images/pp_1.png',
-        'assets/images/pp_2.png',
-        'assets/images/pp_3.png',
-        'assets/images/pp_4.png',
+        'assets/image/pp_1.png',
+        'assets/image/pp_2.png',
+        'assets/image/pp_3.png',
+        'assets/image/pp_4.png',
       ]
     },
     {
       'time': '5 May',
       'photo': [
-        'assets/images/pp_5.png',
-        'assets/images/pp_6.png',
-        'assets/images/pp_7.png',
-        'assets/images/pp_8.png',
+        'assets/image/pp_5.png',
+        'assets/image/pp_6.png',
+        'assets/image/pp_7.png',
+        'assets/image/pp_8.png',
       ]
     }
   ];
@@ -175,7 +175,7 @@ class _CameraScreenState extends State<CameraScreen> {
                               )
                             ]),
                         Image.asset(
-                          'assets/images/progress_each_photo.png',
+                          'assets/image/progress_each_photo.png',
                           width: media.width * 0.35,
                         )
                       ],

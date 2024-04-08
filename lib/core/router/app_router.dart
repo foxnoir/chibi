@@ -69,7 +69,7 @@ class AppRouter {
                       path: AppRouterPaths.profileEditor,
                       name: AppRouteNames.profileEditor,
                       pageBuilder: (context, state) {
-                        return TransitionPage(
+                        return SlideTransitionPage(
                             key: state.pageKey, child: const ProfileEditor());
                       },
                     ),

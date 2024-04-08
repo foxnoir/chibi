@@ -305,6 +305,7 @@ feature/
 
 - [waves in corners](https://www.tldevtech.com/snippet/stack-page-with-clippath-wave-at-top-and-bottom/)  
 - [3 top bar waves](https://stackoverflow.com/questions/67822624/clippath-flutter)  
+- [Edit profile waves](https://www.uplabs.com/posts/profile-and-map-app-ui?utm_source=extension&utm_medium=click&utm_campaign=muzli#)  
 
 
 

@@ -1,5 +1,5 @@
 import 'package:chibi/core/di/stateful_view_with_wm.dart';
-import 'package:chibi/features/template_statefull/presentation/template_vm.dart';
+import 'package:chibi/global_widgets/template_statefull/presentation/template_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 

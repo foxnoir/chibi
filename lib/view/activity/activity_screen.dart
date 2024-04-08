@@ -16,12 +16,12 @@ class ActivityScreen extends StatefulWidget {
 class _ActivityScreenState extends State<ActivityScreen> {
   List latestArr = [
     {
-      'image': 'assets/images/Workout1.png',
+      'image': 'assets/image/Workout1.png',
       'title': 'Fullbody Workout',
       'time': 'Today, 03:00pm'
     },
     {
-      'image': 'assets/images/Workout2.png',
+      'image': 'assets/image/Workout2.png',
       'title': 'Upperbody Workout',
       'time': 'June 05, 02:00pm'
     },
@@ -29,19 +29,19 @@ class _ActivityScreenState extends State<ActivityScreen> {
 
   List whatArr = [
     {
-      'image': 'assets/images/what_1.png',
+      'image': 'assets/image/what_1.png',
       'title': 'Fullbody Workout',
       'exercises': '11 Exercises',
       'time': '32mins'
     },
     {
-      'image': 'assets/images/what_2.png',
+      'image': 'assets/image/what_2.png',
       'title': 'Lowebody Workout',
       'exercises': '12 Exercises',
       'time': '40mins'
     },
     {
-      'image': 'assets/images/what_3.png',
+      'image': 'assets/image/what_3.png',
       'title': 'AB Workout',
       'exercises': '14 Exercises',
       'time': '20mins'

@@ -20,7 +20,7 @@ class CompleteProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.only(right: 15, left: 15),
             child: Column(
               children: [
-                Image.asset('assets/images/complete_profile.png',
+                Image.asset('assets/image/complete_profile.png',
                     width: media.width),
                 const SizedBox(
                   height: 15,

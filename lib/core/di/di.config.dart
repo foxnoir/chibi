@@ -15,9 +15,9 @@ import 'package:chibi/features/profile_editor/presentation/profile_editor_vm.dar
 import 'package:chibi/features/progress/presentation/progress_vm.dart' as _i6;
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav_vm.dart'
     as _i7;
-import 'package:chibi/features/template_statefull/presentation/template_vm.dart'
+import 'package:chibi/global_widgets/template_statefull/presentation/template_vm.dart'
     as _i10;
-import 'package:chibi/features/template_stateless/presentation/template_vm.dart'
+import 'package:chibi/global_widgets/template_stateless/presentation/template_vm.dart'
     as _i9;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;

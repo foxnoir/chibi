@@ -134,6 +134,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'exercices'**
   String get exercices;
+
+  /// No description provided for @editProfile.
+  ///
+  /// In de, this message translates to:
+  /// **'Edit profile'**
+  String get editProfile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

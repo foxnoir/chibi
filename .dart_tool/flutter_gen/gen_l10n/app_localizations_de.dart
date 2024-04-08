@@ -24,4 +24,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get exercices => 'exercices';
+
+  @override
+  String get editProfile => 'Edit profile';
 }

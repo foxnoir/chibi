@@ -17,19 +17,19 @@ class _YourGoalScreenState extends State<YourGoalScreen> {
       'title': 'Improve Shape',
       'subtitle':
           'I have a low amount of body fat\nand need / want to build more\nmuscle',
-      'image': 'assets/images/goal_1.png'
+      'image': 'assets/image/goal_1.png'
     },
     {
       'title': 'Lean & Tone',
       'subtitle':
           'I’m “skinny fat”. look thin but have\nno shape. I want to add learn\nmuscle in the right way',
-      'image': 'assets/images/goal_2.png'
+      'image': 'assets/image/goal_2.png'
     },
     {
       'title': 'Lose a Fat',
       'subtitle':
           'I have over 20 lbs to lose. I want to\ndrop all this fat and gain muscle\nmass',
-      'image': 'assets/images/goal_3.png'
+      'image': 'assets/image/goal_3.png'
     }
   ];
   CarouselController carouselController = CarouselController();
