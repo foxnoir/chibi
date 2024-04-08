@@ -1,5 +1,6 @@
 import 'package:chibi/core/di/stateful_view_with_wm.dart';
 import 'package:chibi/core/router/app_router_consts.dart';
+import 'package:chibi/core/theme/app_images.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/features/profile/presentation/profile_vm.dart';
 import 'package:chibi/features/profile/presentation/widgets/setting_row.dart';
@@ -78,7 +79,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Image.asset(
-                    'assets/image/user.png',
+                    AppImages.defaultProfile,
                     width: 50,
                     height: 50,
                     fit: BoxFit.cover,

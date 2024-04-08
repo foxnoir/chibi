@@ -1,3 +1,4 @@
+import 'package:chibi/core/theme/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:chibi/core/theme/colours.dart';
 
@@ -36,7 +37,7 @@ class GradientBtn extends StatelessWidget {
           ]),
       child: MaterialButton(
         minWidth: double.maxFinite,
-        height: 50,
+        height: getWidth(context) * 0.22,
         onPressed: onPressed,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         textColor: theme.colorScheme.tertiary,

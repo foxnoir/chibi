@@ -22,8 +22,6 @@ class ScaffoldWithBottomNav
     return Observer(builder: (context) {
       return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          elevation: 0,
           title: Text(title),
         ),
         body: BottomNavBarTabs(context)

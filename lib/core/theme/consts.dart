@@ -1,6 +1,7 @@
 class Consts {
   // padding
   static const double globalContentPaddingS = 6.0;
+  static const double globalContentPaddingL = 33.0;
 
 // radius
   static const double radiusS = 6.0;

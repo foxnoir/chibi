@@ -1,7 +1,8 @@
 import 'package:chibi/core/di/stateless_view_with_vm.dart';
 import 'package:chibi/core/theme/app_images.dart';
 import 'package:chibi/core/theme/consts.dart';
-import 'package:chibi/global_widgets/gradient_btn.dart';
+import 'package:chibi/core/theme/layout.dart';
+import 'package:chibi/features/profile/presentation/widgets/title_subtitle_cell.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:chibi/features/profile_editor/presentation/profile_editor_vm.dart';
 import 'package:chibi/global_widgets/scaffold_with_back_btn.dart';
@@ -21,20 +22,57 @@ class ProfileEditor extends StatelessViewWithVM<ProfileEditorVM> {
   @override
   Widget build(BuildContext context, ProfileEditorVM viewModel) {
     final AppLocalizations? appLocalizations = AppLocalizations.of(context);
+    final double iconSize = getWidth(context) * 0.3;
 
     return Observer(builder: (context) {
       return ScaffoldWithBackButton(
-          bgImg: AppImages.scaffoldBg,
-          title: appLocalizations?.editProfile ?? '',
-          child: Center(
-            child: ClipRRect(
+        bgImg: AppImages.scaffoldBg,
+        title: appLocalizations?.editProfile ?? '',
+        child: Padding(
+          padding: const EdgeInsets.only(top: Consts.globalContentPaddingL),
+          child: Column(
+            children: [
+              ClipRRect(
                 borderRadius: BorderRadius.circular(Consts.radiusL),
-                child: GradientBtn(
-                    title: 'Back To Home',
-                    onPressed: () {
-                      Navigator.pop(context);
-                    })),
-          ));
+                child: Image.asset(
+                  AppImages.defaultProfile,
+                  width: iconSize,
+                  height: iconSize,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const Row(
+                children: [
+                  Expanded(
+                    child: TitleSubtitleCell(
+                      title: '180cm',
+                      subtitle: 'Height',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: TitleSubtitleCell(
+                      title: '65kg',
+                      subtitle: 'Weight',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: TitleSubtitleCell(
+                      title: '22yo',
+                      subtitle: 'Age',
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
     });
   }
 }
