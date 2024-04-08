@@ -1,5 +1,5 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/global_widgets/round_button.dart';
+import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:chibi/view/workour_detail_view/widgets/step_detail_row.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

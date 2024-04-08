@@ -1,5 +1,5 @@
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/global_widgets/round_button.dart';
+import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:chibi/view/workour_detail_view/exercises_stpe_details.dart';
 import 'package:chibi/view/workour_detail_view/widgets/exercises_set_section.dart';
 import 'package:chibi/view/workour_detail_view/widgets/icon_title_next_row.dart';

@@ -1,4 +1,4 @@
-import 'package:chibi/global_widgets//round_button.dart';
+import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 

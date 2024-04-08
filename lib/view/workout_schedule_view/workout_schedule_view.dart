@@ -1,7 +1,7 @@
 import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:chibi/core/common.dart';
 import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/global_widgets/round_button.dart';
+import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:chibi/view/workout_schedule_view/add_schedule_view.dart';
 import 'package:flutter/material.dart';
 

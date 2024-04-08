@@ -4,7 +4,7 @@ import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/features/profile/presentation/profile_vm.dart';
 import 'package:chibi/features/profile/presentation/widgets/setting_row.dart';
 import 'package:chibi/features/profile/presentation/widgets/title_subtitle_cell.dart';
-import 'package:chibi/global_widgets/round_button.dart';
+import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
