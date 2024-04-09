@@ -1,26 +1,31 @@
+import 'package:chibi/core/di/stateless_view_with_vm.dart';
+import 'package:chibi/features/profile_editor/presentation/profile_vm.dart';
+import 'package:flutter/material.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/core/theme/consts.dart';
-import 'package:flutter/material.dart';
 
-class ProfileDetailsBtn extends StatelessWidget {
+class ProfileDetailsBtn extends StatelessViewWithVM<ProfileVM> {
   final String title;
   final String subtitle;
-  final Function() onTap;
+  final int index;
   const ProfileDetailsBtn({
     required this.title,
     required this.subtitle,
-    required this.onTap,
+    required this.index,
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ProfileVM viewModel) {
     final ThemeData theme = Theme.of(context);
 
     return Padding(
       padding: const EdgeInsets.all(Consts.globalContentPaddingM),
       child: GestureDetector(
-        onTap: onTap,
+        onTap: () {
+          viewModel.index = index;
+          viewModel.isEditingMode = !viewModel.isEditingMode;
+        },
         child: Container(
           padding: const EdgeInsets.all(Consts.globalContentPaddingM),
           decoration: BoxDecoration(

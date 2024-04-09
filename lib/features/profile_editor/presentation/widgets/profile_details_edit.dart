@@ -1,74 +1,34 @@
-import 'package:chibi/core/theme/colours.dart';
-import 'package:chibi/features/profile_editor/presentation/widgets/profile_details_btn.dart';
+import 'package:chibi/core/di/stateless_view_with_vm.dart';
+import 'package:chibi/features/profile_editor/presentation/profile_vm.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
-class ProfileDetailsEdit extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  const ProfileDetailsEdit(
-      {Key? key, required this.title, required this.subtitle})
-      : super(key: key);
+class ProfileDetailsEdit extends StatelessViewWithVM<ProfileVM> {
+  const ProfileDetailsEdit({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ProfileVM viewModel) {
+    final AppLocalizations? appLocalizations = AppLocalizations.of(context);
     final ThemeData theme = Theme.of(context);
 
-    // Define your detailsBtn list here
-    final List<List<Widget>> detailsBtn = [
-      [
-        ProfileDetailsBtn(
-          title: '180cm',
-          subtitle: 'Height',
-          onTap: () {},
-        ),
-        ProfileDetailsBtn(
-          title: '65kg',
-          subtitle: 'Weight',
-          onTap: () {},
-        ),
-        ProfileDetailsBtn(
-          title: '22yo',
-          subtitle: 'Age',
-          onTap: () {},
-        ),
-      ]
+    final double iconSize = MediaQuery.of(context).size.width * 0.3;
+    final List<Color?> colors = [
+      theme.colorScheme.secondary,
+      theme.colorScheme.primary,
+      theme.colorScheme.tertiary,
     ];
 
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      decoration: BoxDecoration(
-          color: theme.colorScheme.surface,
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
-      child: Column(
-        children: [
-          ShaderMask(
-            blendMode: BlendMode.srcIn,
-            shaderCallback: (bounds) {
-              return LinearGradient(
-                      colors: Colours.primaryG,
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight)
-                  .createShader(
-                      Rect.fromLTRB(0, 0, bounds.width, bounds.height));
-            },
-            child: Text(
-              title,
-              style: TextStyle(
-                  color: theme.colorScheme.surface.withOpacity(0.7),
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14),
-            ),
-          ),
-          Text(
-            subtitle,
-            style: const TextStyle(
-              color: Colours.gray,
-              fontSize: 12,
-            ),
-          ),
-        ],
-      ),
-    );
+    return Observer(builder: (context) {
+      return Padding(
+        padding: const EdgeInsets.only(top: 20.0),
+        child: GestureDetector(
+            onTap: () => viewModel.isEditingMode = !viewModel.isEditingMode,
+            child: Container(
+                height: 230, width: 200, color: colors[viewModel.index])),
+      );
+    });
   }
 }

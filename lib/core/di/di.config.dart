@@ -37,7 +37,7 @@ extension GetItInjectableX on _i1.GetIt {
     final registerfModule = _$RegisterfModule();
     gh.lazySingleton<_i3.FlutterSecureStorage>(
         () => registerfModule.secureStorage);
-    gh.factory<_i4.ProfileVM>(() => _i4.ProfileVM());
+    gh.lazySingleton<_i4.ProfileVM>(() => _i4.ProfileVM());
     gh.factory<_i5.ProgressVM>(() => _i5.ProgressVM());
     gh.factory<_i6.ScaffoldWithBottomNavVM>(
         () => _i6.ScaffoldWithBottomNavVM());

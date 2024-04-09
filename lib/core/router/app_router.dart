@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
+import 'package:chibi/core/theme/app_images.dart';
 import 'package:chibi/features/profile_editor/presentation/profile.dart';
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
@@ -38,7 +39,7 @@ class AppRouter {
                   return NoTransitionPage(
                       key: state.pageKey,
                       child: ScaffoldWithBottomNav(
-                          title: AppLocalizations.of(context)?.profile ?? 'fff',
+                          title: AppLocalizations.of(context)?.home ?? 'fff',
                           child: const Home()));
                 },
               ),
@@ -48,7 +49,7 @@ class AppRouter {
                 pageBuilder: (context, state) {
                   return NoTransitionPage(
                       child: ScaffoldWithBottomNav(
-                          title: AppLocalizations.of(context)?.profile ?? '',
+                          title: AppLocalizations.of(context)?.progress ?? '',
                           child: const Progress()));
                 },
               ),
@@ -60,6 +61,7 @@ class AppRouter {
                       key: state.pageKey,
                       child: ScaffoldWithBottomNav(
                           title: AppLocalizations.of(context)?.profile ?? '',
+                          bgImg: AppImages.scaffoldBg,
                           child: const Profile()),
                     );
                   },

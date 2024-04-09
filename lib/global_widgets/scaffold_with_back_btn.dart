@@ -34,7 +34,6 @@ class ScaffoldWithBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
       children: [
         // Since I'm not a designer and can't create svgs to make a custom paint, I put a png here.
         // Not recommended.
@@ -63,7 +62,7 @@ class ScaffoldWithBackButton extends StatelessWidget {
               automaticallyImplyLeading: true,
               actions: actions != null ? [actions!] : null,
               bottom: appBarBottom),
-          body: Align(alignment: Alignment.topCenter, child: child),
+          body: child,
           bottomNavigationBar: bottomButton,
           bottomSheet: bottomSheet,
         ),
