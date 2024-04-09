@@ -1,22 +1,27 @@
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/core/theme/consts.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDataBtn extends StatelessWidget {
   final String title;
   final String subtitle;
-  const ProfileDataBtn({Key? key, required this.title, required this.subtitle})
-      : super(key: key);
+  const ProfileDataBtn({
+    required this.title,
+    required this.subtitle,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
 
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+      padding:
+          const EdgeInsets.symmetric(vertical: Consts.globalContentPaddingM),
       decoration: BoxDecoration(
           color: theme.colorScheme.surface,
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 2)]),
+          borderRadius: BorderRadius.circular(Consts.radiusM),
+          boxShadow: Consts.boxShadowContainer),
       child: Column(
         children: [
           ShaderMask(
@@ -29,21 +34,9 @@ class ProfileDataBtn extends StatelessWidget {
                   .createShader(
                       Rect.fromLTRB(0, 0, bounds.width, bounds.height));
             },
-            child: Text(
-              title,
-              style: TextStyle(
-                  color: theme.colorScheme.surface.withOpacity(0.7),
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14),
-            ),
+            child: Text(title, style: theme.textTheme.labelLarge),
           ),
-          Text(
-            subtitle,
-            style: const TextStyle(
-              color: Colours.gray,
-              fontSize: 12,
-            ),
-          ),
+          Text(subtitle, style: theme.textTheme.labelMedium),
         ],
       ),
     );

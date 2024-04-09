@@ -45,13 +45,13 @@ ThemeData _theme(ColorScheme colorScheme) {
       bodyMedium: const TextStyle(
           fontSize: FontSize.medium, fontWeight: FontWeights.medium),
       labelLarge: TextStyle(
-          fontSize: FontSize.large,
+          fontSize: FontSize.medium,
           fontWeight: FontWeights.medium,
           color: colorScheme.tertiary),
       labelMedium: const TextStyle(
         fontSize: FontSize.small,
-        fontWeight: FontWeights.light,
-        color: Colours.lightgray,
+        fontWeight: FontWeights.medium,
+        color: Colours.gray,
       ),
       labelSmall: const TextStyle(
           fontSize: FontSize.tiny, fontWeight: FontWeights.light),

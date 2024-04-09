@@ -1,3 +1,4 @@
+import 'package:chibi/core/theme/consts.dart';
 import 'package:chibi/core/theme/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:chibi/core/theme/colours.dart';
@@ -28,13 +29,8 @@ class GradientBtn extends StatelessWidget {
                   : Colours.primaryG,
               begin: Alignment.centerLeft,
               end: Alignment.centerRight),
-          borderRadius: BorderRadius.circular(25),
-          boxShadow: [
-            BoxShadow(
-                color: Colours.black.withOpacity(0.3),
-                blurRadius: 2,
-                offset: const Offset(0, 2))
-          ]),
+          borderRadius: BorderRadius.circular(Consts.radiusL),
+          boxShadow: Consts.boxShadowBtn),
       child: MaterialButton(
         minWidth: double.maxFinite,
         height: getWidth(context) * 0.22,

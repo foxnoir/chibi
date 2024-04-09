@@ -37,7 +37,7 @@ class ProfileEditor extends StatelessViewWithVM<ProfileEditorVM> {
           child: Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(Consts.radiusL),
+                borderRadius: BorderRadius.circular(Consts.radiusRound),
                 child: Image.asset(
                   AppImages.defaultProfile,
                   width: iconSize,
