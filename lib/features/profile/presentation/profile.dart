@@ -4,7 +4,7 @@ import 'package:chibi/core/theme/app_images.dart';
 import 'package:chibi/core/theme/colours.dart';
 import 'package:chibi/features/profile/presentation/profile_vm.dart';
 import 'package:chibi/features/profile/presentation/widgets/setting_row.dart';
-import 'package:chibi/features/profile/presentation/widgets/title_subtitle_cell.dart';
+import 'package:chibi/features/profile_editor/presentation/widgets/profile_details_btn.dart';
 import 'package:chibi/global_widgets/gradient_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -129,7 +129,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
             const Row(
               children: [
                 Expanded(
-                  child: TitleSubtitleCell(
+                  child: ProfileDataBtn(
                     title: '180cm',
                     subtitle: 'Height',
                   ),
@@ -138,7 +138,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   width: 15,
                 ),
                 Expanded(
-                  child: TitleSubtitleCell(
+                  child: ProfileDataBtn(
                     title: '65kg',
                     subtitle: 'Weight',
                   ),
@@ -147,7 +147,7 @@ class _ProfileState extends StatefulViewWithVMState<Profile, ProfileVM>
                   width: 15,
                 ),
                 Expanded(
-                  child: TitleSubtitleCell(
+                  child: ProfileDataBtn(
                     title: '22yo',
                     subtitle: 'Age',
                   ),

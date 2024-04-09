@@ -1,11 +1,10 @@
 import 'package:chibi/core/theme/colours.dart';
 import 'package:flutter/material.dart';
 
-class TitleSubtitleCell extends StatelessWidget {
+class ProfileDataBtn extends StatelessWidget {
   final String title;
   final String subtitle;
-  const TitleSubtitleCell(
-      {Key? key, required this.title, required this.subtitle})
+  const ProfileDataBtn({Key? key, required this.title, required this.subtitle})
       : super(key: key);
 
   @override

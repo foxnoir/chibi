@@ -12,6 +12,6 @@ class ProfileEditorVM extends ProfileEditorVMBase with _$ProfileEditorVM {
 abstract class ProfileEditorVMBase extends ViewModel with Store {
   ProfileEditorVMBase();
 
-  // final WebsocketRepository _websocketRepository =
-  //     DI.getIt<WebsocketRepository>();
+  @observable
+  bool isEditingMode = false;
 }
