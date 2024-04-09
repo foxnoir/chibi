@@ -140,6 +140,24 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Edit profile'**
   String get editProfile;
+
+  /// No description provided for @weight.
+  ///
+  /// In de, this message translates to:
+  /// **'Weight'**
+  String get weight;
+
+  /// No description provided for @height.
+  ///
+  /// In de, this message translates to:
+  /// **'Height'**
+  String get height;
+
+  /// No description provided for @age.
+  ///
+  /// In de, this message translates to:
+  /// **'Age'**
+  String get age;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

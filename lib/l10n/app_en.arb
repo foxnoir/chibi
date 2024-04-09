@@ -6,5 +6,8 @@
   "progress": "progress",
   "workout": "workout",
   "exercices": "exercices",
-  "editProfile": "Edit profile"
+  "editProfile": "Edit profile",
+  "weight": "Weight",
+  "height": "Height",
+  "age": "Age"
 }

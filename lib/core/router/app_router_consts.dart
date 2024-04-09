@@ -8,9 +8,6 @@ class AppRouterPaths {
   static const String workouts = '/workouts';
   static const String exercices = '/exercices';
   static const String profile = '/profile';
-
-  // subroutes
-  static const String profileEditor = 'profileEditor';
 }
 
 class AppRouteNames {
@@ -20,5 +17,4 @@ class AppRouteNames {
   static const String workouts = 'workouts';
   static const String exercices = 'exercices';
   static const String profile = 'profile';
-  static const String profileEditor = 'profileEditor';
 }

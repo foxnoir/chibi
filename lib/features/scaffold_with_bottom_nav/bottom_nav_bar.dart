@@ -1,8 +1,7 @@
 import 'package:chibi/core/theme/app_icons.dart';
 import 'package:chibi/core/theme/consts.dart';
 import 'package:chibi/features/home/presentation/home.dart';
-import 'package:chibi/features/profile/presentation/profile.dart';
-import 'package:chibi/features/profile_editor/presentation/profile_editor.dart';
+import 'package:chibi/features/profile_editor/presentation/profile.dart';
 import 'package:chibi/features/progress/presentation/progress.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +27,7 @@ class BottomNavBarTabs {
       BottomNavBarItem(
         icon: AppIcons.workout,
         activeIcon: AppIcons.workoutActive,
-        initialLocation: const ProfileEditor(),
+        initialLocation: const Profile(),
         isActive: index == 2,
       ),
       BottomNavBarItem(

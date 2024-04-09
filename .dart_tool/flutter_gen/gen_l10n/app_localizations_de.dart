@@ -27,4 +27,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get editProfile => 'Edit profile';
+
+  @override
+  String get weight => 'Weight';
+
+  @override
+  String get height => 'Height';
+
+  @override
+  String get age => 'Age';
 }

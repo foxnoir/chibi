@@ -1,15 +1,38 @@
 import 'package:chibi/core/theme/colours.dart';
+import 'package:chibi/features/profile_editor/presentation/widgets/profile_details_btn.dart';
 import 'package:flutter/material.dart';
 
-class ProfileDataBtn extends StatelessWidget {
+class ProfileDetailsEdit extends StatelessWidget {
   final String title;
   final String subtitle;
-  const ProfileDataBtn({Key? key, required this.title, required this.subtitle})
+  const ProfileDetailsEdit(
+      {Key? key, required this.title, required this.subtitle})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+
+    // Define your detailsBtn list here
+    final List<List<Widget>> detailsBtn = [
+      [
+        ProfileDetailsBtn(
+          title: '180cm',
+          subtitle: 'Height',
+          onTap: () {},
+        ),
+        ProfileDetailsBtn(
+          title: '65kg',
+          subtitle: 'Weight',
+          onTap: () {},
+        ),
+        ProfileDetailsBtn(
+          title: '22yo',
+          subtitle: 'Age',
+          onTap: () {},
+        ),
+      ]
+    ];
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),

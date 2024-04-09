@@ -1,1 +1,0 @@
-{"valid_import":true,"imports":[{"uri":"package:mobx/mobx.dart","transitive":false},{"uri":"package:chibi/core/di/stateless_view_with_vm.dart","transitive":false},{"uri":"package:injectable/injectable.dart","transitive":false}],"elements":[]}

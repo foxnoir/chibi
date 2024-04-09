@@ -2,8 +2,7 @@ import 'dart:io';
 
 import 'package:chibi/core/router/app_router_consts.dart';
 import 'package:chibi/core/router/transitons.dart';
-import 'package:chibi/features/profile/presentation/profile.dart';
-import 'package:chibi/features/profile_editor/presentation/profile_editor.dart';
+import 'package:chibi/features/profile_editor/presentation/profile.dart';
 import 'package:chibi/features/scaffold_with_bottom_nav/scaffold_with_bottom_nav.dart';
 import 'package:chibi/features/home/presentation/home.dart';
 import 'package:chibi/features/progress/presentation/progress.dart';
@@ -65,14 +64,14 @@ class AppRouter {
                     );
                   },
                   routes: [
-                    GoRoute(
-                      path: AppRouterPaths.profileEditor,
-                      name: AppRouteNames.profileEditor,
-                      pageBuilder: (context, state) {
-                        return SlideTransitionPage(
-                            key: state.pageKey, child: const ProfileEditor());
-                      },
-                    ),
+                    // GoRoute(
+                    //   path: AppRouterPaths.profileEditor,
+                    //   name: AppRouteNames.profileEditor,
+                    //   pageBuilder: (context, state) {
+                    //     return SlideTransitionPage(
+                    //         key: state.pageKey, child: const Profile());
+                    //   },
+                    // ),
                   ]),
             ],
           ),
